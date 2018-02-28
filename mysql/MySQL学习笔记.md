@@ -2,7 +2,7 @@
 
 ### 连接mysql
 ```mysql
-mysql -u 用户名 -p
+mysql -h host -P port -u username -p
 ```
 ### 查看端口
 ```mysql
