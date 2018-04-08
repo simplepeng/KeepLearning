@@ -1,6 +1,5 @@
-# HTML学习笔记
 
-## 简介
+# 简介
 
 * HTML 是描述网页的语言
 
@@ -10,9 +9,9 @@
 - <h1> 与 </h1> 之间的文本被显示为标题
 - <p> 与 </p> 之间的文本被显示为段落
 
-## 基础
+# 基础
 
-### 标题
+## 标题
 
 HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的
 
@@ -22,7 +21,7 @@ HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的
 <h3>This is a heading</h3>
 ```
 
-### 段落
+## 段落
 
 HTML 段落（paragraph）是通过 <p> 标签进行定义的
 
@@ -31,7 +30,7 @@ HTML 段落（paragraph）是通过 <p> 标签进行定义的
 <p>This is another paragraph.</p>
 ```
 
-### 链接
+## 链接
 
 HTML 链接（hypertext reference）是通过 <a> 标签进行定义的
 
@@ -49,7 +48,7 @@ HTML 链接（hypertext reference）是通过 <a> 标签进行定义的
 
 "链接文本" 不必一定是文本。图片或其他 HTML 元素都可以成为链接
 
-#### target 属性
+### target 属性
 
 使用 Target 属性，你可以定义被链接的文档在何处显示
 
@@ -59,7 +58,7 @@ HTML 链接（hypertext reference）是通过 <a> 标签进行定义的
 <a href="http://www.w3school.com.cn/" target="_blank">Visit W3School!</a>
 ```
 
-#### name属性
+### name属性
 
 name 属性规定锚（anchor）的名称,任意名称都可以
 
@@ -91,7 +90,7 @@ name 属性规定锚（anchor）的名称,任意名称都可以
 <a href="http://www.w3school.com.cn/html/html_links.asp#tips">有用的提示</a>
 ```
 
-### 图像
+## 图像
 
 HTML 图像是通过 <img> 标签进行定义的
 
@@ -99,7 +98,7 @@ HTML 图像是通过 <img> 标签进行定义的
 <img src="w3school.jpg" width="104" height="142" />
 ```
 
-#### 替换文本属性（Alt）
+### 替换文本属性（Alt）
 
 alt 属性用来为图像定义一串预备的可替换的文本
 
@@ -109,7 +108,7 @@ alt 属性用来为图像定义一串预备的可替换的文本
 
 在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息。此时，浏览器将显示这个替代性的文本而不是图像。为页面上的图像都加上替换文本属性是个好习惯，这样有助于更好的显示信息，并且对于那些使用纯文本浏览器的人来说是非常有用的
 
-### 水平线
+## 水平线
 
 <hr /> 标签在 HTML 页面中创建水平线（horizontal rule），hr 元素可用于分隔内容
 
@@ -121,13 +120,13 @@ alt 属性用来为图像定义一串预备的可替换的文本
 <p>This is a paragraph</p>
 ```
 
-### 注释
+## 注释
 
 ```html
 <!-- This is a comment -->
 ```
 
-### 换行
+## 换行
 
 不产生一个新段落的情况下进行换行（新行），请使用 <br/ 标签
 
@@ -135,7 +134,7 @@ alt 属性用来为图像定义一串预备的可替换的文本
 <p>This is<br />a para<br />graph with line breaks</p>
 ```
 
-## 元素
+# 元素
 
 HTML 元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码
 
@@ -145,7 +144,7 @@ HTML 元素指的是从开始标签（start tag）到结束标签（end tag）�
 | <a href="default.htm" > | This is a link      | </a>     |
 | <br />                  |                     |          |
 
-## 属性
+# 属性
 
 HTML 标签可以拥有*属性*。属性提供了有关 HTML 元素的*更多的信息*。
 
@@ -167,7 +166,7 @@ HTML 链接由 <a> 标签定义。链接的地址在 href 属性中指定：
 name='Bill "HelloWorld" Gates'
 ```
 
-## 样式
+# 样式
 
 style 属性用于改变 HTML 元素的样式
 
@@ -189,7 +188,7 @@ This text is in Times and green</p>
 </html>
 ```
 
-### 应该避免使用下面这些标签和属性：
+## 应该避免使用下面这些标签和属性：
 
 | 标签                 | 描述               |
 | -------------------- | ------------------ |
@@ -204,13 +203,13 @@ This text is in Times and green</p>
 
 对于以上这些标签和属性：请使用样式代替！
 
-## CSS 样式表
+# CSS 样式表
 
 层叠样式表 (*C*ascading *S*tyle *S*heets)
 
 当浏览器读到一个样式表，它就会按照这个样式表来对文档进行格式化
 
-### 外部样式表
+## 外部样式表
 
 当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观
 
@@ -220,7 +219,7 @@ This text is in Times and green</p>
 </head>
 ```
 
-### 内部样式表
+## 内部样式表
 
 当单个文件需要特别样式时，就可以使用内部样式表。你可以在 head 部分通过 <style> 标签定义内部样式表
 
@@ -233,7 +232,7 @@ p {margin-left: 20px}
 </head>
 ```
 
-### 内联样式
+## 内联样式
 
 当特殊的样式需要应用到个别元素时，就可以使用内联样式。 使用内联样式的方法是在相关的标签中使用样式属性。样式属性可以包含任何 CSS 属性
 
@@ -242,7 +241,7 @@ p {margin-left: 20px}
 This is a paragraph
 </p>
 ```
-## 表格
+# 表格
 
 表格由 <table> 标签来定义。每个表格均有若干行（由 <tr> 标签（table row）定义），每行被分割为若干单元格（由 <td> 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等
 
@@ -259,17 +258,17 @@ This is a paragraph
 </table>
 ```
 
-### 边框
+## 边框
 
 border 属性定义边框的粗细，不设置就没有边框
 
-### 表头
+## 表头
 
 表格的表头使用 <th> 标签（table heading）进行定义
 
-## 列表
+# 列表
 
-### 无序列表
+## 无序列表
 
 无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记
 
@@ -287,7 +286,7 @@ border 属性定义边框的粗细，不设置就没有边框
 
 列表项内部可以使用段落、换行符、图片、链接以及其他列表等等
 
-### 有序列表
+## 有序列表
 
 同样，有序列表也是一列项目，列表项目使用数字进行标记
 
@@ -305,7 +304,7 @@ border 属性定义边框的粗细，不设置就没有边框
 
 列表项内部可以使用段落、换行符、图片、链接以及其他列表等等
 
-### 定义列表
+## 定义列表
 
 自定义列表不仅仅是一列项目，而是项目及其注释的组合
 
@@ -330,23 +329,23 @@ White cold drink
 
 定义列表的列表项内部可以使用段落、换行符、图片、链接以及其他列表等等
 
-## 块
+# 块
 
 大多数 HTML 元素被定义为块级元素（block level element）或内联元素（ inline element）
 
-### 块元素
+## 块元素
 
 块级元素在浏览器显示时，通常会以新行来开始（和结束）
 
 例子：<h1>, <p>, <ul>, <table>
 
-### 内联元素
+## 内联元素
 
 内联元素在显示时通常不会以新行开始
 
 例子：<b>, <td>, <a>, <img>
 
-### div元素
+## div元素
 
 HTML <div> 元素是块级元素，它是可用于组合其他 HTML 元素的容器
 
@@ -358,7 +357,7 @@ HTML <div> 元素是块级元素，它是可用于组合其他 HTML 元素的容
 
 <div> 元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。使用 <table> 元素进行文档布局不是表格的正确用法。<table> 元素的作用是显示表格化的数据
 
-### span元素
+## span元素
 
 HTML <span> 元素是内联元素，可用作文本的容器
 
@@ -366,7 +365,7 @@ HTML <span> 元素是内联元素，可用作文本的容器
 
 当与 CSS 一同使用时，<span> 元素可用于为部分文本设置样式属性
 
-## 类
+# 类
 
 对 HTML 进行分类（设置类），使我们能够为元素的类定义 CSS 样式
 
@@ -401,7 +400,7 @@ with a metropolitan area of over 13 million inhabitants.
 </html>
 ```
 
-### 分类块级元素
+## 分类块级元素
 
 HTML <div> 元素是*块级元素*。它能够用作其他 HTML 元素的容器
 
@@ -445,7 +444,7 @@ and the most populous metropolitan area in the world.</p>
 </html>
 ```
 
-### 分类行级元素
+## 分类行级元素
 
 HTML <span> 元素是行内元素，能够用作文本的容器
 
@@ -467,9 +466,9 @@ HTML <span> 元素是行内元素，能够用作文本的容器
 </html>
 ```
 
-## 布局
+# 布局
 
-### 使用<div>元素的HTML布局
+## 使用<div>元素的HTML布局
 
 <div> 元素常用作布局工具，因为能够轻松地通过 CSS 对其进行定位
 
@@ -538,7 +537,7 @@ Copyright ? W3Schools.com
 </html>
 ```
 
-### 使用HTML5的布局
+## 使用HTML5的布局
 
 HTML5 提供的新语义元素定义了网页的不同部分
 
@@ -622,7 +621,7 @@ Copyright W3Schools.com
 
 ```
 
-### 使用表格的HTML布局
+## 使用表格的HTML布局
 
 注释：<table> 元素不是作为布局工具而设计的
 
@@ -662,7 +661,7 @@ table.lamp td {
 </style>
 ```
 
-## 框架
+# 框架
 
 通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。每份HTML文档称为一个框架，并且每个框架都独立于其他的框架
 
@@ -671,7 +670,7 @@ table.lamp td {
 - 开发人员必须同时跟踪更多的HTML文档
 - 很难打印整张页面
 
-### 框架结构标签
+## 框架结构标签
 
 - 框架结构标签（<frameset>）定义如何将窗口分割为框架
 - 每个 frameset 定义了一系列行*或*列
@@ -679,7 +678,7 @@ table.lamp td {
 
 frameset 标签也被某些文章和书籍译为框架集
 
-### 框架标签
+## 框架标签
 
 <Frame> 标签定义了放置在每个框架中的 HTML 文档
 
@@ -692,7 +691,7 @@ frameset 标签也被某些文章和书籍译为框架集
 </frameset>
 ```
 
-## 内联框架
+# 内联框架
 
 iframe用于在网页中显示网页
 
@@ -700,7 +699,7 @@ iframe用于在网页中显示网页
 <iframe src="URL" width="200" height="200" frameborder="0"></iframe>
 ```
 
-### 使用iframe作为链接的目标
+## 使用iframe作为链接的目标
 
 iframe 可用作链接的目标（target）
 
@@ -711,9 +710,9 @@ iframe 可用作链接的目标（target）
 <p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p>
 ```
 
-## 脚本
+# 脚本
 
-### script元素
+## script元素
 
 <script> 标签用于定义客户端脚本，比如 JavaScript
 
@@ -729,7 +728,7 @@ document.write("Hello World!")
 </script>
 ```
 
-### noscript标签
+## noscript标签
 
 <noscript> 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时
 
@@ -740,15 +739,15 @@ document.write("Hello World!")
 <noscript>Your browser does not support JavaScript!</noscript>
 ```
 
-## 头部元素
+# 头部元素
 
-### head元素
+## head元素
 
 <head> 元素是所有头部元素的容器。<head> 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等
 
 以下标签都可以添加到 head 部分：<title>、<base>、<link>、<meta>、<script> 以及 <style>
 
-### title元素
+## title元素
 
 <title> 标签定义文档的标题。
 
@@ -775,7 +774,7 @@ The content of the document......
 </html>
 ```
 
-### base元素
+## base元素
 
 <base> 标签为页面上的所有链接规定默认地址或默认目标（target）
 
@@ -786,7 +785,7 @@ The content of the document......
 </head>
 ```
 
-### link元素
+## link元素
 
 <link> 标签定义文档与外部资源之间的关系
 
@@ -798,7 +797,7 @@ The content of the document......
 </head>
 ```
 
-### style元素
+## style元素
 
 <style> 标签用于为 HTML 文档定义样式信息
 
@@ -813,9 +812,9 @@ p {color:blue}
 </head>
 ```
 
-##  表单
+#  表单
 
-### form元素
+## form元素
 
 HTML 表单用于收集用户输入
 
@@ -829,9 +828,9 @@ form elements
 </form>
 ```
 
-### 表单元素
+## 表单元素
 
-#### input元素
+### input元素
 
 *<input>* 元素是最重要的*表单元素*
 
@@ -843,7 +842,7 @@ form elements
 | radio  | 定义单选按钮输入（选择多个选择之一） |
 | submit | 定义提交按钮（提交表单）             |
 
-##### 文本输入
+#### 文本输入
 
 *<input type="text">* 定义用于*文本输入*的单行输入字段
 
@@ -857,7 +856,7 @@ form elements
 </form> 
 ```
 
-##### 单选按钮输入
+#### 单选按钮输入
 
 *<input type="radio">* 定义*单选按钮*
 
@@ -871,7 +870,7 @@ form elements
 </form> 
 ```
 
-##### 提交按钮
+#### 提交按钮
 
 *<input type="submit">* 定义用于向*表单处理程序*（form-handler）*提交*表单的按钮
 
@@ -891,7 +890,7 @@ Last name:<br>
 </form> 
 ```
 
-##### password
+#### password
 
 *<input type="password">* 定义*密码字段*
 
@@ -905,7 +904,7 @@ Last name:<br>
 </form> 
 ```
 
-#####   复选框
+####   复选框
 
 <input type="checkbox"> 定义复选框
 
@@ -919,7 +918,7 @@ Last name:<br>
 </form> 
 ```
 
-##### HTMl5 输入类型
+#### HTMl5 输入类型
 
 HTML5 增加了多个新的输入类型：
 
@@ -939,7 +938,7 @@ HTML5 增加了多个新的输入类型：
 
 注释：老式 web 浏览器不支持的输入类型，会被视为输入类型 text
 
-#### Action属性
+### Action属性
 
 *action 属性*定义在提交表单时执行的动作
 
@@ -955,7 +954,7 @@ HTML5 增加了多个新的输入类型：
 
 如果省略 action 属性，则 action 会被设置为当前页面
 
-#### Method属性
+### Method属性
 
 *method 属性*规定在提交表单时所用的 HTTP 方法（*GET* 或 *POST*）
 
@@ -967,7 +966,7 @@ HTML5 增加了多个新的输入类型：
 <form action="action_page.php" method="POST">
 ```
 
-#### Name属性
+### Name属性
 
 如果要正确地被提交，每个输入字段必须设置一个 name 属性
 
@@ -983,7 +982,7 @@ Last name:<br>
 </form> 
 ```
 
-#### fieldset组合表单数据
+### fieldset组合表单数据
 
 *<fieldset>* 元素组合表单中的相关数据
 
@@ -1003,7 +1002,7 @@ Last name:<br>
 </form> 
 ```
 
-#### form属性列表
+### form属性列表
 
 | 属性           | 描述                                                       |
 | -------------- | ---------------------------------------------------------- |
@@ -1016,7 +1015,7 @@ Last name:<br>
 | novalidate     | 规定浏览器不验证表单。                                     |
 | target         | 规定 action 属性中地址的目标（默认：_self）。              |
 
-#### select元素（下拉列表）
+### select元素（下拉列表）
 
 *<select>* 元素定义*下拉列表*
 
@@ -1039,7 +1038,7 @@ Last name:<br>
 <option value="fiat" selected>Fiat</option>
 ```
 
-#### textarea 元素
+### textarea 元素
 
 *<textarea>* 元素定义多行输入字段（*文本域*）
 
@@ -1049,7 +1048,7 @@ Last name:<br>
 </textarea>
 ```
 
-#### button 元素
+### button 元素
 
 *<button>* 元素定义可点击的*按钮*
 
@@ -1057,7 +1056,7 @@ Last name:<br>
 <button type="button" onclick="alert('Hello World!')">Click Me!</button>
 ```
 
-#### HTML5 detailst 元素
+### HTML5 detailst 元素
 
 *<datalist>* 元素为 <input> 元素规定预定义选项列表
 
@@ -1078,9 +1077,9 @@ Last name:<br>
 </form>
 ```
 
-### 输入(input)属性
+## 输入(input)属性
 
-#### value 属性
+### value 属性
 
 *value* 属性规定输入字段的初始值
 
@@ -1094,7 +1093,7 @@ Last name:<br>
 </form> 
 ```
 
-#### readonly 属性
+### readonly 属性
 
 *readonly* 属性规定输入字段为只读（不能修改）
 
@@ -1110,7 +1109,7 @@ Last name:<br>
 
 readonly 属性不需要值。它等同于 readonly="readonly"
 
-#### disable 属性
+### disable 属性
 
 *disabled* 属性规定输入字段是禁用的
 
@@ -1118,11 +1117,11 @@ readonly 属性不需要值。它等同于 readonly="readonly"
 
 被禁用的元素不会被提交
 
-#### size 属性
+### size 属性
 
 *size* 属性规定输入字段的尺寸（以字符计）
 
-#### maxlength 属性
+### maxlength 属性
 
 *maxlength* 属性规定输入字段允许的最大长度
 
@@ -1132,7 +1131,7 @@ readonly 属性不需要值。它等同于 readonly="readonly"
 
 注释：输入限制并非万无一失。JavaScript 提供了很多方法来增加非法输入。如需安全地限制输入，则接受者（服务器）必须同时对限制进行检查
 
-#### HTML5 属性
+### HTML5 属性
 
 HTML5 为 <input> 增加了如下属性：
 
