@@ -1158,5 +1158,1053 @@ CSS 尺寸 (Dimension) 属性允许你控制元素的高度和宽度。同样，
 | [min-width](https://www.w3cschool.cn/cssref/pr-dim-min-width.html) | 设置元素的最小宽度。 |
 | [width](https://www.w3cschool.cn/cssref/pr-dim-width.html)   | 设置元素的宽度。     |
 
+# 显示（display）和可见性（visibility）
+
+display 属性和 visibility属性都可以用来隐藏某个元素，但是这两个属性有不同的定义
+
+## 隐藏元素 display：none或visibility：hidden
+
+隐藏一个元素可以通过把display属性设置为"none"，或把visibility属性设置为"hidden"
+
+visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局
+
+```css
+h1.hidden {visibility:hidden;}
+```
+
+display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失
+
+```css
+h1.hidden {display:none;}
+```
+
+# 定位（positioning）
+
+CSS定位属性允许你为一个元素定位。它也可以将一个元素放在另一个元素后面，并指定一个元素的内容太大时，应该发生什么
+
+元素可以使用的顶部，底部，左侧和右侧属性定位。然而，这些属性无法工作，除非是先设定position属性。他们也有不同的工作方式，这取决于定位方法
+
+## static 定位
+
+HTML元素的默认值，即没有定位，元素出现在正常的流中
+
+静态定位的元素不会受到top, bottom, left, right影响
+
+## fixed 定位
+
+元素的位置相对于浏览器窗口是固定位置
+
+即使窗口是滚动的它也不会移动
+
+```css
+p.pos_fixed 
+{ 
+position:fixed; 
+top:30px; 
+right:5px; 
+}
+```
+
+## relative 定位
+
+相对定位元素的定位是相对其正常位置
+
+```css
+h2.pos_left 
+{ 
+position:relative; 
+left:-20px; 
+} 
+h2.pos_right 
+{ 
+position:relative; 
+left:20px; 
+}
+```
+
+相对定位元素经常被用来作为绝对定位元素的容器块
+
+## absolute 定位
+
+绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于<html>
+
+```css
+h2 
+{ 
+position:absolute; 
+left:100px; 
+top:150px; 
+}
+```
+
+## 重叠的元素
+
+元素的定位与文档流无关，所以它们可以覆盖页面上的其它元素
+
+z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前面，或后面）
+
+一个元素可以有正数或负数的堆叠顺序
+
+```css
+img 
+{ 
+position:absolute; 
+left:0px; 
+top:0px; 
+z-index:-1; 
+}
+```
+
+## 定位所有属性
+
+| 属性                                                         | 说明                                                         | 值                                                           | CSS  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [bottom](https://www.w3cschool.cn/cssref/pr-pos-bottom.html) | 定义了定位元素下外边距边界与其包含块下边界之间的偏移。       | auto *length%*inherit                                        | 2    |
+| [clip](https://www.w3cschool.cn/cssref/pr-pos-clip.html)     | 剪辑一个绝对定位的元素                                       | *shape*auto inherit                                          | 2    |
+| [cursor](https://www.w3cschool.cn/cssref/pr-class-cursor.html) | 显示光标移动到指定的类型                                     | *url*auto crosshair default pointer move e-resize ne-resize nw-resize n-resize se-resize sw-resize s-resize w-resize text wait help | 2    |
+| [left](https://www.w3cschool.cn/cssref/pr-pos-left.html)     | 定义了定位元素左外边距边界与其包含块左边界之间的偏移。       | auto *length%*inherit                                        | 2    |
+| [overflow](https://www.w3cschool.cn/cssref/pr-pos-overflow.html) | 设置当元素的内容溢出其区域时发生的事情。                     | auto hidden scroll visible inherit                           | 2    |
+| [position](https://www.w3cschool.cn/cssref/pr-class-position.html) | 指定元素的定位类型                                           | absolute fixed relative static inherit                       | 2    |
+| [right](https://www.w3cschool.cn/cssref/pr-pos-right.html)   | 定义了定位元素右外边距边界与其包含块右边界之间的偏移。       | auto *length%*inherit                                        | 2    |
+| [top](https://www.w3cschool.cn/cssref/pr-pos-top.html)       | 定义了一个定位元素的上外边距边界与其包含块上边界之间的偏移。 | auto *length%*inherit                                        | 2    |
+| [z-index](https://www.w3cschool.cn/cssref/pr-pos-z-index.html) | 设置元素的堆叠顺序                                           | *number*auto inherit                                         | 2    |
+
+# 浮动（float）
+
+CSS 的 Float（浮动），会使元素向左或向右移动，其周围的元素也会重新排列
+
+Float（浮动），往往是用于图像，但它在布局时一样非常有用
+
+## 元素怎样浮动
+
+元素的水平方向浮动，意味着元素只能左右移动而不能上下移动
+
+浮动元素之后的元素将围绕它
+
+浮动元素之前的元素将不会受到影响
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>W3Cschool(w3cschool.cn)</title>
+<style>
+img 
+{
+	float:left;
+}
+</style>
+</head>
+
+<body>
+<p>在下面的段落中，我们添加了一个 <b>float:left</b> 的图片。导致图片将会浮动在段落的左边。</p>
+<p>
+<img src="/attachments/cover/cover_css.png" width="95" height="84" />
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+</p>
+</body>
+
+</html>
+```
+
+##  彼此相邻的浮动元素
+
+如果你把几个浮动的元素放到一起，如果有空间的话，它们将彼此相邻
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>W3Cschool教程(w3cschool.cn)</title> 
+<style>
+.thumbnail 
+{
+	float:left;
+	width:110px;
+	height:90px;
+	margin:5px;
+}
+</style>
+</head>
+
+<body>
+<h3>图片库</h3>
+<p>试着调整窗口,看看当图片没有足够的空间会发生什么。</p>
+<img class="thumbnail" src="/statics/images/course/klematis_small.jpg" width="107" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis2_small.jpg" width="107" height="80">
+<img class="thumbnail" src="/statics/images/course/klematis3_small.jpg" width="116" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis4_small.jpg" width="120" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis_small.jpg" width="107" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis2_small.jpg" width="107" height="80">
+<img class="thumbnail" src="/statics/images/course/klematis3_small.jpg" width="116" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis4_small.jpg" width="120" height="90">
+</body>
+</html>
+```
+
+## 清除浮动（clear）
+
+元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性
+
+clear 属性指定元素两侧不能出现浮动元素
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>W3Cschool教程(w3cschool.cn)</title> 
+<style>
+.thumbnail 
+{
+	float:left;
+	width:110px;
+	height:90px;
+	margin:5px;
+}
+.text_line
+{
+	clear:both;
+	margin-bottom:2px;
+}
+</style>
+</head>
+
+<body>
+<h3>图片库</h3>
+<p>试着调整窗口,看看当图片没有足够的空间会发生什么。.</p>
+<img class="thumbnail" src="/statics/images/course/klematis_small.jpg" width="207" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis2_small.jpg" width="107" height="80">
+<img class="thumbnail" src="/statics/images/course/klematis3_small.jpg" width="116" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis4_small.jpg" width="120" height="90">
+<h3 class="text_line">第二行</h3>
+<img class="thumbnail" src="/statics/images/course/klematis_small.jpg" width="107" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis2_small.jpg" width="107" height="80">
+<img class="thumbnail" src="/statics/images/course/klematis3_small.jpg" width="116" height="90">
+<img class="thumbnail" src="/statics/images/course/klematis4_small.jpg" width="120" height="90">
+</body>
+</html>
+```
+
+## 浮动的所有属性
+
+| 属性                                                         | 描述                               | 值                           | CSS  |
+| ------------------------------------------------------------ | ---------------------------------- | ---------------------------- | ---- |
+| [clear](https://www.w3cschool.cn/cssref/pr-class-clear.html) | 指定不允许元素周围有浮动元素。     | left right both none inherit | 1    |
+| [float](https://www.w3cschool.cn/cssref/pr-class-float.html) | 指定一个盒子（元素）是否可以浮动。 | left right none inherit      | 1    |
+
+#  组合选择器
+
+CSS 组合选择符可以让你直观的明白选择器与选择器之间的关系
+
+在 CSS3 中包含了四种组合方式:
+
+- 后代选取器(以空格分隔)
+- 子元素选择器(以大于号分隔）
+- 相邻兄弟选择器（以加号分隔）
+- 普通兄弟选择器（以波浪号分隔）
+
+## 后台选取器（以空格分隔）
+
+后代选取器匹配所有指定元素的后代元素
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>W3Cschool教程(w3cschool.cn)</title> 
+<style>
+div p
+{
+	background-color:yellow;
+}
+</style>
+</head>
+<body>
+
+<div>
+<p>段落 1。 在 div 中。</p>
+<p>段落 2。 在 div 中。</p>
+</div>
+
+<p>段落 3。不在 div 中。</p>
+<p>段落 4。不在 div 中。</p>
+
+</body>
+</html>
+```
+
+## 子元素选择器（以大于号分隔）
+
+与后代选择器相比，子元素选择器（Child selectors）只能选择作为某元素子元素的元素
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>W3Cschool教程(w3cschool.cn)</title> 
+<style>
+div>p
+{
+	background-color:yellow;
+}
+</style>
+</head>
+
+<body>
+<h1>Welcome to My Homepage</h1>
+<div>
+<h2>My name is Donald</h2>
+<p>I live in Duckburg.</p>
+</div>
+
+<div>
+<span><p>I will not be styled.</p></span>
+</div>
+
+<p>My best friend is Mickey.</p>
+</body>
+</html>
+```
+
+## 相邻兄弟选择器（以加号分隔）
+
+相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素
+
+如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器（Adjacent sibling selector）
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>W3Cschool教程(w3cschool.cn)</title> 
+<style>
+div+p
+{
+	background-color:yellow;
+}
+</style>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<div>
+<h2>My name is Donald</h2>
+<p>I live in Duckburg.</p>
+</div>
+
+<p>My best friend is Mickey.</p>
+
+<p>I will not be styled.</p>
+
+</body>
+</html>
+```
+
+## 普通相邻兄弟选择器（以波浪号分隔）
+
+普通兄弟选择器选取所有指定元素的相邻兄弟元素
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>W3Cschool教程(w3cschool.cn)</title> 
+<style>
+div~p
+{
+	background-color:yellow;
+}
+</style>
+</head>
+<body>
+
+<div>
+<p>段落 1。 在 div 中。</p>
+<p>段落 2。 在 div 中。</p>
+</div>
+
+<p>段落 3。不在 div 中。</p>
+<p>段落 4。不在 div 中。</p>
+
+</body>
+</html>
+```
+
+# 伪类（pseudo-classes）
+
+CSS伪类是用来添加一些选择器的特殊效果
+
+由于状态的变化是非静态的，所以元素达到一个特定状态时，它可能得到一个伪类的样式
+
+当状态改变时，它又会失去这个样式。由此可以看出，它的功能和class有些类似，但它是基于文档之外的抽象，所以叫伪类
+
+## 语法
+
+```css
+selector:pseudo-class {property:value;}
+```
+
+CSS类也可以使用伪类
+
+```css
+selector.class:pseudo-class {property:value;}
+```
+
+## anchor伪类
+
+在支持 CSS 的浏览器中，链接的不同状态都可以以不同的方式显示
+
+ ```css
+a:link {color:#FF0000;} /* 未访问的链接 */ 
+a:visited {color:#00FF00;} /* 已访问的链接 */ 
+a:hover {color:#FF00FF;} /* 鼠标划过链接 */ 
+a:active {color:#0000FF;} /* 已选中的链接 */
+ ```
+
+**注意：** 在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+
+**注意：** 在 CSS 定义中，a:active 必须被置于 a:hover 之后，才是有效的。
+
+**注意：**伪类的名称不区分大小写。
+
+## 伪类和css类
+
+伪类可以与 CSS 类配合使用：
+
+```css
+a.red:visited {color:#FF0000;}       
+<a class="red" href="css-syntax.html">CSS Syntax</a>
+```
+
+如果在上面的例子的链接已被访问，它会显示为红色
+
+## 所有css伪类/元素
+
+## 所有CSS伪类/元素
+
+| 选择器                                                       | 示例           | 示例说明                                         |
+| ------------------------------------------------------------ | -------------- | ------------------------------------------------ |
+| [:link](https://www.w3cschool.cn/cssref/sel-link.html)       | a:link         | 选择所有未访问链接                               |
+| [:visited](https://www.w3cschool.cn/cssref/sel-visited.html) | a:visited      | 选择所有访问过的链接                             |
+| [:active](https://www.w3cschool.cn/cssref/sel-active.html)   | a:active       | 选择正在活动链接                                 |
+| [:hover](https://www.w3cschool.cn/cssref/sel-hover.html)     | a:hover        | 把鼠标放在链接上的状态                           |
+| [:focus](https://www.w3cschool.cn/cssref/sel-focus.html)     | input:focus    | 选择元素输入后具有焦点                           |
+| [:first-letter](https://www.w3cschool.cn/cssref/sel-firstletter.html) | p:first-letter | 选择每个<p> 元素的第一个字母                     |
+| [:first-line](https://www.w3cschool.cn/cssref/sel-firstline.html) | p:first-line   | 选择每个<p> 元素的第一行                         |
+| [:first-child](https://www.w3cschool.cn/cssref/sel-firstchild.html) | p:first-child  | 选择器匹配属于任意元素的第一个子元素的 <]p> 元素 |
+| [:before](https://www.w3cschool.cn/cssref/sel-before.html)   | p:before       | 在每个<p>元素之前插入内容                        |
+| [:after](https://www.w3cschool.cn/cssref/sel-after.html)     | p:after        | 在每个<p>元素之后插入内容                        |
+| [:lang(*language*)](https://www.w3cschool.cn/cssref/sel-lang.html) | p:lang(it)     | 为<p>元素的lang属性选择一个开始值                |
+
+# 导航栏
+
+熟练使用导航栏，对于任何网站都非常重要
+
+使用CSS你可以转换成好看的导航栏而不是枯燥的HTML菜单
+
+## 导航栏-链接列表
+
+导航条基本上是一个链接列表，所以使用 <ul> 和 <li> 元素非常有意义
+
+ ```html
+<!DOCTYPE html>
+<html>
+<body>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+
+<p>Note: We use href="#" for test links. In a real web site this would be URLs.</p>
+
+</body>
+</html>
+ ```
+
+# 下拉菜单
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>下拉菜单实例|W3Cschool教程(w3cschool.cn)</title>
+<meta charset="utf-8">
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+
+<h2>下拉菜单</h2>
+<p>鼠标移动到按钮上打开下拉菜单。</p>
+
+<div class="dropdown">
+  <button class="dropbtn">下拉菜单</button>
+  <div class="dropdown-content">
+    <a href="http://www.w3cschool.cn">W3Cschool教程 1</a>
+    <a href="http://www.w3cschool.cn">W3Cschool教程 2</a>
+    <a href="http://www.w3cschool.cn">W3Cschool教程 3</a>
+  </div>
+</div>
+
+</body>
+</html>
+```
+
+# 响应式设计
+
+# 可视区域（Viewport）
+
+viewport 是用户网页的可视区域
+
+手机浏览器是把页面放在一个虚拟的"窗口"（viewport）中，通常这个虚拟的"窗口"（viewport）比屏幕宽，这样就不用把每个网页挤到很小的窗口中（这样会破坏没有针对手机浏览器优化的网页的布局），用户可以通过平移和缩放来看网页的不同部分
+
+## 设置Viewport
+
+一个常用的针对移动网页优化过的页面的 viewport meta 标签大致如下：
+
+- width：控制 viewport 的大小，可以指定的一个值，如果 600，或者特殊的值，如 device-width 为设备的宽度（单位为缩放为 100% 时的 CSS 的像素）。
+- height：和 width 相对应，指定高度。
+- initial-scale：初始缩放比例，也即是当页面第一次 load 的时候缩放比例。
+- maximum-scale：允许用户缩放到的最大比例。
+- minimum-scale：允许用户缩放到的最小比例。
+- user-scalable：用户是否可以手动缩放
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+	max-width:100%;
+	height:auto;
+}
+</style>
+<script charset="utf-8" async="true" src="i8.js"></script></head>
+<body>
+<img src="img_chania.jpg" alt="Chania" height="345" width="460">
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam 
+nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
+volutpat.
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper 
+suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem 
+vel eum iriure dolor in hendrerit in vulputate velit esse molestie 
+consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et 
+accumsan et iusto odio dignissim qui blandit praesent luptatum zzril 
+delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor 
+cum soluta nobis eleifend option congue nihil imperdiet doming id quod 
+mazim placerat facer possim assum.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet
+ doming id quod mazim placerat facer possim assum.
+</p>
+</body>
+</html>
+```
+
+# 网格视图
+
+使用网格视图有助于我们设计网页。这让我们向网页添加元素变的更简单
+
+## 创建响应式网格视图
+
+首先确保所有的 HTML 元素都有 **box-sizing** 属性且设置为 **border-box**
+
+确保边距和边框包含在元素的宽度和高度间
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Chania</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3 menu">
+<ul>
+<li>The Flight</li>
+<li>The City</li>
+<li>The Island</li>
+<li>The Food</li>
+</ul>
+</div>
+
+<div class="col-9">
+<h1>The City</h1>
+<p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+<p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+</div>
+</body>
+</html>
+```
+
+# 媒体查询（@media）
+
+使用 @media 查询，你可以针对不同的媒体类型定义不同的样式
+
+如果浏览器窗口小于 500px, 背景将变为浅蓝色：
+
+```css
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
+```
+
+## 添加断点
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Chania</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3 menu">
+<ul>
+<li>The Flight</li>
+<li>The City</li>
+<li>The Island</li>
+<li>The Food</li>
+</ul>
+</div>
+
+<div class="col-6">
+<h1>The City</h1>
+<p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+</div>
+<div class="col-3 right">
+<div class="aside">
+<h2>What?</h2>
+<p>Chania is a city on the island of Crete.</p>
+<h2>Where?</h2>
+<p>Crete is a Greek island in the Mediterranean Sea.</p>
+<h2>How?</h2>
+<p>You can reach Chania airport from all over Europe.</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+</body>
+</html>
+```
+
+## 为移动端优先设计
+
+移动端优先意味着在设计桌面和其他设备时优先考虑移动端的设计
+
+这就意味着我们必须对 CSS 做一些改变
+
+在屏幕小于 768px 进行样式修改，同样在屏幕宽度大于 768px 时也需要修改样式。以下是移动端优先实例：
+
+```css
+/* 为移动端设计: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+```
+
+## 横屏/竖屏
+
+结合CSS媒体查询,可以创建适应不同设备的方向(横屏landscape、竖屏portrait等)的布局
+
+语法：
+
+```css
+orientation：portrait | landscape
+```
+
+- **portrait：**指定输出设备中的页面可见区域高度大于或等于宽度
+- **landscape：** 除portrait值情况外，都是landscape
+
+```css
+@media only screen and (orientation: landscape) {
+    body {
+        background-color: lightblue;
+    }
+}
+```
+
+# 图片
+
+## 使用width属性
+
+如果 width 属性设置为 100%，图片会根据上下范围实现响应式功能：
+
+```css
+img { 
+    width: 100%; 
+    height: auto; 
+}
+```
+
+## 使用max-width属性
+
+如果 max-width 属性设置为 100%, 图片永远不会大于其原始大小：
+
+```css
+img { 
+    max-width: 100%; 
+    height: auto; 
+}
+```
+
+## 背景图片
+
+背景图片可以响应调整大小或缩放
+
+以下是三个不同的方法：
+
+1. 如果 background-size 属性设置为 "contain", 背景图片将按比例自适应内容区域。图片保持其比例不变：
+
+```css
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+div {
+    width: 100%;
+    height: 400px;
+    background-image: url('/statics/images/course/img_flowers.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid red;
+}
+</style>
+</head>
+<body>
+
+<p>调整浏览器大小查看效果。</p>
+
+<div></div>
+
+</body>
+</html>
+```
+
+2. 如果 background-size 属性设置为 "100% 100%" ，背景图片将延展覆盖整个区域：
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+div {
+    width: 100%;
+    height: 400px;
+    background-image: url('/statics/images/course/img_flowers.jpg');
+    background-size: 100% 100%;
+    border: 1px solid red;
+}
+</style>
+</head>
+<body>
+
+<p>调整浏览器大小查看效果。</p>
+
+<div></div>
+
+</body>
+</html>
+```
+
+3. 如果 background-size 属性设置为 "cover"，则会把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。注意该属性保持了图片的比例因此 背景图像的某些部分无法显示在背景定位区域中。
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+div {
+    width: 100%;
+    height: 400px;
+    background-image: url('/statics/images/course/img_flowers.jpg');
+    background-size: cover;
+    border: 1px solid red;
+}
+</style>
+</head>
+<body>
+
+<p>调整浏览器大小查看效果。</p>
+
+<div></div>
+
+</body>
+</html>
+```
+
+## 不同设备显示不同图片
+
+大尺寸图片可以显示在大屏幕上，但在小屏幕上确不能很好显示。我们没有必要在小屏幕上去加载大图片，这样很影响加载速度。所以我们可以使用媒体查询，根据不同的设备显示不同的图片
+
+```css
+/* For width smaller than 400px: */ 
+body { 
+    background-image: url('img_smallflower.jpg'); 
+} 
+
+/* For width 400px and larger: */ 
+@media only screen and (min-width: 400px) { 
+    body { 
+        background-image: url('img_flowers.jpg'); 
+    } 
+}
+```
+
+你可以使用媒体查询的 min-device-width 替代 min-width 属性，它将检测的是设备宽度而不是浏览器宽度。浏览器大小重置时，图片大小不会改变
+
+```html
+/* 设备小于 400px: */ 
+body { 
+    background-image: url('img_smallflower.jpg'); 
+} 
+
+/* 设备大于 400px (也等于): */ 
+@media only screen and (min-device-width: 400px) { 
+    body { 
+        background-image: url('img_flowers.jpg'); 
+    } 
+}
+```
+
+## Html5的'<picture>'元素
+
+HTML5 的 <picture>元素可以设置多张图片
+
+<picture>元素类似于<video> 和 <audio> 元素。可以设备不同的资源，第一个设置的资源为首选使用的：
+
+```css
+<picture> 
+  <source srcset="img_smallflower.jpg" media="(max-width: 400px)"> 
+  <source srcset="img_flowers.jpg"> 
+  <img src="img_flowers.jpg" alt="Flowers"> 
+</picture>
+```
+
+`srcset` 属性的必须的，定义了图片资源
+
+`media` 属性是可选的
+
+
+
 
 
