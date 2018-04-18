@@ -402,9 +402,9 @@ with a metropolitan area of over 13 million inhabitants.
 
 ## 分类块级元素
 
-HTML <div> 元素是*块级元素*。它能够用作其他 HTML 元素的容器
+HTML &lt;div> 元素是*块级元素*。它能够用作其他 HTML 元素的容器
 
-设置 <div> 元素的类，使我们能够为相同的 <div> 元素设置相同的类
+设置 &lt;div> 元素的类，使我们能够为相同的 &lt;div> 元素设置相同的类
 
 ```html
 <!DOCTYPE html>
@@ -446,9 +446,9 @@ and the most populous metropolitan area in the world.</p>
 
 ## 分类行级元素
 
-HTML <span> 元素是行内元素，能够用作文本的容器
+HTML &lt;span> 元素是行内元素，能够用作文本的容器
 
-设置 <span> 元素的类，能够为相同的 <span> 元素设置相同的样式
+设置 &lt;span> 元素的类，能够为相同的 &lt;span> 元素设置相同的样式
 
 ```html
 <!DOCTYPE html>
@@ -468,9 +468,9 @@ HTML <span> 元素是行内元素，能够用作文本的容器
 
 # 布局
 
-## 使用<div>元素的HTML布局
+## 使用&lt;div>元素的HTML布局
 
-<div> 元素常用作布局工具，因为能够轻松地通过 CSS 对其进行定位
+&lt;div> 元素常用作布局工具，因为能够轻松地通过 CSS 对其进行定位
 
 ```html
 <!DOCTYPE html>
@@ -623,11 +623,11 @@ Copyright W3Schools.com
 
 ## 使用表格的HTML布局
 
-注释：<table> 元素不是作为布局工具而设计的
+注释：&lt;table> 元素不是作为布局工具而设计的
 
-<table> 元素的作用是显示表格化的数据
+&lt;table> 元素的作用是显示表格化的数据
 
-使用 <table> 元素能够取得布局效果，因为能够通过 CSS 设置表格元素的样式：
+使用 &lt;table> 元素能够取得布局效果，因为能够通过 CSS 设置表格元素的样式：
 
 ```html
 <body>
@@ -672,7 +672,7 @@ table.lamp td {
 
 ## 框架结构标签
 
-- 框架结构标签（<frameset>）定义如何将窗口分割为框架
+- 框架结构标签（&lt;frameset>）定义如何将窗口分割为框架
 - 每个 frameset 定义了一系列行*或*列
 - rows/columns 的值规定了每行或每列占据屏幕的面积
 
@@ -680,7 +680,7 @@ frameset 标签也被某些文章和书籍译为框架集
 
 ## 框架标签
 
-<Frame> 标签定义了放置在每个框架中的 HTML 文档
+&lt;Frame> 标签定义了放置在每个框架中的 HTML 文档
 
 在下面的这个例子中，我们设置了一个两列的框架集。第一列被设置为占据浏览器窗口的 25%。第二列被设置为占据浏览器窗口的 75%
 
@@ -714,7 +714,7 @@ iframe 可用作链接的目标（target）
 
 ## script元素
 
-<script> 标签用于定义客户端脚本，比如 JavaScript
+&lt;script> 标签用于定义客户端脚本，比如 JavaScript
 
 script 元素既可包含脚本语句，也可通过 src 属性指向外部脚本文件
 
@@ -730,7 +730,7 @@ document.write("Hello World!")
 
 ## noscript标签
 
-<noscript> 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时
+&lt;noscript> 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时
 
 ```html
 <script type="text/javascript">
