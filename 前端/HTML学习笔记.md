@@ -743,13 +743,13 @@ document.write("Hello World!")
 
 ## head元素
 
-<head> 元素是所有头部元素的容器。<head> 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等
+&lt;head> 元素是所有头部元素的容器。&lt;head> 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等
 
-以下标签都可以添加到 head 部分：<title>、<base>、<link>、<meta>、<script> 以及 <style>
+以下标签都可以添加到 head 部分：&lt;title>、&lt;base>、&lt;link>、&lt;meta>、&lt;script> 以及 &lt;style>
 
 ## title元素
 
-<title> 标签定义文档的标题。
+&lt;title&gt; 标签定义文档的标题。
 
 title 元素在所有 HTML/XHTML 文档中都是必需的。
 
@@ -776,7 +776,7 @@ The content of the document......
 
 ## base元素
 
-<base> 标签为页面上的所有链接规定默认地址或默认目标（target）
+&lt;base&gt; 标签为页面上的所有链接规定默认地址或默认目标（target）
 
 ```html
 <head>
@@ -787,9 +787,9 @@ The content of the document......
 
 ## link元素
 
-<link> 标签定义文档与外部资源之间的关系
+&lt;link&gt; 标签定义文档与外部资源之间的关系
 
-<link> 标签最常用于连接样式表
+&lt;link&gt; 标签最常用于连接样式表
 
 ```html
 <head>
@@ -818,7 +818,7 @@ p {color:blue}
 
 HTML 表单用于收集用户输入
 
-<form> 元素定义 HTML 表单
+&lt;form&gt; 元素定义 HTML 表单
 
 ```html
 <form>
@@ -832,9 +832,9 @@ form elements
 
 ### input元素
 
-*<input>* 元素是最重要的*表单元素*
+*&lt;input&gt; 元素是最重要的*表单元素*
 
-<input> 元素有很多形态，根据不同的 *type* 属性
+&lt;input&gt; 元素有很多形态，根据不同的 type 属性
 
 | 类型   | 描述                                 |
 | ------ | ------------------------------------ |
@@ -844,7 +844,7 @@ form elements
 
 #### 文本输入
 
-*<input type="text">* 定义用于*文本输入*的单行输入字段
+*&lt;input type="text"&gt; 定义用于*文本输入*的单行输入字段
 
 ```html
 <form>
@@ -858,7 +858,7 @@ form elements
 
 #### 单选按钮输入
 
-*<input type="radio">* 定义*单选按钮*
+*&lt;input type="radio"&gt; 定义*单选按钮*
 
 单选按钮允许用户在有限数量的选项中选择其中之一
 
@@ -872,7 +872,7 @@ form elements
 
 #### 提交按钮
 
-*<input type="submit">* 定义用于向*表单处理程序*（form-handler）*提交*表单的按钮
+*&lt;input type="submit"&gt; 定义用于向*表单处理程序*（form-handler）*提交*表单的按钮
 
 表单处理程序通常是包含用来处理输入数据的脚本的服务器页面
 
@@ -892,7 +892,7 @@ Last name:<br>
 
 #### password
 
-*<input type="password">* 定义*密码字段*
+*&lt;input type="password"&gt; 定义*密码字段*
 
 ```html
 <form>
@@ -906,7 +906,7 @@ Last name:<br>
 
 ####   复选框
 
-<input type="checkbox"> 定义复选框
+&lt;input type="checkbox"&gt; 定义复选框
 
 复选框允许用户在有限数量的选项中选择零个或多个选项
 
@@ -984,18 +984,18 @@ Last name:<br>
 
 ### fieldset组合表单数据
 
-*<fieldset>* 元素组合表单中的相关数据
+&lt;fieldset&gt;* 元素组合表单中的相关数据
 
-*<legend>* 元素为 <fieldset> 元素定义标题
+*&lt;legend&gt; 元素为 &lt;fieldset&gt; 元素定义标题
 
 ```html
 <form action="action_page.php">
 <fieldset>
 <legend>Personal information:</legend>
-First name:<br>
+First name:<br/>
 <input type="text" name="firstname" value="Mickey">
 <br>
-Last name:<br>
+Last name:<br/>
 <input type="text" name="lastname" value="Mouse">
 <br><br>
 <input type="submit" value="Submit"></fieldset>
@@ -1017,7 +1017,7 @@ Last name:<br>
 
 ### select元素（下拉列表）
 
-*<select>* 元素定义*下拉列表*
+*&lt;select&gt; 元素定义*下拉列表*
 
 ```html
 <select name="cars">
@@ -1028,7 +1028,7 @@ Last name:<br>
 </select>
 ```
 
-*<option>* 元素定义待选择的选项。
+*&lt;option*&gt; 元素定义待选择的选项。
 
 列表通常会把首个选项显示为被选选项。
 
@@ -1040,7 +1040,7 @@ Last name:<br>
 
 ### textarea 元素
 
-*<textarea>* 元素定义多行输入字段（*文本域*）
+*&lt;textarea&gt; 元素定义多行输入字段（*文本域*）
 
 ```html
 <textarea name="message" rows="10" cols="30">
@@ -1050,7 +1050,7 @@ Last name:<br>
 
 ### button 元素
 
-*<button>* 元素定义可点击的*按钮*
+*&lt;button&gt;* 元素定义可点击的*按钮*
 
 ```html
 <button type="button" onclick="alert('Hello World!')">Click Me!</button>
@@ -1058,11 +1058,11 @@ Last name:<br>
 
 ### HTML5 detailst 元素
 
-*<datalist>* 元素为 <input> 元素规定预定义选项列表
+*&lt;datalist&gt;* 元素为 &lt;input&gt; 元素规定预定义选项列表
 
 用户会在他们输入数据时看到预定义选项的下拉列表
 
-<input> 元素的 *list* 属性必须引用 <datalist> 元素的 *id* 属性
+&lt;input&gt; 元素的 *list* 属性必须引用 &lt;datalist&gt; 元素的 *id* 属性
 
 ```html
 <form action="action_page.php">
@@ -1099,10 +1099,10 @@ Last name:<br>
 
 ```html
 <form action="">
- First name:<br>
+ First name:<br/>
 <input type="text" name="firstname" value="John" readonly>
 <br>
- Last name:<br>
+ Last name:<br/>
 <input type="text" name="lastname">
 </form> 
 ```
@@ -1133,7 +1133,7 @@ readonly 属性不需要值。它等同于 readonly="readonly"
 
 ### HTML5 属性
 
-HTML5 为 <input> 增加了如下属性：
+HTML5 为 &lt;input&gt; 增加了如下属性：
 
 - autocomplete
 - autofocus
@@ -1152,7 +1152,7 @@ HTML5 为 <input> 增加了如下属性：
 - required
 - step
 
-并为 <form> 增加如需属性：
+并为 &lt;form&gt; 增加如下属性：
 
 - autocomplete
 - novalidate
