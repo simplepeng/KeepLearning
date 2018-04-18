@@ -2,40 +2,40 @@
 
 ## 画布 元素（Canvas）
 
-* <canvas> 标签定义图形，比如图表和其他图像。该标签基于 JavaScript 的绘图 API
+<canvas> 标签定义图形，比如图表和其他图像。该标签基于 JavaScript 的绘图 API
 
 ## 多媒体元素
 
-* <audio> 定义音频内容
-* <video> 定义视频（video 或者 movie）
-* <source>  定义多媒体资源 <video> 和 <audio>
-* <embed> 定义嵌入的内容，比如插件
-* <track> 为诸如 <video> 和 <audio> 元素之类的媒介规定外部文本轨道
+<audio> 定义音频内容
+<video> 定义视频（video 或者 movie）
+<source>  定义多媒体资源 <video> 和 <audio>
+<embed> 定义嵌入的内容，比如插件
+<track> 为诸如 <video> 和 <audio> 元素之类的媒介规定外部文本轨道
 
 ## 表单元素
 
-* <datalist>  定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值
-* <keygen> 规定用于表单的密钥对生成器字段
-* <output> 定义不同类型的输出，比如脚本的输出
+<datalist>  定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值
+<keygen> 规定用于表单的密钥对生成器字段
+<output> 定义不同类型的输出，比如脚本的输出
 
 ## 语义和结构元素
 
-* <article> 定义页面独立的内容区域
+<article> 定义页面独立的内容区域
 
 ## 已移除的元素
 
-- <acronym>
-- <applet>
-- <basefont>
-- <big>
-- <center>
-- <dir>
-- <font>
-- <frame>
-- <frameset>
-- <noframes>
-- <strike>
-- <tt>
+<acronym>
+<applet>
+<basefont>
+<big>
+<center>
+<dir>
+<font>
+<frame>
+<frameset>
+<noframes>
+<strike>
+<tt>
 
 # Canvas
 
