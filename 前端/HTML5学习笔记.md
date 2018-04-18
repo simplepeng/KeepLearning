@@ -768,3 +768,168 @@ FALLBACK:
 
 web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行
 
+## 检查浏览器是否支持Web Workers
+
+在创建 web worker 之前，请检测用户的浏览器是否支持它
+
+```javascript
+if(typeof(Worker)!=="undefined")
+   {
+   // 是的! Web worker 支持!
+   // 一些代码.....
+   }
+ else
+   {
+   // //抱歉! Web Worker 不支持
+   } 
+```
+
+## 创建Web Worker 文件
+
+必须为外部 JavaScript 文件
+
+```javascript
+var i=0;
+
+ function timedCount()
+ {
+ i=i+1;
+ postMessage(i);
+ setTimeout("timedCount()",500);
+ }
+
+ timedCount();
+```
+
+## 创建 Web Worker 对象
+
+下面的代码检测是否存在 worker，如果不存在，- 它会创建一个新的 web worker 对象，然后运行 "demo_workers.js" 中的代码
+
+```javascript
+ if(typeof(w)=="undefined")
+   {
+   w=new Worker("demo_workers.js");
+   }
+```
+
+向 web worker 添加一个 "onmessage" 事件监听器
+
+```javascript
+ w.onmessage=function(event){
+ document.getElementById("result").innerHTML=event.data;
+ };
+```
+
+## 终止 Web Worker
+
+当我们创建 web worker 对象后，它会继续监听消息（即使在外部脚本完成之后）直到其被终止为止
+
+```javascript
+ w.terminate(); 
+```
+
+## Web Worker 和 DOM
+
+由于 web worker 位于外部文件中，它们无法访问下例 JavaScript 对象：
+
+- [window 对象](https://www.w3cschool.cn/javascript_guide/javascript_guide-9f8e269x.html)
+- [document 对象](https://www.w3cschool.cn/jsref/dom-obj-document.html)
+- parent 对象
+
+
+# WebSocket
+
+WebSocket是HTML5开始提供的一种在单个 TCP 连接上进行全双工通讯的协议
+
+在WebSocket API中，浏览器和服务器只需要做一个握手的动作，然后，浏览器和服务器之间就形成了一条快速通道。两者之间就直接可以数据互相传送
+
+浏览器通过 JavaScript 向服务器发出建立 WebSocket 连接的请求，连接建立以后，客户端和服务器端就可以通过 TCP 连接直接交换数据
+
+当你获取 Web Socket 连接后，你可以通过 **send()** 方法来向服务器发送数据，并通过 **onmessage** 事件来接收服务器返回的数据
+
+```javascript
+var Socket = new WebSocket(url, [protocal] );
+```
+
+第一个参数 url, 指定连接的 URL。第二个参数 protocol 是可选的，指定了可接受的子协议
+
+## 属性
+
+| Socket.readyState     | **readyState** 表示连接状态，可以是以下值：0 - 表示连接尚未建立。1 - 表示连接已建立，可以进行通信。2 - 表示连接正在进行关闭。3 - 表示连接已经关闭或者连接不能打开。 |
+| --------------------- | ------------------------------------------------------------ |
+| Socket.bufferedAmount | 只读属性 **bufferedAmount** 已被 send() 放入正在队列中等待传输，但是还没有发出的 UTF-8 文本字节数。 |
+
+## 事件
+
+| 事件    | 事件处理程序     | 描述                       |
+| ------- | ---------------- | -------------------------- |
+| open    | Socket.onopen    | 连接建立时触发             |
+| message | Socket.onmessage | 客户端接收服务端数据时触发 |
+| error   | Socket.onerror   | 通信发生错误时触发         |
+| close   | Socket.onclose   | 连接关闭时触发             |
+
+## 方法
+
+| 方法           | 描述             |
+| -------------- | ---------------- |
+| Socket.send()  | 使用连接发送数据 |
+| Socket.close() | 关闭连接         |
+
+## 实例
+
+```html
+<!DOCTYPE HTML>
+<html>
+   <head>
+   <meta charset="utf-8">
+   <title>W3Cschool教程(w3cschool.cn)</title>
+	
+      <script type="text/javascript">
+         function WebSocketTest()
+         {
+            if ("WebSocket" in window)
+            {
+               alert("您的浏览器支持 WebSocket!");
+               
+               // 打开一个 web socket
+               var ws = new WebSocket("ws://localhost:9998/echo");
+				
+               ws.onopen = function()
+               {
+                  // Web Socket 已连接上，使用 send() 方法发送数据
+                  ws.send("发送数据");
+                  alert("数据发送中...");
+               };
+				
+               ws.onmessage = function (evt) 
+               { 
+                  var received_msg = evt.data;
+                  alert("数据已接收...");
+               };
+				
+               ws.onclose = function()
+               { 
+                  // 关闭 websocket
+                  alert("连接已关闭..."); 
+               };
+            }
+            
+            else
+            {
+               // 浏览器不支持 WebSocket
+               alert("您的浏览器不支持 WebSocket!");
+            }
+         }
+      </script>
+		
+   </head>
+   <body>
+   
+      <div id="sse">
+         <a href="javascript:WebSocketTest()">运行 WebSocket</a>
+      </div>
+      
+   </body>
+</html>
+```
+
