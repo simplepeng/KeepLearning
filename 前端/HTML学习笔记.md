@@ -4,16 +4,16 @@
 * HTML 是描述网页的语言
 
 - HTML 指的是超文本标记语言 (**H**yper **T**ext **M**arkup **L**anguage)
-- <html> 与 </html> 之间的文本描述网页
-- <body> 与 </body> 之间的文本是可见的页面内容
-- <h1> 与 </h1> 之间的文本被显示为标题
-- <p> 与 </p> 之间的文本被显示为段落
+- &lt;html&gt; 与 &lt;/html&gt;  之间的文本描述网页
+- &lt;body&gt;  与 &lt;/body&gt;  之间的文本是可见的页面内容
+- &lt;h1&gt;  与 &lt;/h1&gt;  之间的文本被显示为标题
+- &lt;p&gt;  与 &lt;/p&gt;  之间的文本被显示为段落
 
 # 基础
 
 ## 标题
 
-HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的
+HTML 标题（Heading）是通过 &lt;h1&gt;  - &lt;h6&gt;  等标签进行定义的
 
 ```html
 <h1>This is a heading</h1>
@@ -23,7 +23,7 @@ HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的
 
 ## 段落
 
-HTML 段落（paragraph）是通过 <p> 标签进行定义的
+HTML 段落（paragraph）是通过 &lt;p&gt; 标签进行定义的
 
 ```html
 <p>This is a paragraph.</p>
@@ -32,7 +32,7 @@ HTML 段落（paragraph）是通过 <p> 标签进行定义的
 
 ## 链接
 
-HTML 链接（hypertext reference）是通过 <a> 标签进行定义的
+HTML 链接（hypertext reference）是通过 &lt;a&gt; 标签进行定义的
 
 ```html
 <a href="http://www.w3school.com.cn">This is a link</a>
@@ -192,10 +192,10 @@ This text is in Times and green</p>
 
 | 标签                 | 描述               |
 | -------------------- | ------------------ |
-| <center>             | 定义居中的内容。   |
-| <font> 和 <basefont> | 定义 HTML 字体。   |
-| <s> 和 <strike>      | 定义删除线文本     |
-| <u>                  | 定义下划线文本     |
+| &lt;center&gt;             | 定义居中的内容。   |
+| &lt;font&gt; 和 &lt;basefont&gt; | 定义 HTML 字体。   |
+| &lt;s&gt; 和 &lt;strike&gt;      | 定义删除线文本     |
+| &lt;u&gt;                  | 定义下划线文本     |
 | 属性                 | 描述               |
 | align                | 定义文本的对齐方式 |
 | bgcolor              | 定义背景颜色       |
@@ -221,7 +221,7 @@ This text is in Times and green</p>
 
 ## 内部样式表
 
-当单个文件需要特别样式时，就可以使用内部样式表。你可以在 head 部分通过 <style> 标签定义内部样式表
+当单个文件需要特别样式时，就可以使用内部样式表。你可以在 head 部分通过 &lt;style&gt; 标签定义内部样式表
 
 ```html
 <head>
@@ -243,7 +243,7 @@ This is a paragraph
 ```
 # 表格
 
-表格由 <table> 标签来定义。每个表格均有若干行（由 <tr> 标签（table row）定义），每行被分割为若干单元格（由 <td> 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等
+表格由 &lt;table&gt; 标签来定义。每个表格均有若干行（由  &lt;tr&gt; 标签（table row）定义），每行被分割为若干单元格（由  &lt;td&gt; 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等
 
 ```html
 <table border="1">
@@ -264,7 +264,7 @@ border 属性定义边框的粗细，不设置就没有边框
 
 ## 表头
 
-表格的表头使用 <th> 标签（table heading）进行定义
+表格的表头使用 &lt;th&gt; 标签（table heading）进行定义
 
 # 列表
 
@@ -272,7 +272,7 @@ border 属性定义边框的粗细，不设置就没有边框
 
 无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记
 
-无序列表始于 <ul> 标签（unordered list）。每个列表项始于 <li> （list）
+无序列表始于 &lt;ul&gt; 标签（unordered list）。每个列表项始于 &lt;li&gt; （list）
 
 ```html
 <ul>
@@ -290,7 +290,7 @@ border 属性定义边框的粗细，不设置就没有边框
 
 同样，有序列表也是一列项目，列表项目使用数字进行标记
 
-有序列表始于 <ol> 标签（ordered list）。每个列表项始于 <li> 标签
+有序列表始于 &lt;ol&gt; 标签（ordered list）。每个列表项始于 <li> 标签
 
 ```html
 <ol>
@@ -308,7 +308,7 @@ border 属性定义边框的粗细，不设置就没有边框
 
 自定义列表不仅仅是一列项目，而是项目及其注释的组合
 
-自定义列表以 <dl> 标签（definition list）开始。每个自定义列表项以 <dt> 开始。每个自定义列表项的定义以 <dd> 开始
+自定义列表以 &lt;dl&gt; 标签（definition list）开始。每个自定义列表项以 <dt> 开始。每个自定义列表项的定义以 &lt;dd&gt; 开始
 
 ```html
 <dl>
