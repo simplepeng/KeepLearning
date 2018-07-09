@@ -2,9 +2,9 @@
 
 ## 为什么需要架构组件
 
-> 之前有多少人是把所有代码都写在 **Activity**里面？几乎每个人都干过一次，对吧？
+> 之前有多少人是把所有代码都写在 **Activity**里面？几乎每个人都干过一次，对吧！
 
-Android 框架允许很自由的做到上面这点，但是后来我们意识到了这么做带来的问题，这使得我们的代码变得臃肿不堪，难以维护。所以才出现了像mvp，mvvm这样不同的架构模式，这使得我们可以编写更健壮的和可测试的代码。但是Android Team并没有这样的官方组件。而且，我们作为开发者更喜欢争论哪种架构模式更好。
+Android 框架层面上允许自由的做到上面这点，但是后来我们意识到了这么做会带来的问题，这使得我们的代码变得臃肿不堪，难以维护。所以才出现了像mvp，mvvm这样不同的架构模式，这使得我们可以编写更健壮的和可测试的代码。但是Android Team并没有这样的官方组件。而且，我们作为开发者更喜欢争论哪种架构模式更好。
 
 直到Android团队意识到他们需要**明确表态**并告诉我们应如何构建应用程序，其结果就是发布架构组件和相关指南。
 
@@ -56,14 +56,28 @@ LiveData的优点：
 
 Room提供了一个SQLite的抽象层，可以在充分利用SQLite的同时流畅访问的数据库。
 
-简而言之，它是SQLite数据库的一个ORM，它意味着你可以直接将对象保存到数据库中，并且Room会很好地将对象正确保存到数据库中。
+简而言之，它就像SQLite数据库的一个ORM，它意味着你可以直接将对象保存到数据库中，并且Room会很好地将对象正确保存到数据库中。
 
 Room的优点：
 
-* 原始的SQL查询，可以在编译时查询
+* 原始的SQL查询
 * 消除了在SQL查询和Java数据对象之间转换的样板代码
 * 不需要写Cursor或Loader
 
 ## 结论
 
 最后，我觉得这是自构建Android应用程序以来的最好方式。虽然有些迟到，但是总比缺席好。我们可以用这些组件构建出令人惊讶的应用。
+
+### 参考
+
+https://developer.android.com/topic/libraries/architecture/
+
+### 其他
+
+[Android架构组件(Architecture Components)介绍](https://blog.csdn.net/qq_21793463/article/details/80841182)
+
+[Android架构组件—LiveData](https://blog.csdn.net/qq_21793463/article/details/80841186)
+
+[Android架构组件—ViewModel](https://blog.csdn.net/qq_21793463/article/details/80841196)
+
+[Android架构组件Room的使用](https://blog.csdn.net/qq_21793463/article/details/78905316)

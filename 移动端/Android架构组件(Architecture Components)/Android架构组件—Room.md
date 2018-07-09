@@ -401,3 +401,7 @@ android {
 ```
 
 您应该将导出的JSON文件(表示数据库的模式历史记录)存储在您的版本控制系统中，因为它允许为测试目的创建您的数据库的旧版本
+
+### 参考
+
+https://developer.android.com/training/data-storage/room/

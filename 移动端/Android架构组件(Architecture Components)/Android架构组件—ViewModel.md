@@ -2,9 +2,9 @@
 
 ## 前言
 
-我们中的大多数人遇到了旋转手机并且应用程序崩溃或UI失去状态的问题。
+我们中的大多数人都遇到过旋转手机并且应用程序崩溃或UI失去状态的问题。
 
-解决它最简单的办法就是配置`Activity`到`potrait`模式，但这是一个很糟糕的做法。
+解决它最简单的办法就是配置`Activity`为`potrait`模式，但这是一个很糟糕的做法。
 
 幸运的是，Android团队在2017年Google I / O期间发布了ViewModel。
 
@@ -16,7 +16,7 @@
 * 处理`Activity`/ `Fragment`和应用程序的其余部分之间的通信
 * 在配置更改期间保留数据
 
-> 注意：它**永远**不会访问您的视图层次结构或保留Activity或Fragment的引用。
+> 注意：它**永远**应该不能访问您的视图层次结构或保留Activity或Fragment的引用。
 
 ## 添加组件到项目中
 
@@ -36,27 +36,27 @@ allprojects {
 在app下的`build.gradle`添加
 
 ```groovy
-dependencies {
+def lifecycle_version = "1.1.1"
+
     // ViewModel and LiveData
-    implementation "android.arch.lifecycle:extensions:1.1.1"
-    // alternatively, just ViewModel
-    implementation "android.arch.lifecycle:viewmodel:1.1.1"
-    // alternatively, just LiveData
-    implementation "android.arch.lifecycle:livedata:1.1.1"
-    
-    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
-}
-```
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    // alternatively - just ViewModel
+    implementation "android.arch.lifecycle:viewmodel:$lifecycle_version" // use -ktx for Kotlin
+    // alternatively - just LiveData
+    implementation "android.arch.lifecycle:livedata:$lifecycle_version"
+    // alternatively - Lifecycles only (no ViewModel or LiveData).
+    //     Support library depends on this lightweight import
+    implementation "android.arch.lifecycle:runtime:$lifecycle_version"
 
-切换到支持java8
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
+    // alternately - if using Java8, use the following instead of compiler
+    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
 
-如果您的app使用java8，我们推荐使用下面这个库来代替`android.arch.lifecycle:compiler`
+    // optional - ReactiveStreams support for LiveData
+    implementation "android.arch.lifecycle:reactivestreams:$lifecycle_version"
 
-```groovy
-dependencies {
-    // Java8 support for Lifecycles
-    implementation "android.arch.lifecycle:common-java8:1.1.1"
-}
+    // optional - Test helpers for LiveData
+    testImplementation "android.arch.core:core-testing:$lifecycle_version"
 ```
 
 ##  实现一个简单的ViewModel
@@ -66,14 +66,14 @@ public class MyViewModel extends ViewModel {
     private MutableLiveData<List<User>> users;
     public LiveData<List<User>> getUsers() {
         if (users == null) {
-            users = new MutableLiveData<List<Users>>();
+            users = new MutableLiveData<List<User>>();
             loadUsers();
         }
         return users;
     }
 
     private void loadUsers() {
-        // Do an asynchronous operation to fetch users.
+        // 执行一步操作获取users数据
     }
 }
 ```
@@ -83,12 +83,12 @@ public class MyViewModel extends ViewModel {
 ```java
 public class MyActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
-        // Create a ViewModel the first time the system calls an activity's onCreate() method.
-        // Re-created activities receive the same MyViewModel instance created by the first activity.
+        // 在系统第一次调用onCreate()方法时创建一个ViewModel
+        // 重新创建
 
         MyViewModel model = ViewModelProviders.of(this).get(MyViewModel.class);
         model.getUsers().observe(this, users -> {
-            // update UI
+            // 更新UI
         });
     }
 }
@@ -205,7 +205,9 @@ ViewModels对于从用户界面**分离数据**非常有用，这些**数据**�
 
 > 利用ViewModels，您无需担心在屏幕旋转或其他配置更改期间应用程序崩溃或丢失UI状态
 
+### 参考
 
+https://developer.android.com/topic/libraries/architecture/viewmodel
 
 
 
