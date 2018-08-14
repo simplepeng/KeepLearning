@@ -1,6 +1,6 @@
 # 简介
 
-* CSS 指 层叠样式表 (Cascading Style Sheets)
+* CSS 指层叠样式表 (Cascading Style Sheets)
 * 样式定义**如何显示** HTML 元素
 * 样式通常存储在**样式表**中
 * 把样式添加到 HTML 4.0 中，是为了**解决内容与表现分离的问题**
@@ -288,7 +288,7 @@ background-position:right top;
 
 ```css
 body        
-  {        
+{        
    background-image:url('img_tree.png');        
    background-repeat:no-repeat;        
   background-position:66% 33%;        

@@ -145,8 +145,8 @@ SELECT 条件 FROM 数据源 GROUP BY 字段名
 SELECT 条件 FROM 数据源1 [INNER,LEFT,RIGHT]JOIN 数据源2;
 ```
 
-* **INNER JOIN（内连接,或等值连接）**：获取两个表中字段匹配关系的记录,可省略INNER关键字
-* **LEFT JOIN（左连接）：**获取左表所有记录，即使右表没有对应匹配的记录
+* **INNER JOIN（内连接,或等值连接）**：获取两个数据源中字段匹配关系的记录,可省略INNER关键字
+* **LEFT JOIN（左连接）：**获取左数据源所有记录，即使右数据源没有对应匹配的记录
 * **RIGHT JOIN（右连接）：** 与 LEFT JOIN 相反，一般很少用，LEFT JOIN 交换数据源可实现同样的效果
 
 ### 插入数据

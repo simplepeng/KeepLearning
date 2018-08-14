@@ -1,0 +1,86 @@
+
+-----css
+
+# 简介
+
+# 样式表
+
+	外部样式表
+	内部样式表
+	内联样式
+
+
+# 选择器
+ 
+ 	标签选择器(元素选择器)
+ 	id选择器
+ 	类选择器
+ 	属性选择器
+ 	后代选择器:descendant selector
+ 	子元素选择器:Child selectors
+ 	相邻兄弟选择器：Adjacent sibling selector
+ 	伪类选择器:Pseudo-classes
+ 	伪元素选择器
+ 	通配符选择器：universal selector
+ 	选择器分组
+
+ # 背景
+
+ 	背景颜色
+ 	背景图片
+ 	背景图片起始位置
+ 	背景图片重复模式
+ 	背景图片依附形式
+
+ # 文本
+
+ 	文本颜色：color
+ 	文本方向：direction
+ 	行高：line-height
+ 	字符间距：letter-spacing
+ 	对齐：text-align
+ 	修饰：text-decoration
+ 	缩进：text-indent
+ 	阴影：text-shadow
+ 	字符变换：text-transform
+ 	文本方向：unicode-bidi
+ 	字符间距：word-spacing
+ 	字符串中空白的处理：white-space
+
+ # 字体
+
+ 	字体系列：font-family
+ 	字体尺寸：font-size
+ 	字体风格：font-style
+ 	字体异体：font-variant
+ 	字体粗细：font-weight
+
+ # 链接
+
+ 	未被访问的链接：a:link
+ 	已被访问的链接：a:visited
+ 	鼠标位于链接上方：a：hover
+ 	链接被点击的时刻：a:active
+
+ # 列表
+
+ 	将图像设置为列表项标志：list-style-image
+ 	设置列表中列表项标志的位置：list-style-position
+ 	设置列表项标志的类型：list-style-type
+
+ # 定位
+
+ 	默认定位：static
+ 	相对定位：relative
+ 	绝对定位：absolute
+ 	浮动定位：float
+ 	固定定位：fixed
+
+ # 轮廓
+
+ 	轮廓颜色：outline-color
+ 	轮廓样式：outline-style
+ 	轮廓宽度：outline-widthoutline-width
+
+ # 盒子模型
+
