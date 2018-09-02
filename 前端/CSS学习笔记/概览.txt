@@ -1,38 +1,82 @@
 
 -----css
 
-# 简介
+1- 简介
 
-# 样式表
+2- 样式表
 
 	外部样式表
 	内部样式表
 	内联样式
 
-
-# 选择器
+3- 选择器
  
- 	标签选择器(元素选择器)
- 	id选择器
- 	类选择器
- 	属性选择器
- 	后代选择器:descendant selector
- 	子元素选择器:Child selectors
- 	相邻兄弟选择器：Adjacent sibling selector
- 	伪类选择器:Pseudo-classes
- 	伪元素选择器
- 	通配符选择器：universal selector
- 	选择器分组
+ 	标签选择器(元素选择器): h1 {} span {}
+ 	id选择器: #
+ 	类选择器: .
+ 	属性选择器: [href] {}
+ 	后代选择器:Descendant selector （父选择器 子选择器...{}，用空格隔开）
+ 	子元素选择器:Child selectors （选择器 > 子元素 {}，用大于符号隔开）
+ 	相邻兄弟选择器：Adjacent sibling selector （选择器 + 相邻选择器 {}，用加号隔开）
+ 	伪类选择器:Pseudo-classes （选择器 : 伪类 {}，用冒号隔开）
+	 例如：a:link {color: #FF0000}		/* 未访问的链接 */
+ 	伪元素选择器：selector:pseudo-element {}
+	 例如：:first-letter 向文本的第一个字母添加特殊样式
+	 	   :first-line 向文本的首行添加特殊样式
+		   :before 在元素之前添加内容
+		   :after 在元素之后添加内容
+ 	通配符选择器：universal selector（* {}）
+ 	选择器分组：选择器,选择器.... {}，用逗号隔开
 
- # 背景
+ 4- 背景
 
- 	背景颜色
- 	背景图片
- 	背景图片起始位置
- 	背景图片重复模式
- 	背景图片依附形式
-
- # 文本
+ 	背景颜色:background-color
+ 	背景图片:background-image
+	 		：url(xxx.png|jpeg...);
+	背景图片大小:background-size
+			:length //第一个值设置宽度，第二个值设置高度,如果只设置一个值，则第二个值会被设置为 "auto"
+			:percentage //以父元素的百分比来设置背景图像的宽度和高度，同上
+			:cover //把背景图像扩展至足够大，以使背景图像完全覆盖背景区域,背景图像的某些部分也许无法显示在背景定位区域中
+			:contain //把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域
+ 	背景图片起始位置:background-position
+	 		:默认值 0% 0%
+			:[top|center|right|bottom|left] //任意两个一组，如果只选择一个，第二个值将是center
+			:x% y% //按照百分比设置
+			:x y //任意单位都可，不限于px
+	定位模式:background-origin //background-origin 属性规定 background-position 属性相对于什么位置来定位
+			:padding-box //背景图像相对于内边距框来定位
+			:border-box //背景图像相对于边框盒来定位
+			:content-box //背景图像相对于内容框来定位
+	裁剪绘制区域：background-clip //background-clip 属性规定背景的绘制区域
+			:border-box //背景被裁剪到边框盒
+			:padding-box //背景被裁剪到内边距框
+			:content-box //背景被裁剪到内容框
+ 	背景图片重复模式:background-repeat
+			:repeat //默认。背景图像将在垂直方向和水平方向重复
+			:repeat-x //背景图像将在水平方向重复
+			:repeat-y //背景图像将在垂直方向重复
+			:no-repeat //背景图像将仅显示一次
+			:inherit //规定应该从父元素继承 background-repeat 属性的设置
+ 	背景图片依附形式:background-attachment
+			:scroll //默认值,背景图像会随着页面其余部分的滚动而移动
+			:fixed //当页面的其余部分滚动时，背景图像不会移动
+			:inherit //规定应该从父元素继承 background-attachment 属性的设置
+	简写属性：background: //简写属性在一个声明中设置所有的背景属性
+		{
+			background-color
+			background-position
+			background-size
+			background-repeat
+			background-origin
+			background-clip
+			background-attachment
+			background-image
+		}
+		body
+  		{ 
+  			background: #00FF00 url(bgimage.gif) no-repeat fixed top;
+  		}
+ 5- 文本
 
  	文本颜色：color
  	文本方向：direction
@@ -47,7 +91,7 @@
  	字符间距：word-spacing
  	字符串中空白的处理：white-space
 
- # 字体
+ 6- 字体
 
  	字体系列：font-family
  	字体尺寸：font-size
@@ -55,20 +99,20 @@
  	字体异体：font-variant
  	字体粗细：font-weight
 
- # 链接
+ 7- 链接
 
  	未被访问的链接：a:link
  	已被访问的链接：a:visited
  	鼠标位于链接上方：a：hover
  	链接被点击的时刻：a:active
 
- # 列表
+ 8- 列表
 
  	将图像设置为列表项标志：list-style-image
  	设置列表中列表项标志的位置：list-style-position
  	设置列表项标志的类型：list-style-type
 
- # 定位
+ 9- 定位
 
  	默认定位：static
  	相对定位：relative
@@ -76,11 +120,13 @@
  	浮动定位：float
  	固定定位：fixed
 
- # 轮廓
+ 10- 轮廓
 
  	轮廓颜色：outline-color
  	轮廓样式：outline-style
  	轮廓宽度：outline-widthoutline-width
 
- # 盒子模型
+ 11- 盒子模型
+
+ 12- display和visibility
 
