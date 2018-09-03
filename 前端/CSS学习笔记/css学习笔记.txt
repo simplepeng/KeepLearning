@@ -19,12 +19,12 @@
  	子元素选择器:Child selectors （选择器 > 子元素 {}，用大于符号隔开）
  	相邻兄弟选择器：Adjacent sibling selector （选择器 + 相邻选择器 {}，用加号隔开）
  	伪类选择器:Pseudo-classes （选择器 : 伪类 {}，用冒号隔开）
-	 例如：a:link {color: #FF0000}		/* 未访问的链接 */
+	 				例如：a:link {color: #FF0000}		/* 未访问的链接 */
  	伪元素选择器：selector:pseudo-element {}
-	 例如：:first-letter 向文本的第一个字母添加特殊样式
-	 	   :first-line 向文本的首行添加特殊样式
-		   :before 在元素之前添加内容
-		   :after 在元素之后添加内容
+	 				例如：:first-letter 向文本的第一个字母添加特殊样式
+	 	   				  :first-line 向文本的首行添加特殊样式
+		   				  :before 在元素之前添加内容
+		   				  :after 在元素之后添加内容
  	通配符选择器：universal selector（* {}）
  	选择器分组：选择器,选择器.... {}，用逗号隔开
 
@@ -76,20 +76,51 @@
   		{ 
   			background: #00FF00 url(bgimage.gif) no-repeat fixed top;
   		}
+
  5- 文本
 
  	文本颜色：color
  	文本方向：direction
- 	行高：line-height
- 	字符间距：letter-spacing
+	 	 		:ltr 	//默认。文本方向从左到右
+				:rtl 	//文本方向从右到左
+ 	行高：line-height //设置行间的距离（行高），不允许使用负值
+			:normal		//默认的，不设置即可
+			:number 	//设置数值，此数字会与当前的字体尺寸相乘来设置行间距，一般默认行高为1
+			:length 	//设置固定的行间距，大多数浏览器中默认行高大约是 20px
+			:% //百分比，在大多数浏览器中默认行高大约是 110% 到 120%
+ 	字符间距：letter-spacing //增加或减少字符间的空白（字符间距）,允许负值
+	 			:normal		//默认。规定字符间没有额外的空间
+				:length		//定义字符间的固定空间（允许使用负值）
  	对齐：text-align
- 	修饰：text-decoration
- 	缩进：text-indent
- 	阴影：text-shadow
- 	字符变换：text-transform
- 	文本方向：unicode-bidi
- 	字符间距：word-spacing
+	 		:left	//把文本排列到左边。默认值：由浏览器决定
+			:right	//把文本排列到右边
+			:center	//把文本排列到中间
+			:justify	//实现两端对齐文本效果
+ 	修饰：text-decoration //向文本添加修饰，例如删除线，下划线等
+	 		:none	//默认。定义标准的文本
+			:underline	//定义文本下的一条线，下划线
+			:overline	//定义文本上的一条线，上划线
+			:line-through	//定义穿过文本下的一条线，删除线
+			:blink	//定义闪烁的文本
+ 	缩进：text-indent //可以接受负值
+	 		:length //定义固定的缩进。默认值：0，单位都可，一般用em
+			:% //百分比
+ 	//阴影：text-shadow 		//设置文本阴影。CSS2 包含该属性，但是 CSS2.1 没有保留该属性
+ 	字符变换：text-transform	//控制文本的大小写
+	 			:none	//默认。定义带有小写字母和大写字母的标准的文本
+				:capitalize		//文本中的每个单词以大写字母开头
+				:uppercase		//定义仅有大写字母
+				:lowercase		//定义无大写字母，仅有小写字母
+ 	//文本方向：unicode-bidi
+ 	字间距：word-spacing 	//增加或减少单词间的空白（即字间隔）
+	 			:normal		//默认。定义单词间的标准空间
+				:length		//定义单词间的固定空间，px,em...
  	字符串中空白的处理：white-space
+	 						:normal		//默认。空白会被浏览器忽略
+							:pre		//空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签
+							:nowrap		//文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止
+							:pre-wrap	//保留空白符序列，但是正常地进行换行
+							:pre-line	//合并空白符序列，但是保留换行符
 
  6- 字体
 
@@ -128,5 +159,5 @@
 
  11- 盒子模型
 
- 12- display和visibility
+ 12- display 和 visibility
 
