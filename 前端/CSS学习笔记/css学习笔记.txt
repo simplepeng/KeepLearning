@@ -125,12 +125,40 @@
  6- 字体
 
  	字体系列：font-family
+	 			p {
+  					font-family:"Times New Roman",Georgia,Serif;
+  				}
+				  //可以把多个字体名称作为一个“回退”系统来保存。如果浏览器不支持第一个字体，
+				    则会尝试下一个
  	字体尺寸：font-size
- 	字体风格：font-style
+				:xx-small 	//把字体的尺寸设置为不同的尺寸，从 xx-small 到 xx-large，默认值：medium
+				x-small
+				small
+				medium
+				large
+				x-large
+				xx-large
+				:smaller	//把 font-size 设置为比父元素更小的尺寸
+				:larger		//把 font-size 设置为比父元素更大的尺寸
+				:length		//把 font-size 设置为一个固定的值，px,em...
+				:%			//把 font-size 设置为基于父元素的一个百分比值
+ 	字体风格：font-style	//该属性设置使用斜体、倾斜或正常字体
+	 			:normal		//默认值。浏览器显示一个标准的字体样式
+				:italic		//浏览器会显示一个斜体的字体样式
+				:oblique	//浏览器会显示一个倾斜的字体样式
  	字体异体：font-variant
+	 			:normal		//默认值。浏览器会显示一个标准的字体
+				:small-caps //浏览器会显示小型大写字母的字体
  	字体粗细：font-weight
+	 			:normal		//默认值。定义标准的字符
+				:bold		//定义粗体字符
+				:bolder		//定义更粗的字符
+				:lighter	//定义更细的字符
+				:100,200,300,400,500,600,700,800,900	//定义由粗到细的字符。400 等同于 normal，
+														  而 700 等同于 bold
+	简写属性：font		//http://www.w3school.com.cn/cssref/pr_font_font.asp
 
- 7- 链接
+ 7- 链接 		//http://www.w3school.com.cn/css/css_link.asp
 
  	未被访问的链接：a:link
  	已被访问的链接：a:visited
@@ -142,22 +170,40 @@
  	将图像设置为列表项标志：list-style-image
  	设置列表中列表项标志的位置：list-style-position
  	设置列表项标志的类型：list-style-type
+	简写属性：list-style
 
- 9- 定位
-
- 	默认定位：static
- 	相对定位：relative
- 	绝对定位：absolute
- 	浮动定位：float
- 	固定定位：fixed
+ - 表格
 
  10- 轮廓
 
  	轮廓颜色：outline-color
  	轮廓样式：outline-style
  	轮廓宽度：outline-widthoutline-width
+	简写属性：outline
 
  11- 盒子模型
+		规定了元素框处理 元素内容、内边距、边框 和 外边距 的方式
+		元素：element
+		内边距：padding
+		外边距：margin
+		边框：border
 
- 12- display 和 visibility
+ 12- display  //http://www.w3school.com.cn/cssref/pr_class_display.asp
+		常用->:none		//此元素不会被显示
+			  :block	//此元素将显示为块级元素，此元素前后会带有换行符
+			  :inline	//默认。此元素会被显示为内联元素，元素前后没有换行符
+			  :inline-block		//行内块元素。（CSS2.1 新增的值）
 
+ - visibility
+		:visible	//默认值。元素是可见的
+		:hidden		//元素是不可见的
+		:collapse	//当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。
+					  被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 "hidden"
+
+ - 定位
+
+ 	默认定位：static
+ 	相对定位：relative
+ 	绝对定位：absolute
+ 	浮动定位：float
+ 	固定定位：fixed
