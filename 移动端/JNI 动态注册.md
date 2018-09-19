@@ -51,7 +51,7 @@ const char *classPathName = "com/chenpeng/registernativemethoddemo/MainActivity"
 JNINativeMethod method[] = {{"getString", "()Ljava/lang/String;", (void *) native_getString}};
 
 /**
- * 定义在jni.h中，System.loadLibrary()时会调用JNI_OnLoad()函数
+ * 该函数定义在jni.h头文件中，System.loadLibrary()时会调用JNI_OnLoad()函数
  */
 JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     //定义 JNIEnv 指针
