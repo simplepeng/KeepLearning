@@ -22,6 +22,29 @@
 
 ## 字符和字符串
 
+    char[] str = {'h','e','l','l','o','\0'};
+    char[] str = "hello";
+    char* str = "hello";
+
+    string.h
+
+    strlen
+    返回字符串的长度
+
+    strcmp
+    比较两个字符串
+    0->相等
+    >1->s1>s2
+    <-1->s1<s2
+
+    strcpy
+
+    strcat
+
+    strchr
+
+    strstr
+
 ## 指针
 
 ## 结构体
