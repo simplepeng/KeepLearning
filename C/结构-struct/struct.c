@@ -5,7 +5,9 @@ struct Person
     int age;
 };
 
-typedef struct Person1
+// typedef struct Person person;
+
+typedef struct
 {
     int age;
 } Person1;
@@ -22,7 +24,7 @@ int main(int argc, char const *argv[])
 {
 
     struct Person person;
-    //Person person; #编译报错，must use 'struct' tag to refer to type 'Person'
+    // Person person; //#编译报错，must use 'struct' tag to refer to type 'Person'
     person.age = 25;
     printf("%d\n", person.age);
 
