@@ -21,6 +21,9 @@ class Person
     {
         _name = name;
     }
+
+  protected:
+    int age;
 };
 
 int main()
