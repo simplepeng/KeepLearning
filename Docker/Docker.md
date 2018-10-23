@@ -14,7 +14,7 @@ Docker支持将软件编译成一个镜像；然后在镜像中各种软件做�
 
 ## 常用命令
 
-搜索镜像
+### 搜索镜像
 
 
 ```shell
@@ -23,7 +23,7 @@ docker search 关键字
 
 >  docker search mysql
 
-拉取镜像
+### 拉取镜像
 
 ```shell
 docker pull 镜像名:tag
@@ -35,7 +35,7 @@ docker pull 镜像名:tag
 docker search mysql
 ```
 
-查看本地镜像
+### 查看本地镜像
 
 ```shell
 docker images
@@ -48,17 +48,17 @@ docker images
 > mysql                          latest              f45277861b04        3 months ago        445MB
 > dominate/idea-license-server   latest              ec21bba92a2f        11 months ago       127MB
 
-删除本地镜像
+### 删除本地镜像
 
 > docker rmi image-id
 
-使用镜像启动容器
+### 使用镜像启动容器
 
 ```shell
 docker run --name 容器名称 -d tomcat:latest
 ```
 
-显示已启动的容器
+### 显示已启动的容器
 
 ```shell
 docker ps
@@ -68,33 +68,41 @@ docker ps
 > CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
 > 19e2ea0a7a37        dominate/idea-license-server   "/docker-entrypoint.…"   2 months ago        Up 2 months         0.0.0.0:1017->1017/tcp   idea_server
 
-删除容器
+### 删除容器
 
 ```
 docker rm container-id
 ```
 
-停止容器
+### 停止容器
 
 ```shell
 docker stop container-id
 ```
 
-启动容器
+### 启动容器
 
 ```shell
 docker start container-id
 ```
 
-后台运行，端口映射
+> docker start container-id -a 
+
+```shell
+-a: 查看输出日志
+```
+
+### 后台运行，端口映射
 
 ```shell
 -d：后台运行
 -p: 将主机的端口映射到容器的一个端口    主机端口:容器内部的端口
+-v：数据卷的挂载。
 ```
 
 
 > docker run -d -p 8888:8080 tomcat
 
+这里涉及到docker container的一个特性，container如果停止运行了，那么再次启动时，之前所有运行相关的数据和文件就都不存在了，就类似于设置了自动还原的电脑一般，无论你做了多少的操作，一旦关机重启之后就又恢复到最初的状态。数据卷就是来解决上述问题的，通过Docker container外部的文件夹的挂载，将可持久化的文件存储到外部挂载的文件夹中。
 
 [命令wiki](https://docs.docker.com/engine/reference/commandline/docker/)
