@@ -1,0 +1,35 @@
+
+oc程序的源文件后缀名为.m,
+m代表message，代表oc中一个重要的机制，消息机制
+
+#import 指令
+    是一个预处理指令
+    是#include的增强版，将文件内容在预编译的时候拷贝写指令的地方
+    解决是#include多次包含的弊端，同一个文件无论#import多次，只会包含一次
+
+Foundation（基础）框架
+    这个框架提供了一些最基础的功能 输入和输出，一些数据类型
+
+NSLog函数
+    printf函数的增强版
+    NSLog(@"格式控制字符串",变量)
+
+NSString
+    NSString 的指针变量专门用来存储oc字符串的地址
+    oc字符串必须使用一个前缀@符号
+    NSString * str = "simple"; 
+    NSLog("my name is %@",str);
+
+NS 前缀
+    NextStep
+
+@符号
+    将c字符串转出oc字符串
+    oc中大多数关键字都是以@符号开始
+
+注释
+    单行注释
+    多行注释
+
+函数的定义和函数
+    与c语言的函数定义和调用是一样的
