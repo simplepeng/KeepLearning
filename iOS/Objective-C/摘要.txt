@@ -33,3 +33,93 @@ NS 前缀
 
 函数的定义和函数
     与c语言的函数定义和调用是一样的
+
+oc的编译，链接，执行
+    1.在.m文件写上符合oc规范的源代码
+    2.使用编译器编译目标文件
+        cc -c xx.m
+
+        a.预处理
+        b.检查语法
+        c.编译
+    3.链接
+        如果程序中使用了框架中的函数或类，那么在链接的时候，就必须要告诉编译器去哪一个框架中找这个函数或类
+            cc xx.o -framework 框架名称
+    4.链接成功就会生成a.out 可执行文件
+
+数据类型
+    1.oc语言支持c语言中的所有数据类型
+        a.基本数据类型
+            int double float char
+        b.构造数据类型
+            数组 结构体 枚举
+        c.指针类型  
+            *
+        d.空类型
+            void
+        e.typedef自定义类型
+    2.BOOL 布尔类型
+        BOOL a = YES;
+                 NO
+        本质
+            typedef signed char BOOL
+            #define YES ((BOOL)1)
+            #define NO ((BOOL)0)
+    3.Boolbean
+        Boolbean a = true;
+                     flase;
+    4.class 类型，类
+    5.id类型，万能指针
+    6.nil 空类型 null
+    7.SEL 方法选择器
+    8.block 代码段
+
+类 
+    定义类的语法：
+        位置：直接写在源文件中，不要写在方法中
+        语法：
+            声明->
+                @interface 类名 : NSObject
+                {
+
+                }
+                @end
+            实现->
+                @implementation 类名
+                {
+
+                }
+                @end
+    类必须要写声明和实现
+    属性名以下划线开头？
+    @interface Person : NSObject
+    {
+        @public
+        NSString *_name;
+        int _age;
+    }
+    @end
+
+    @implementation Person
+    {
+
+    }
+    @end
+
+    创建类对象:
+        类名 *对象名 = [类名 new];
+    使用对象:
+        访问对象的属性：
+            默认情况，对象的属性是不允许外部访问的
+            想要访问必须给属性名加上@public关键字
+        读取属性值和赋值：
+            Person *p = [Person new];
+
+            p->name = @"simple";
+            p->name; //simple
+            或
+            (*p).name = @"peng";
+
+方法的声明，实现，调用：
+    无参数方法的声明：
+        
