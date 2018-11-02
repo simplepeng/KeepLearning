@@ -123,3 +123,73 @@ oc的编译，链接，执行
 方法的声明，实现，调用：
     无参数方法的声明：
         
+对象属性的默认值
+    基本数据类型 默认值是0
+    c指针类型 默认值是NULL
+    oc指针类型 默认值是nil
+
+nil与NULL
+    NULL：可以作为指针变量的值，如果一个指针的是NULL值代表，代表这个指针不指向内存中
+         中任何一块空间
+        NULL其实等价于0
+    nil：只能作为指针变量的值
+
+    nil，NULL其实是一样的
+
+分组导航标记
+    #pragma mark 分组名
+    加载类声明或者实现上面
+
+类与对象
+    当对象作为方法的参数的时候，参数类型是类的指针。
+
+异常处理
+    目的：为了程序在运行时发生异常而不崩溃，而是继续往下执行
+    语法：
+        @try
+        {
+            ....
+        }
+        @catch(NSException *e)
+        {
+            ...
+        }
+        @finally
+        {
+            ...
+        }
+
+类方法
+    语法：
+    @interface Person : NSObject
+    {
+
+    }
+    + (void) hehe;
+    @end
+
+    @implementation Person
+    + (void) hehe
+    {
+
+    }
+
+    [Person hehe];
+    规范：
+        定义一个类就要求为这个类提供一个和类名同名的类方法，以返回一个最纯洁的对象
+        @interface Person : NSObject
+        {
+
+        }
+        + (Person *) person;
+        @end
+
+        @implementation Person
+        + (Person *) person
+        {
+            return [Person new];
+        }
+        @end
+
+NSString
+    oc中的字符串实际是用NSString类存储的。
