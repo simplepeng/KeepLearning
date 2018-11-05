@@ -193,3 +193,35 @@ nil与NULL
 
 NSString
     oc中的字符串实际是用NSString类存储的。
+    常用类方法：
+        +(instancetype)stringWithUTF8String:(const char *) arg;
+        instancetype 作为返回值，代表返回的是当前这个类的对象
+        作用：将c语言的字符串转换成oc的字符串
+        + (instancetype)stringWithFormat:(NSString *)format,...
+        作用：拼接1个字符串对象，使用变量或者其他数据拼接成oc字符串
+    常用对象方法：
+        length 返回值为NSUInteger ，其实就是unsigned long
+        作用：得到字符串的字符的个数，可以处理中文。
+        - (unichar)characterAtIndex:(NSUInteger)index;
+        返回值是unichar 其实就是unsinged short占据2个字节
+        输出char用%c，输出unichar用%C
+        - (BOOL)isEqualToString:(NSString *)aString;
+        判断两个字符串的内容是否相同
+
+匿名对象
+    没有名字的对象，如果创建一个对象，没有用一个指针存储这个对象的地址，
+    也就是没有任何指针指向这个对象，那么这个对象就叫做匿名对象。
+
+static关键字
+    1. c语言的static
+        修饰局部变量
+        修饰全局变量
+        修饰函数
+    2.oc中的static
+        static不能修饰属性，也不能修饰方法
+        可以修饰方法中的局部变量，方法中的局部变量被staic修饰，那么这个变量就会成为
+        静态变量，存储在常量区，方法执行完毕不会回收
+
+self关键字
+    可以在对象方法和类方法中使用
+    self是一个指针，在对象方法中self执行当前对象，在类方法中self指向当前类
