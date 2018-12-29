@@ -50,7 +50,21 @@ docker images
 
 ### 删除本地镜像
 
-> docker rmi image-id
+```
+docker rmi image-id
+```
+
+如果已经使用镜像（image）创建过容器（container），可能会删除不了，报错：
+
+```shell
+unable to delete ec21bba92a2f (must be forced) - image is being used by stopped container
+```
+
+这是需要使用`-f`强制删除:
+
+```
+docker rmi -f image-id
+```
 
 ### 使用镜像启动容器
 
