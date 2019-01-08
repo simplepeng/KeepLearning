@@ -526,7 +526,76 @@ func main() {
 
 [鸭子类型 duck typing](https://zh.wikipedia.org/wiki/%E9%B8%AD%E5%AD%90%E7%B1%BB%E5%9E%8B)
 
+## 包（packages）
 
+我们在Go的包中书写所有的代码。主程序包是程序执行的入口点。这里有许多Go中的内置包。我们一直使用的最着名的是`fmt`包。
+
+### 安装包
+
+```shell
+go get <package-url-github>
+// example
+go get github.com/satori/go.uuid
+```
+
+我们安装的软件包保存在GOPATH env中，这是我们的工作目录。您可以通过`cd $GOPATH/pkg`进入我们工作目录中的pkg包文件夹。
+
+### 创建自定义的包
+
+让我们从创建一个文件夹custom_package开始：
+
+```shell
+> mkdir custom_package
+> cd custom_package
+```
+
+要创建自定义包，我们需要首先使用我们需要的包名创建一个文件夹。假设我们正在建立一个包`person`，为此，我们在`custom_package`文件夹中创建一个名为`person`的文件夹。
+
+```shell
+> mkdir person
+> cd person
+```
+
+现在让我们在这个文件夹中创建一个文件`person.go`。
+
+```go
+package person
+func Description(name string) string {
+  return "The person name is: " + name
+}
+func secretName(name string) string {
+  return "Do not share"
+}
+```
+
+我们现在需要安装包，以便可以导入和使用它。
+
+```shell
+go install
+```
+
+现在让我们回到`custom_package`文件夹并创建一个`main.go`文件。
+
+```go
+package main
+import(
+  "custom_package/person"
+  "fmt"
+)
+func main(){ 
+  p := person.Description("Milap")
+  fmt.Println(p)
+}
+// => The person name is: Milap
+```
+
+现在，我们可以导入我们创建的`person`包并使用函数Description。请注意，我们在包中创建的函数secretName将无法访问（注：Go包访问权限使用函数名首字母大小写区分的）。在Go中，小写字母开头的的函数访问权限是`private`。
+
+### 包文档（Packages Documentation）
+
+
+
+## 错误处理（Error Handling）
 
 
 
