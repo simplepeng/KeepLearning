@@ -593,21 +593,319 @@ func main(){
 
 ### 包文档（Packages Documentation）
 
+Go内置了对包文档的支持 ，运行以下命令以生成文档：
 
+```shell
+godoc person Description
+```
+
+这将为person包内的Description函数生成文档，要查看文档，请使用以下命令运行Web服务器：
+
+```shell
+godoc -http=":8080"
+```
+
+现在转到URL` http:// localhost:8080/pkg/`并查看我们刚创建的包的文档。
+
+### Go中的一些内置包
+
+#### fmt
+
+该包实现了格式化的`I / O`（输入/输出）功能。我们已经使用过该包打印到stdout。
+
+#### json
+
+Go中另一个有用的包是json包。它帮助我们编码/解码（encode/decode）Json格式的文件。
+
+```go
+// Encode
+package main
+
+import (
+  "fmt"
+  "encoding/json"
+)
+
+func main(){
+  mapA := map[string]int{"apple": 5, "lettuce": 7}
+  mapB, _ := json.Marshal(mapA)
+  fmt.Println(string(mapB))
+}
+```
+
+```go
+// Decode
+package main
+
+import (
+  "fmt"
+  "encoding/json"
+)
+
+type response struct {
+  PageNumber int `json:"page"`
+  Fruits []string `json:"fruits"`
+}
+
+func main(){
+  str := `{"page": 1, "fruits": ["apple", "peach"]}`
+  res := response{}
+  json.Unmarshal([]byte(str), &res)
+  fmt.Println(res.PageNumber)
+}
+//=> 1
+```
+
+在使用`unmarshal`解码json字节时，第一个参数是json字节，第二个参数是我们希望json映射到的响应类型struct的地址。请注意`json:”page”`将json中的page属性映射给struct中PageNumber属性。
 
 ## 错误处理（Error Handling）
 
+errors是程序没有按照预期执行而导致的结果。假设我们正在对外部服务进行API调用，此API调用可能成功或可能失败，当存在错误类型时，Go程序中的错误可以被标记识别出来：
 
+```go
+resp, err := http.Get("http://example.com/")
+```
 
+这里对错误对象的API调用可能通过或可能失败。我们可以检查错误是否为`nil`，并相应地处理响应：
 
+```go
+package main
 
+import (
+  "fmt"
+  "net/http"
+)
 
+func main(){
+  resp, err := http.Get("http://example.com/")
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(resp)
+}
+```
 
+### 给函数返回自定义的错误类型
 
+当我们编写自己的函数时，有些情况下我们会遇到错误。可以在错误对象的帮助下返回这些错误：
 
+```go
+func Increment(n int) (int, error) {
+  if n < 0 {
+    // return error object
+    return nil, errors.New("math: cannot process negative number")
+  }
+  return (n + 1), nil
+}
+func main() {
+  num := 5
+ 
+  if inc, err := Increment(num); err != nil {
+    fmt.Printf("Failed Number: %v, error message: %v", num, err)
+  }else {
+    fmt.Printf("Incremented Number: %v", inc)
+  }
+}
+```
 
+使用Go构建的大多数软件包或我们使用的外部软件包都有一种错误处理机制。所以我们调用的任何函数都可能存在错误。这些错误永远不应该被忽略，并且总是在我们调用这些函数的地方优雅地处理，就像我们在上面的例子中所做的那样。
 
+### 恐慌（panic）
 
+`Panic`是在程序执行期间突然发生的未经处理的异常。在Go中，panic不是处理程序中异常的理想方式，建议使用错误对象。发生panic时，程序执行停止。panic之后执行的事情就是defer。
+
+### 延迟（defer）
+
+Defer总是在函数结束时执行。
+
+```go
+//Go
+package main
+
+import "fmt"
+
+func main() {
+    f()
+    fmt.Println("Returned normally from f.")
+}
+
+func f() {
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println("Recovered in f", r)
+        }
+    }()
+    fmt.Println("Calling g.")
+    g(0)
+    fmt.Println("Returned normally from g.")
+}
+
+func g(i int) {
+    if i > 3 {
+        fmt.Println("Panicking!")
+        panic(fmt.Sprintf("%v", i))
+    }
+    defer fmt.Println("Defer in g", i)
+    fmt.Println("Printing in g", i)
+    g(i + 1)
+}
+```
+
+在上面的例子中，我们使用`panic()`在执行程序时制造一个`panic`。正如您所注意到的，有一个延迟语句，它将使程序在程序执行结束时执行该行。当我们需要在函数末尾执行某些操作时，也可以使用Defer，例如关闭文件。
+
+## 并发（Concurrency）
+
+Go是建立在并发性的基础上的。Go中的并发可以通过轻量级线程的Go routines（协程）来实现。
+
+### 协程（routine）
+
+Go routine 是可以与另一个函数并行或同时运行的函数。创建一个Go routine很简单，简单到只需要在函数名前面加一个关键字`go`即可，我们就可以让这个函数并行执行。Go routines是非常轻量级的，所有我们可以创建成千上万的。让我们来看一个简单的示例：
+
+```go
+package main
+import (
+  "fmt"
+  "time"
+)
+func main() {
+  go c()
+  fmt.Println("I am main")
+  time.Sleep(time.Second * 2)
+}
+func c() {
+  time.Sleep(time.Second * 2)
+  fmt.Println("I am concurrent")
+}
+//=> I am main
+//=> I am concurrent
+```
+
+正如您在上面的示例中看到的那样，函数c是一个Go routine并且它并行的执行在Go的主线程中。有时我们想要在多个线程之间共享资源，Go更喜欢不与另一个线程共享变量，因为这会增加死锁和资源等待的可能性，还有另一种在Go routine之间共享资源的方法：通过 Go 中的 `channels`。
+
+### 通道（Channels）
+
+我们可以使用`Channels`在两个Go协程之间传递数据。在创建Channel时，必须指定Channels接收的数据类型。
+
+让我们创建一个字符串类型的简单Channel，如下所示：
+
+```go
+c := make(chan string)
+```
+
+使用这个Channel，我们可以发送字符串类型数据，并且我们可以同时在此channel中发送和接收数据：
+
+```go
+package main
+
+import "fmt"
+
+func main(){
+  c := make(chan string)
+  go func(){ c <- "hello" }()
+  msg := <-c
+  fmt.Println(msg)
+}
+//=>"hello"
+```
+
+接收方的channel等待直到发送方的channel发送数据。
+
+### 单向的通道（One Way Channel）
+
+在某些情况下，我们希望Go routine通过channel接收数据但不发送数据，反之亦然。为此，我们还可以创建单向的channel。
+
+```go
+
+package main
+
+import (
+ "fmt"
+)
+
+func main() {
+ ch := make(chan string)
+ 
+ go sc(ch)
+ fmt.Println(<-ch)
+}
+
+func sc(ch chan<- string) {
+ ch <- "hello"
+}
+```
+
+在上面的例子中，sc是一个Go routine，它只能向channel发送消息但不能接收消息。
+
+### 使用select为Go routine组织多个channel
+
+函数可能有多个channel正在等待。为此，我们可以使用select语句。让我们看一个更清晰的例子：
+
+```go
+package main
+
+import (
+ "fmt"
+ "time"
+)
+
+func main() {
+ c1 := make(chan string)
+ c2 := make(chan string)
+ go speed1(c1)
+ go speed2(c2)
+ fmt.Println("The first to arrive is:")
+ select {
+ case s1 := <-c1:
+  fmt.Println(s1)
+ case s2 := <-c2:
+  fmt.Println(s2)
+ }
+}
+
+func speed1(ch chan string) {
+ time.Sleep(2 * time.Second)
+ ch <- "speed 1"
+}
+
+func speed2(ch chan string) {
+ time.Sleep(1 * time.Second)
+ ch <- "speed 2"
+}
+```
+
+在上面这个列子中，在主线程中有两个等待的channels，c1和c2。在主函数中使用`select case`打印从通道中发送的消息，无论先收到谁。
+
+### 带缓冲的通道（Buffered channel）
+
+有些情况下我们需要向通道发送多个数据。您可以为此创建缓冲通道。使用缓冲通道，接收器在缓冲区已满之前不会收到消息。让我们来看看这个例子：
+
+```go
+package main
+
+import "fmt"
+
+func main(){
+  ch := make(chan string, 2)
+  ch <- "hello"
+  ch <- "world"
+  fmt.Println(<-ch)
+}
+```
+
+## Great!
+
+我们了解了Go的一些主要组件和功能。
+
+1. Variables, Datatypes
+2. Array slices and maps
+3. Functions
+4. Looping and conditional statements
+5. Pointers
+6. Packages
+7. Method, Structs, and Interfaces
+8. Error Handling
+9. Concurrency — Go routines and channels
 
 
 
