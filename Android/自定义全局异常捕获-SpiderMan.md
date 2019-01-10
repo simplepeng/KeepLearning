@@ -83,7 +83,9 @@ mContext.startActivity(intent);
 
 ### 分享Crash信息
 
-**分享文本**
+![](https://ws1.sinaimg.cn/mw690/00677ch9gy1ftoekwmvl3j30af0hygof)
+
+#### 分享文本
 
 把Throwable解析成有用的字符串，调用系统的分享方法
 
@@ -98,11 +100,169 @@ private void shareText(String text) {
     }
 ```
 
-**分享长图**
+#### 分享长图
 
-分享图片要涉及东西就多啦，比如ScrollView的截图，如何保存到Sd卡，6.0需要动态权限检测，7.0还要兼容fileprovider，具体看源码吧，哈哈哈哈！
+分享图片要涉及东西就多啦，比如ScrollView的截图，如何保存到Sd卡，6.0需要动态权限检测，7.0还要兼容fileprovider。
 
-![](https://ws1.sinaimg.cn/mw690/00677ch9gy1ftoekwmvl3j30af0hygof)
+##### ScrollView的截图
+
+scrollview截图原理很简单，就是创建一个和ScrollView一样宽高的Bitmap，然后将ScrollView的内容画在Bitmap上。
+
+```java
+public Bitmap getBitmapByView(ScrollView view) {
+    if (view == null) return null;
+    int height = 0;
+    for (int i = 0; i < view.getChildCount(); i++) {
+        height += view.getChildAt(i).getHeight();
+    }
+    Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), height, Bitmap.Config.ARGB_8888);
+    Canvas canvas = new Canvas(bitmap);
+    canvas.drawRGB(255, 255, 255);
+    view.draw(canvas);
+    return bitmap;
+}
+```
+
+上面的代码中遍历了ScrollView的所有子view，为了计算出ScrollView的真实高度，但是其实分析源码可以得知ScrollView其实只能有一个子view，所以直接获取ScrollView的第一个子view也是可以的。
+
+```java
+//ScrollView
+@Override
+public void addView(View child) {
+    if (getChildCount() > 0) {
+        throw new IllegalStateException("ScrollView can host only one direct child");
+    }
+
+    super.addView(child);
+}
+```
+
+接着就是创建一个和ScrollView宽高一样的Bitmap，并将它设置给Canvas，Canvas先draw了一个白色的背景，然后才将view的内容画在Bitmap上。
+
+##### 6.0 动态权限
+
+Android从 6.0(API 23)开始，对系统权限做了很大的改变。从6.0开始，一些敏感权限，需要在使用时动态申请，并且用户可以拒绝授权访问这些权限，已授予过的权限，用户也可以去APP设置页面去关闭授权。因为我们需要将长图保存到SD卡后分享，所以我们就需要读写SD卡的权限，读写SD卡权限也属于敏感权限。
+
+我们需要调用`ActivityCompat`类下的`requestPermissions`方法去申请权限。
+
+```java
+ActivityCompat.requestPermissions(Activity activity, String[] permissions, int requestCode);
+```
+
+* activity 当前申请权限的Activity
+* permissions 要申请的权限组
+* requestCode 请求码
+
+然后我们需要在当前Activity下重写`onRequestPermissionsResult`来判断用户是否授权了我们申请的权限。
+
+```java
+@Override
+public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                       @NonNull int[] grantResults) {
+    //判断请求码，确定当前申请的权限
+    if (requestCode == REQUEST_CODE) {
+        //判断权限是否申请通过
+        if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            //授权成功
+            shareImage();
+        } else {
+            //授权失败
+            showToast("请授予SD卡权限才能分享图片");
+        }
+    } else {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+}
+```
+
+其实`gayhub`上已经有很多优秀的权限申请框架了，帮我们简化了很多操作，并且里面有一些思想我们也可以学习一下的。就比如用一个透明的Fragment做代理直接回调权限申请的结果，这样我们就可以不重写`onRequestPermissionsResult`方法。
+
+##### 图片保存到SD卡
+
+图片保存到SD卡也很简单，直接new一个File将Bitmap写入即可，但是记得使用完Bitmap及时调用`recycle`回收。
+
+```java
+private File BitmapToFile(Bitmap bitmap) {
+    if (bitmap == null) return null;
+    String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+            .getAbsolutePath();
+    File imageFile = new File(path, "spiderMan-" + df.format(model.getTime()) + ".jpg");
+    try {
+        FileOutputStream out = new FileOutputStream(imageFile);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+        out.flush();
+        out.close();
+        bitmap.recycle();
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return imageFile;
+}
+```
+
+##### 7.0 FileProvider
+
+最后才到真正分享图片的环节，分享图片其实就是分享File，但是分享File其实又是用的携带`Uri`的`Intent`，在7.0以前我们可以直接调用`Uri.fromFile(file)`方法直接取得文件的Uri地址，但是7.0以后我们就需要`FileProvider`这个东东。那`FileProvider`又是个啥呢？
+
+从 Android 7.0 开始，为了提高私有目录的安全性，防止应用信息的泄漏，开发人员不能够再简单地通过 `file://`Uri 访问应用的私有目录文件或者让其他应用访问自己的私有目录文件。
+
+并且从 7.0 开始，Android SDK 中的 `StrictMode`策略禁止开发人员在应用外部公开 `file://` Uri。也就是说当我们在应用中使用包含 **file://** Uri 的 `Intent` 离开自己的应用时，程序会出现`FileUriExposedException`的异常。
+
+为了解决这个问题，首先我们在 res/xml 目录下新建一个 xml 文件，用于存放应用需要共享的目录文件。
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="image_cache"
+        path="Download" />
+</paths>
+```
+
+然后用一个类去继承`FileProvider`类，这样做的好处是多个应用间同时用到了这个FileProvider类也不会出现冲突。
+
+```java
+public class SpiderManFileProvider extends FileProvider {
+}
+```
+
+接着在`AndroidManifest.xml`加上我们自定义的Provider，因为FileProvider也是继承与ContentProvider，属于四大组件之一，所以必须在AndroidManifest.xml文件中声明。
+
+```xml
+<application>
+        <provider
+            android:name="com.simple.spiderman.SpiderManFileProvider"
+            android:authorities="${applicationId}.spidermanfileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+</application>
+```
+
+最后才是Intent携带File Uri并分享的代码
+
+```java
+Intent intent = new Intent();
+intent.setAction(Intent.ACTION_SEND);
+intent.setType("image/*");
+//判断版本是否为7.0及以上
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+    Uri contentUri = FileProvider.getUriForFile(getApplicationContext(),
+            getApplicationContext().getPackageName() + ".spidermanfileprovider", file);
+    intent.putExtra(Intent.EXTRA_STREAM, contentUri);
+} else {
+    intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+}
+intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+startActivity(Intent.createChooser(intent, "分享图片"));
+```
+
 
 ## 源码地址
 
