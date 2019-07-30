@@ -126,7 +126,8 @@ docker run --name 容器名称 -d -v 主机绝对路径 : 容器内路径 tomcat
 ### 显示已启动的容器
 
 ```shell
-docker ps
+docker ps -a
+-a:显示全部，包括启动失败的
 ```
 
 > root@VM-0-15-ubuntu:/home/ubuntu# docker ps
