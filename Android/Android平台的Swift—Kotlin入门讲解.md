@@ -202,6 +202,84 @@ public static void haha(String a,String b){
 
 ### 5.字符串模板
 
+先来段java代码
+
+```java
+String a = "hello";
+String b = "world";
+int c = 110;
+
+String result = "我是" + a + "你是" + b + "我报警了---" + c;//但是一般不推荐这么用
+String result = String.format("我是%s,你是%s,我报警了---%d",a,b,c);
+```
+
+再看看Kotlin用字符串模板怎么做
+
+```kotlin
+var a = "hello";
+var b = "world";
+var c = 110;
+
+var result = "我是${a} 你是${b} 我报警了--- ${c}";//如果是单个变量{}可以省略，这里的就可以省略，但是我喜欢加上
+```
+
+### 6.常用的内置扩展函数
+
+#### let
+
+```kotlin
+//let扩展函数的实际上是一个作用域函数，当你需要去定义一个变量在一个特定的作用域范围内，let函数的是一个不错的选择；let函数另一个作用就是可以避免写一些判断null的操作。
+var person:Person? = Person()
+//
+if(person != null){
+  person.eat()
+  person.look()
+  person.run()
+}
+//
+person?.let{
+  //it指代的就是person本身
+  it.eat()
+  it.look()
+  it.run()
+}
+```
+
+#### apply
+
+我的理解`apply`扩展函数是用来做对象初始化的，apply会返回调用的对象
+
+```java
+Person person = new Person();
+person.name = "zhang san";
+person.age = "18";
+person.sex = "男";
+```
+
+
+
+```kotlin
+var person = Person().apply{
+  	name = "zhang san"
+  	age = "18"
+  	sex = "男"
+}
+```
+
+#### run
+
+`run`扩展也可以来做一系列初始化的工作，但是它不会返回调用者本身。当然它也可以用来判空
+
+```kotlin
+textView?.run{
+  text = "hello"
+  textColor = Color.Black
+  textSize = 12
+}
+```
+
+其他的暂时不说了，因为我也还是个菜。
+
 
 
 
