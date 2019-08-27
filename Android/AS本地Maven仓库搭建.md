@@ -3,6 +3,8 @@
 1. 在`module`的`build.gradle`中加入下面的代码
 
 ```groovy
+apply plugin: 'maven'
+...
 uploadArchives {
     repositories.mavenDeployer {
         // 本地仓库路径
