@@ -22,11 +22,11 @@
 
 一个不错的方法是实际上按照组织Java / Kotlin文件的逻辑方式组织资源。如果我们有这样的结构：
 
-![](http://p6uvwa6u4.bkt.clouddn.com/img/1_ewhOFw6UCHk_nbUkxpF24w.png)
+![](images/1_1.png)
 
 相应地，资源如下所示：
 
-![](http://p6uvwa6u4.bkt.clouddn.com/img/1_jHsZI7xF0KDN8xlrGLZgjw.png)
+![](images/1_2.png)
 
 为了实现这种效果：
 
@@ -39,13 +39,13 @@
 
 如果有多个屏幕使用资源，请将它们保存在父目录中。例如，metal 特征的字符串被分组到一个文件中，并且其内容被所有的metal 屏幕使用，所以我们将它放在父文件中：
 
-![](http://p6uvwa6u4.bkt.clouddn.com/img/1_KsiJLKjw83hF76I_6J_1sA.png)
+![](images/1_3.png)
 
 ## Gradle 设置
 
 我们需要让Android Studio查找新的目录而不是默认的“res”下来查找资源文件。为此，请转到build.gradle文件并找到对应每个屏幕的**sourceSet**和 目录：
 
-![](http://p6uvwa6u4.bkt.clouddn.com/img/1_VIF2h_gQLmkEbzXDpvqMog.png)
+![](images/1_4.png)
 
 尽管如此，如果项目存在多个module，这还是会变得无比臃肿和丑陋，所以我们可以将其抽取为公用的文件
 
