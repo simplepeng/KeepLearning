@@ -186,7 +186,124 @@ ffmpeg -i chailao.mp4 -vf reverse reverse_video.mp4
 ffmpeg -i chailao.mp4 -vf reverse -af areverse reverse_video_audio.mp4
 ```
 
+## 音视频编解码流程
+
+![](../images/ffmpeg_flow.png)
+
 ## 常用结构体介绍
 
+`ffmpeg`源码是基于`c语言`写的，所以我们如果是不用调用命令，自己写代码实现相应的功能，了解其定义好的`结构体`至关重要。
+
+### AVFormatContext
+
+`AVFormatContext`是音视频文件的一种抽象和封装，该结构体中包含了多路流：`音频流`、`视频流`、`字幕流等`,
+
+是FFmpeg中一个贯穿全局的数据结构，很多函数都要以它为参数。
+
+```c
+typedef struct AVFormatContext {
+    struct AVInputFormat *iformat; //输入容器格式,用于分流,通过avformat_open_input()设置
+    struct AVOutputFormat *oformat; //输出容器格式,用于混流,必须在avformat_write_header()调用前设置
+    AVIOContext *pb;  // I/O 上下文
+    unsigned int nb_streams; // 流的总数
+    AVStream **streams; //所有流的列表,由avformat_new_stream()创建新的流
+    int64_t duration; //流的时长
+    int64_t bit_rate; //流的比特率
+    int64_t probesize; //从指定容器格式的输入中读取最大数据的大小,要足够起播首帧画面
+    int64_t max_analyze_duration; //从指定容器格式的输入中读取的最大数据时长
+    enum AVCodecID video_codec_id; // 视频的codec_id
+    enum AVCodecID audio_codec_id; // 音频的codec_id
+    enum AVCodecID subtitle_codec_id; // 字幕的codec_id
+    unsigned int max_index_size; // 每条流的最大内存字节数
+    unsigned int max_picture_buffer; //从设备获取的实时帧缓冲的最大内存大小
+    AVDictionary *metadata; // 整个文件的元数据
+   .....
+}AVFormatContext;
+```
+
+### AVInputFormat
+
+FFmpeg的解复用器对象，表示输入文件容器格式，一个文件容器格式对应一个AVInputFormat结构，在程序运行时有多个实例。
+
+### AVCodecContext
+
+描述编解码器上下文的数据结构，包含众多编解码器需要的参数信息。
+
+### AVCodec
+
+存储编解码器信息的结构体。
+
+###  AVStream
+
+存储每一个视频/音频流信息的结构体，使用解复用器从容器中解析出不同的流，在FFmpeg中流的对象就是`AVStream`，保存在`AVFormatContext`的`streams`数组中。
+
+### AVPacket
+
+`AVPacket`保存的是`解复用之后-还没解码之前`的数据（仍然是压缩后的数据）和关于这些数据的一些附加信息。
+
+### AVFrame
+
+用来描述`解码后`的音视频数据，必须使用`av_frame_alloc`分配，`av_frame_free`释放。
+
+## 常用方法介绍
+
+### av_register_all
+
+初始化所有组件，只有调用了该函数，才能使用复用器和编解码器(`FFmpeg4.0`以上被废弃，不推荐使用，可以不调用)
+
+### avformat_alloc_context
+
+`AVFormatContext`结构体要用`avformat_alloc_context()`函数进行初始化，分配内存空间。
+
+### avformat_open_input
+
+```c
+int avformat_open_input(AVFormatContext **ps, const char *url, AVInputFormat *fmt, AVDictionary **options);
+```
+
+打开一个文件，读取`header`，不会涉及打开解码器，与之对应的是`avformat_close_input()`函数关闭文件。如果打开文件成功，`AVFormatContext ps指针`就会在函数中初始化完成。
+
+### av_guess_format
+
+```c
+AVOutputFormat *av_guess_format(const char *short_name,
+                                const char *filename,
+                                const char *mime_type);
+```
+
+从所编译的ffmpeg库支持的`muxer库`中查找与`文件后缀名`有关联的容器类型。
+
+### avformat_new_stream
+
+```c
+AVStream *avformat_new_stream(AVFormatContext *s, const AVCodec *c);
+```
+
+在 `AVFormatContext `中创建新的` Stream` 流通道。
+
+### av_read_frame
+
+```c
+int av_read_frame(AVFormatContext *s, AVPacket *pkt);
+```
+
+读取`码流`中的若干音频帧或者1帧视频。
+
+### av_write_frame
+
+FFmpeg先调用`avformat_write_header()`函数写头部信息，中间循环调用`av_write_frame()`函数写入帧数据，最后调用`av_write_trailer()`写尾部信息标志一个编码操作完成。
+
 ## 代码示例
+
+```c
+/ffmpeg/doc/example/encode_video.c
+```
+
+
+
+```shell
+ clang -g -o encode_video encode_video.c -I/usr/local/Cellar/ffmpeg/4.1.4_2/include `pkg-config --libs libavcodec libavutil`
+ 
+ ./encode_video encode.mp4 mpeg1video
+```
 
