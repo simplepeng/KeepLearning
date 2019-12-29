@@ -90,7 +90,7 @@ ffmpeg -i 源媒体 输出媒体
 ffmpeg -i chailao.mp4 chailao.ts
 ```
 
-`.ts`：TS是 transport Stream的缩写通常称为码流文件, TS文件是最原始的音频视频容器,没有经过其他算法的压缩所以一般会很大,这跟当时播放的源文件的情况,比如比特率什么的.
+`.ts`：TS是 transport Stream的缩写通常称为码流文件, TS文件是最e原始的音频视频容器,没有经过其他算法的压缩所以一般会很大,这跟当时播放的源文件的情况,比如比特率什么的.
 
 ### 裁剪媒体文件
 
@@ -172,7 +172,7 @@ ffmpeg -i chailao_without_audio.mp4 -i chailao_without_video.mp4 -vcodec copy -a
 
 ```shell
 //视频倒放
-ffmpeg -i input-file.mp4 -vf reverse output.mp4
+ffmpeg -i input-file.mp4 -vf reverse output.mp4r
 ```
 
 ```shell
@@ -302,6 +302,8 @@ FFmpeg先调用`avformat_write_header()`函数写头部信息，中间循环调�
 
 
 ```shell
+ /usr/local/opt/ffmpeg/includef'f
+ 
  clang -g -o encode_video encode_video.c -I/usr/local/Cellar/ffmpeg/4.1.4_2/include `pkg-config --libs libavcodec libavutil`
  
  ./encode_video encode.mp4 mpeg1video
