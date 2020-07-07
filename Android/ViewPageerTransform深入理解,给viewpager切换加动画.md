@@ -24,7 +24,7 @@ void transformPage (View page, float position)
 ###首先是一个很平常的viewpager
 
 ![这里写图片描述](http://img.blog.csdn.net/20160819101519477)
-```
+```java
 package com.example.simple.pagertransformdemo;
 
 public class MainActivity extends AppCompatActivity {
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 </RelativeLayout>
 ```
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
 我们多加了一行代码
 
-```
+```java
  viewPager.setPageTransformer(true ,new ZoomInTransform());
 ```
 看看这这句代码的作用
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 |transformer  |   将修改每一页动画属性的PageTransformer |
 </br>
 看源码也可以得出
-```
+```java
 public void setPageTransformer(boolean reverseDrawingOrder, PageTransformer transformer) {
         if (Build.VERSION.SDK_INT >= 11) {
             final boolean hasTransformer = transformer != null;
@@ -161,13 +161,13 @@ public void setPageTransformer(boolean reverseDrawingOrder, PageTransformer tran
 ```
 
 將 reverseDrawingOrder 改爲 false 看看效果
-```
+```java
 viewPager.setPageTransformer(false ,new ZoomInTransform());
 ```
 ![这里写图片描述](http://img.blog.csdn.net/20160819151005806)
 
 再看看ZoomInTransform的代碼就一目了然了
-```
+```java
 public class ZoomInTransform implements ViewPager.PageTransformer {
 
     public static final String TAG = "simple_PagerTransform";
@@ -200,7 +200,7 @@ public class ZoomInTransform implements ViewPager.PageTransformer {
 ```
 
 我们还可以看看transformPage是怎么來的
-```
+```java
 //這是viewpager源代碼的一部分，transformPage方法的來源
 if (mPageTransformer != null) {
             final int scrollX = getScrollX();
@@ -220,7 +220,7 @@ if (mPageTransformer != null) {
 
 ### 下面来一个炫酷点的，感觉有点3D效果的样子
 ![这里写图片描述](http://img.blog.csdn.net/20160819175453552)
-```
+```java
 public class SimplePageTransform implements ViewPager.PageTransformer {
 
     @Override
@@ -243,7 +243,7 @@ public class SimplePageTransform implements ViewPager.PageTransformer {
 ```
 ###我们再将transformPage改造一下
 
-```
+```java
 @Override
     public void transformPage(View view, float position) {
         if (position <= 1 && position > 0) {

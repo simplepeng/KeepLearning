@@ -1,6 +1,4 @@
----
-title:  ADB 录制屏幕命令
----
+#   ADB 录制屏幕命令
 
 - 对于Android4.4的上的手机，系统自带了一个命令screenrecord，我们可以很方便的使用。
 
@@ -20,12 +18,13 @@ title:  ADB 录制屏幕命令
 
 - 设定视频比特率
 
-	默认比特率是4M/s，为了分享方便，我们可以调低比特率为2M
-		
-		adb shell screenrecord --bit-rate 2000000 /sdcard/test.mp4
+  默认比特率是4M/s，为了分享方便，我们可以调低比特率为2M
+
+  	adb shell screenrecord --bit-rate 2000000 /sdcard/test.mp4
 
 - 获取视频文件
 
 	使用adb pull 即可把手机SD卡中视频获取到本地
 
 		adb pull /sdcard/test.mp4 .
+

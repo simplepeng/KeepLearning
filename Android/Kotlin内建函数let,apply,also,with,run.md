@@ -29,8 +29,6 @@ println(result)//42
 str?.let { print(it) }
 ```
 
-
-
 ## apply
 
 ### 定义
@@ -62,8 +60,6 @@ val andre = Person().apply {
 }
 ```
 
-
-
 ## also
 
 ### 定义
@@ -91,8 +87,6 @@ api.getData()
     .also { Log.debug(it) }
     .map { /** other stuff */ }
 ```
-
-
 
 ## with
 
@@ -125,8 +119,6 @@ with(messageBoard) {
     post(“Kotlin’s a way of life bro")
 }
 ```
-
-
 
 ## run
 

@@ -13,7 +13,7 @@ RecyclerView是ListView的更高级版本，它重用相同的视图以防止额
 我们可以通过为所有内部RecyclerView设置单个视图池来解决此问题。
 
 ```java
-
+RecyclerView.setRecycledViewPool(RecycledViewPool)
 ```
 
 允许你可以给RecyclerVIew设置自定义的视图池，代码看起来像这样：

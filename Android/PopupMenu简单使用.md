@@ -2,13 +2,7 @@
 
 `PopupMenu` 是锚定到 `View` 的模态菜单。如果空间足够，它将显示在定位视图下方，否则显示在其上方
 
-
-
 <img src="https://ws1.sinaimg.cn/mw690/00677ch9gy1fmwxv9ycibj30bc0dqt90" />
-
-
-
-
 
 ```java
 public void popup(View view) {
@@ -65,8 +59,6 @@ public void popup(View view) {
 </menu>
 ```
 
-
-
 ## 创建菜单组
 
 菜单组是指一系列具有某些共同特征的菜单项。通过菜单组，您可以：
@@ -100,8 +92,6 @@ public void popup(View view) {
     </group>
 </menu>
 ```
-
-
 
 ## 显示图标
 
@@ -145,8 +135,6 @@ public class PopupMenu {
             e.printStackTrace();
         }
 ```
-
-
 
 run 一下看看！
 

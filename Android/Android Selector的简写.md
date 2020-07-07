@@ -113,3 +113,4 @@
 * 方式二写起来更加简单，也减少了样式文件
 
 [源码地址：https://github.com/simplepeng/AndroidExamples/tree/master/example_simplify_selector](https://github.com/simplepeng/AndroidExamples/tree/master/example_simplify_selector)
+
