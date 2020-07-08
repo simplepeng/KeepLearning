@@ -250,6 +250,8 @@ jstring arg_b = (*env)->NewStringUTF(env, "hello world");
 jobject jobject1 = (*env)->NewObject(env, jclazz, construct, arg_a, arg_b);
 ```
 
+* 如何是内部类，包名之前还是用`/`，内部类连接用`$`，比如`android/graphics/Bitmap$Config`。
+
 ### JNI异常处理
 
 * 抛出异常
@@ -279,6 +281,37 @@ if (e != NULL){
         //清除异常，需要和ExceptionOccurred成对出现
         (*env)->ExceptionClear(env);
  }
+```
+
+### JNI创建Java枚举对象
+
+使用`java -p 枚举类`可以查看对应签名，枚举类的变量字段都会生成为`static final`的，并且会生成一个`valueOf`的静态方法。
+
+```c++
+jobject createBitmap(JNIEnv *env,
+                     int width, int height) {
+
+    jclass bitmapCls = env->FindClass("android/graphics/Bitmap");
+    jmethodID createBitmapFunction = env->GetStaticMethodID(bitmapCls,
+                                                            "createBitmap",
+                                                            "(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;");
+    jstring configName = env->NewStringUTF("ARGB_8888");
+    jclass bitmapConfigClass = env->FindClass("android/graphics/Bitmap$Config");
+    jmethodID valueOfBitmapConfigFunction = env->GetStaticMethodID(bitmapConfigClass,
+                                                                   "valueOf",
+                                                                   "(Ljava/lang/String;)Landroid/graphics/Bitmap$Config;");
+
+    jobject bitmapConfig = env->CallStaticObjectMethod(bitmapConfigClass,
+                                                       valueOfBitmapConfigFunction,
+                                                       configName);
+
+    jobject newBitmap = env->CallStaticObjectMethod(bitmapCls,
+                                                    createBitmapFunction,
+                                                    width, height,
+                                                    bitmapConfig);
+
+    return newBitmap;
+}
 ```
 
 ## 静态注册
