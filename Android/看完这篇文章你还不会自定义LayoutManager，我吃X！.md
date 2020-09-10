@@ -1,4 +1,4 @@
-# 看完这篇文章是个人都入门了自定义LayoutManager！！！
+# 看完这篇文章你还不会自定义LayoutManager，我吃X！
 
 最开始我在学习自定义LayoutManager的时候，也是网上搜文章，看博客，以及一些公众号的推文。刚开始看的时候觉得还是那么回事，但是在慢慢的深入LayoutManager源码才发现很多的文章其实都是不合格，乃至可以说是很误导人的，所以我才想自己写一篇关于自定义LayoutManager的文章，希望能帮助到一部分人能入门自定义LayoutManager吧。
 
