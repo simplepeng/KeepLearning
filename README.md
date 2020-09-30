@@ -12,7 +12,7 @@
 * [JavaScript](/JavaScript)
 * [Docker](/Docker)
 * [Git](/Git)
-* [Go](/Go)
+* [Go](/GO)
 * [Groovy](/Groovy)
 * [MySql](/MySql)
 * [Python](/Python)
