@@ -2,9 +2,7 @@
 
 ## 一图胜前言
 
-![](https://simple-bucket-1257044365.cos.ap-chongqing.myqcloud.com/debug.gif)
-
-
+![crash_info.png](https://i.loli.net/2020/12/30/tlm3ysL8QI16He7.png)
 
 上图中，我们模拟了NullPointerException的发生，系统捕获了该异常，并用一个界面展示了出来。
 
@@ -30,9 +28,7 @@ public class SpiderMan implements Thread.UncaughtExceptionHandler {
 
 `UncaughtExceptionHandler`会捕获代码中没有捕获的异常，然后回调给`uncaughtException`方法。
 
-## 高级操作
-
-### 解析Throwable
+## 解析Throwable
 
 ```java
  private CrashModel parseCrash(Throwable ex) {
@@ -70,7 +66,7 @@ public class SpiderMan implements Thread.UncaughtExceptionHandler {
 
 如上代码所示，我们可以从Throwable类中解析出很多有用的信息，包括`崩溃发生的类`，`所在行数`,`exception的类型`...
 
-### 跳转新的界面显示Crash信息
+## 跳转新的界面显示Crash信息
 
 ```java
 Intent intent = new Intent(mContext, CrashActivity.class);
@@ -81,11 +77,11 @@ mContext.startActivity(intent);
 
 在对Throwable解析完成后，我们就可以跳转到一个新的Activity并展示Crash的相关信息，这里`Context`是Application的Context，所有必须使用`Intent.FLAG_ACTIVITY_NEW_TASK`才能成功跳转。
 
-### 分享Crash信息
+## 分享Crash信息
 
-![](https://ws1.sinaimg.cn/mw690/00677ch9gy1ftoekwmvl3j30af0hygof)
+![crash_info_share.png](https://i.loli.net/2020/12/30/bzixLvrSoCaDfuk.png)
 
-#### 分享文本
+### 分享文本
 
 把Throwable解析成有用的字符串，调用系统的分享方法
 
@@ -100,11 +96,11 @@ private void shareText(String text) {
     }
 ```
 
-#### 分享长图
+### 分享长图
 
 分享图片要涉及东西就多啦，比如ScrollView的截图，如何保存到Sd卡，6.0需要动态权限检测，7.0还要兼容fileprovider。
 
-##### ScrollView的截图
+### ScrollView的截图
 
 scrollview截图原理很简单，就是创建一个和ScrollView一样宽高的Bitmap，然后将ScrollView的内容画在Bitmap上。
 
@@ -139,7 +135,7 @@ public void addView(View child) {
 
 接着就是创建一个和ScrollView宽高一样的Bitmap，并将它设置给Canvas，Canvas先draw了一个白色的背景，然后才将view的内容画在Bitmap上。
 
-##### 6.0 动态权限
+### 6.0 动态权限
 
 Android从 6.0(API 23)开始，对系统权限做了很大的改变。从6.0开始，一些敏感权限，需要在使用时动态申请，并且用户可以拒绝授权访问这些权限，已授予过的权限，用户也可以去APP设置页面去关闭授权。因为我们需要将长图保存到SD卡后分享，所以我们就需要读写SD卡的权限，读写SD卡权限也属于敏感权限。
 
@@ -175,9 +171,9 @@ public void onRequestPermissionsResult(int requestCode, @NonNull String[] permis
 }
 ```
 
-其实`gayhub`上已经有很多优秀的权限申请框架了，帮我们简化了很多操作，并且里面有一些思想我们也可以学习一下的。就比如用一个透明的Fragment做代理直接回调权限申请的结果，这样我们就可以不重写`onRequestPermissionsResult`方法。
+其实`github`上已经有很多优秀的权限申请框架了，帮我们简化了很多操作，并且里面有一些思想我们也可以学习一下的。就比如用一个透明的Fragment做代理直接回调权限申请的结果，这样我们就可以不重写`onRequestPermissionsResult`方法。
 
-##### 图片保存到SD卡
+### 图片保存到SD卡
 
 图片保存到SD卡也很简单，直接new一个File将Bitmap写入即可，但是记得使用完Bitmap及时调用`recycle`回收。
 
@@ -202,7 +198,7 @@ private File BitmapToFile(Bitmap bitmap) {
 }
 ```
 
-##### 7.0 FileProvider
+### 7.0 FileProvider
 
 最后才到真正分享图片的环节，分享图片其实就是分享File，但是分享File其实又是用的携带`Uri`的`Intent`，在7.0以前我们可以直接调用`Uri.fromFile(file)`方法直接取得文件的Uri地址，但是7.0以后我们就需要`FileProvider`这个东东。那`FileProvider`又是个啥呢？
 
@@ -263,6 +259,67 @@ intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 startActivity(Intent.createChooser(intent, "分享图片"));
 ```
 
+##   自动初始化
+
+很多第三方框架或SDK都会有个初始化操作，比如在`Application`的`onCreate`中调用`XXX.init()`，`SpiderMan`在最开始也是这么做的，但是之后学习了`LeakCanary`的做法，就不再需要手动初始化了，那么自动初始化该怎么做呢？
+
+首先定义一个`SpiderManInitProvider`，它是继承于`ContentProvider`的一个子类。然后在`AndroidManifest.xml`中注册这个`ContentProvider`。
+
+```java
+public class SpiderManInitProvider extends ContentProvider {
+    @Override
+    public boolean onCreate() {
+        Context application = getContext().getApplicationContext();
+        if (application == null) {
+            application = Utils.getApplicationByReflect();
+        }
+        SpiderMan.init(application);
+        return true;
+    }
+ //... 省略默认实现代码
+}
+```
+
+```xml
+    <application>
+				
+        <provider
+            android:name=".SpiderManInitProvider"
+            android:authorities="${applicationId}.spiderman-init-provider"
+            android:exported="false"
+            android:multiprocess="true" />
+
+    </application>
+```
+
+从上面代码可以看到，我们就在`ContentProvider`的`onCreate`方法中调用了`SpiderMan`的初始化操作，这样就自动完成了初始化工作。那么为什么这么做就可以了呢？因为Android源码太过复杂，不太好讲解，下面我就简单分析下利用`ContentProvider`做自动初始化的原理。
+
+简单的打点，我们同时在`ContentProvider`和`Application`的`onCreate`方法增加输出，可以发现`ContentProvider`的`onCreate`会先于`Appliction`调用。
+
+> ContentProvider ----> onCreate
+>
+> Application ----> onCreate
+
+那么直接从`Application`的`onCreate`的方法入手，在一连串的跳转后发现：其实`Application`的`onCreate`方法调用是`Instrumentation`调用了`callApplicationOnCreate`方法，然后这个方法是在`ActivityThread`的`handleBindApplication`方法中调用的。并且在`callApplicationOnCreate`方法前有个`installContentProviders`的方法，这个方法就是创建所有在`AndroidManifest.xml`注册过的`ContentProvider`。
+
+```java
+//ActivtyThread
+private void handleBindApplication(AppBindData data) {
+  ...
+    if (!data.restrictedBackupMode) {
+                if (!ArrayUtils.isEmpty(data.providers)) {
+                    installContentProviders(app, data.providers);
+                }
+            }
+  	...
+  		try {
+                mInstrumentation.callApplicationOnCreate(app);
+            } catch (Exception e) {
+
+            }
+  ...
+}
+```
 
 ## 源码地址
 
