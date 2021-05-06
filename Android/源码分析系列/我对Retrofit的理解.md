@@ -41,7 +41,7 @@ Proxy.newProxyInstance(service.getClassLoader(), new Class<?>[] { service },
 
 ## 为什么Api类要设计成接口
 
-动态代理要求代理的类必须要实现接口。
+动态代理要求代理的对象必须是接口或者实现接口的类。
 
 ## 为啥设计ConverterFactory和CallAdapterFactory
 
@@ -238,12 +238,95 @@ static final class ExecutorCallbackCall<T> implements Call<T> {
       }
 ```
 
-`ExecutorCallbackCall`是实现`Call`的子类，
+`ExecutorCallbackCall`是实现`Call`的子类，所以它肯定是有`enqueue`和`execute`方法的，但是其实执行请求却是`delegate`这个代理类，`callbackExecutor`就是把响应抛到主线程的执行类，后面小节会讲到。
+
+现在主要分析`delegate`这个代理类，从前面的分析已经知道这个类的实现类就是`OkHttpCall`，所以现在我们只需要关注`OkHttpCall`的`enqueue`或`execute`就行。
+
+```java
+//OkHttpCall
+public void enqueue(final Callback<T> callback) {
+		//...
+    synchronized (this) {
+    //...
+          call = rawCall = createRawCall();
+     //...
+    }
+
+    call.enqueue(new okhttp3.Callback() {
+      @Override public void onResponse(okhttp3.Call call, okhttp3.Response rawResponse) {
+					//解析响应体
+          response = parseResponse(rawResponse);
+        //...
+					//回调响应
+          callback.onResponse(OkHttpCall.this, response);
+      }
+
+      @Override public void onFailure(okhttp3.Call call, IOException e) {
+        //回调异常
+        callFailure(e);
+      }
+    });
+  }
+```
+
+`createRawCall`方法是创建OkHttp请求类的方法
+
+```java
+//  OkHttpCall
+private okhttp3.Call createRawCall() throws IOException {
+    okhttp3.Call call = callFactory.newCall(requestFactory.create(args));
+    if (call == null) {
+      throw new NullPointerException("Call.Factory returned null.");
+    }
+    return call;
+  }
+```
+
+`callFactory`变量其实就是`OkHttpClient`实例，在`Retrofit`的`Builder`中传入，如果没有传入的就是自己实例化一个`OkHttpClient`。
+
+`requestFactory.create(args)`方法就是将请求参数拼装成`OkHttp`需要的`Request`类。
+
+```java
+//Retrofit
+ public Retrofit build() {
+	//...
+   okhttp3.Call.Factory callFactory = this.callFactory;
+   if (callFactory == null) {
+     callFactory = new OkHttpClient();
+   }
+```
+
+`parseResponse`是解析响应体的方法，方面里面还使用了`converter`来转换数据。
+
+```java
+//
+Response<T> parseResponse(okhttp3.Response rawResponse) throws IOException {
+    //...
+T body = responseConverter.convert(catchingBody);
+return Response.success(body, rawResponse);
+  //...
+}
+```
 
 ## 如何把成功的回调抛到主线程的
 
 ```java
-//Platform
+//Retrofit
+public Retrofit build() {
+
+  Executor callbackExecutor = this.callbackExecutor;
+  if (callbackExecutor == null) {
+    callbackExecutor = platform.defaultCallbackExecutor();
+  }
+}
+```
+
+如果`Retrofit.Builder`没有调用`callbackExecutor(Executor executor)`方法传入`Executor`，那就用默认的`defaultCallbackExecutor`。
+
+`DefaultCallAdapterFactory.ExecutorCallbackCall`的`callbackExecutor`
+
+```java
+//Platform-Android
 static class MainThreadExecutor implements Executor {
   private final Handler handler = new Handler(Looper.getMainLooper());
   @Override public void execute(Runnable r) {
@@ -253,3 +336,30 @@ static class MainThreadExecutor implements Executor {
 ```
 
 ## 怎么支持Kotlin的协程的
+
+`suspend`函数编译成了`Continuation`类，可以自己用AS的`decompile`功能验证。最终使用`SuspendForBody`类来发起请求，它也是`HttpServiceMethod`的子类。
+
+```java
+static final class SuspendForBody<ResponseT> extends HttpServiceMethod<ResponseT, Object> {
+
+  //...
+
+  @Override protected Object adapt(Call<ResponseT> call, Object[] args) {
+    call = callAdapter.adapt(call);
+
+    //noinspection unchecked Checked by reflection inside RequestFactory.
+    Continuation<ResponseT> continuation = (Continuation<ResponseT>) args[args.length - 1];
+    return isNullable
+        ? KotlinExtensions.awaitNullable(call, continuation)
+        : KotlinExtensions.await(call, continuation);
+  }
+}
+
+```
+
+并通过扩展函数给`Retrofit`的`Call`类增加了`await`的扩展函数
+
+
+
+
+
