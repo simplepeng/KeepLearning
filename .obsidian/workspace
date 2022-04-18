@@ -1,0 +1,97 @@
+{
+  "main": {
+    "id": "75dd71eed5b361cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "85cb9e703d065a85",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Android/无障碍服务研究.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "87de54991bd3ff7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "5da8e4b5deea90b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b76ad2e54983553f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "570c433f19009dd5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "b18034b6a7563335",
+    "type": "split",
+    "children": [
+      {
+        "id": "84c84b7e4af8b825",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2dfd91c1569143d0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Android/无障碍服务研究.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "85cb9e703d065a85",
+  "lastOpenFiles": [
+    "Android/无障碍服务研究.md",
+    "Android.md",
+    "README.md"
+  ]
+}
