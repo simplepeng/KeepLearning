@@ -1,3 +1,5 @@
+# Shell简学
+
 ## 简介
 
 Shell 是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁。Shell 既是一种命令语言，又是一种程序设计语言。
@@ -6,7 +8,7 @@ Shell 是指一种应用程序，这个应用程序提供了一个界面，用�
 
 Ken Thompson 的 sh 是第一种 Unix Shell，Windows Explorer 是一个典型的图形界面 Shell。
 
-### shell脚本
+## shell脚本
 
 Shell 脚本（shell script），是一种为 shell 编写的脚本程序。
 
@@ -16,7 +18,7 @@ Shell 脚本（shell script），是一种为 shell 编写的脚本程序。
 
 Linux Shell 脚本以`.sh`结尾
 
-### hello world
+## hello world
 
 ```shell
 #!/bin/bash
@@ -117,9 +119,9 @@ c=4
 > 3
 > ./var.sh: line 10: c: readonly variable
 
-### 系统变量
+## 系统变量
 
-#### 常用系统变量
+### 常用系统变量
 
 `$HOME`、`$PWD`、`$SHELL`、`$USER`等
 
@@ -137,7 +139,7 @@ echo $USER
 >/bin/zsh
 >simple
 
-#### 显示当前shell中所有变量：set
+### 显示当前shell中所有变量：set
 
 ```shell
 $ set
@@ -149,7 +151,7 @@ $ set
 0=-zsh
 ```
 
-#### 特殊变量
+### 特殊变量
 
 `$n` ：n为数字，`$0`代表该脚本名称，`$1-$9`代表第一到第九个参数，十以上的参数需要用大括号包含，`${10}`
 
