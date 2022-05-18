@@ -188,7 +188,7 @@ ffmpeg -i chailao.mp4 -vf reverse -af areverse reverse_video_audio.mp4
 
 ## 音视频编解码流程
 
-![](../images/ffmpeg_flow.png)
+![](imgs/ffmpeg_flow.png)
 
 ## 常用结构体介绍
 
@@ -298,8 +298,6 @@ FFmpeg先调用`avformat_write_header()`函数写头部信息，中间循环调�
 ```c
 /ffmpeg/doc/example/encode_video.c
 ```
-
-
 
 ```shell
  /usr/local/opt/ffmpeg/includef'f
