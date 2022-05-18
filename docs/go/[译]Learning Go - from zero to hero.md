@@ -1,4 +1,4 @@
-# Learning Go - from zero to hero
+# [译]Learning Go - from zero to hero
 
 [原文链接](https://medium.freecodecamp.org/learning-go-from-zero-to-hero-d2a3223b3d86)
 
