@@ -1,24 +1,6 @@
-## 学习笔记和博客的记录
+## 一个大专🐶的自学之路
 
-* [Android](/Android)
-* [C](/C)
-* [C++](/C++)
-* [数据结构](/数据结构)
-* [算法](/算法)
-* [设计模式](/设计模式)
-* [英语](/英语)
-* [HTML](/HTML)
-* [CSS](/CSS)
-* [JavaScript](/JavaScript)
-* [Docker](/Docker)
-* [Git](/Git)
-* [Go](/GO)
-* [Groovy](/Groovy)
-* [MySql](/MySql)
-* [Python](/Python)
-* [Shell](/Shell)
-* [其他](/其他)
-* [个人博客](https://simplepeng.github.io)
+[萌戳链接](https://simplepeng.github.io/KeepLearning/)
 
 ## 赞赏
 
