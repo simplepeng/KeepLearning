@@ -1,5 +1,7 @@
 # Python学习笔记
 
+## 简介
+
 
 
 ## Hello World
@@ -400,5 +402,4 @@ print('Number of animals in the new zoo is',
 
 * 廖雪峰的Python博客
 * 简明Python教程
-
 
