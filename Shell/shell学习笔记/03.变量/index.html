@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>变量 - KeepLearning</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u53d8\u91cf";
+        var mkdocs_page_input_path = "Shell/shell\u5b66\u4e60\u7b14\u8bb0/03.\u53d8\u91cf.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> KeepLearning
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">一个大专🐶的学习记录</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C++</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">C++学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HelloWorld/">HelloWorld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Reference/">Reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%87%BD%E6%95%B0/">函数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98/">动态内存</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/">变量和常量</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/">命名空间</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">异常处理</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%BC%95%E7%94%A8/">引用</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8C%87%E9%92%88/">指针</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9E%9A%E4%B8%BE/">枚举</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A8%A1%E6%9D%BF-%E6%B3%9B%E5%9E%8B/">模板 泛型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B3%A8%E9%87%8A/">注释</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%80%E4%BB%8B/">简介</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%92%8C%E9%81%8D%E5%8E%86/">逻辑控制和遍历</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C语言</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../C%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">C语言学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Docker/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Shell学习笔记</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../01.%E7%AE%80%E4%BB%8B/">简介</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02.%E6%B3%A8%E9%87%8A/">注释</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">变量</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#_2">变量类型</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">定义变量</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">使用变量</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">只读变量</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">删除变量</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_7">系统变量</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_8">常用系统变量</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shellset">显示当前Shell中的所有变量：set</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_9">特殊变量</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#n">$n</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_10">$</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_11">$*,$@</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_12">$?</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../04.%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../05.%E6%95%B0%E7%BB%84/">数组</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../06.%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../07.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">流程控制</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../08.%E5%87%BD%E6%95%B0/">函数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../09.%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/">输入和输出</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../10.%E5%90%91Shell%E8%84%9A%E6%9C%AC%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/">向Shell脚本传递参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../11.%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/">文件包含</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../12.Shell%E5%B7%A5%E5%85%B7/">Shell工具</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Css</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../css/CSS3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS3学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../css/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Git</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../git/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/">Git速查表</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../go/%5B%E8%AF%91%5DLearning%20Go%20-%20from%20zero%20to%20hero/">[译]Learning Go - from zero to hero</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Groovy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../groovy/Groovy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Groovy学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Html</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../html/HTML5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">HTML5学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../html/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">HTML学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Javascript</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../javascript/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">基本语法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mysql</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../mysql/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">MySQL学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../python/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">其他</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E5%85%B6%E4%BB%96/HenCoder-5%E6%9C%9F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">HenCoder-5期-学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E5%85%B6%E4%BB%96/MacOS%2010.10%20%E4%BB%A5%E4%B8%8A%E8%A7%A3%E5%86%B3%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB/">MacOS 10.10 以上解决机械键盘按键无法识别</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E5%85%B6%E4%BB%96/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4%20TensorFlow/">极客时间 TensorFlow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E5%85%B6%E4%BB%96/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A5%E9%97%A8-FFmpeg%28%E5%85%AC%E5%8F%B8%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB%29/">FFmpeg-公司技术分享</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">数据结构</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01.%E7%BA%BF%E6%80%A7%E8%A1%A8-list/">线性表-List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/02.%E6%A0%88-stack/">栈-Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03.%E9%98%9F%E5%88%97-queue/">队列-queue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04.%E5%AD%97%E7%AC%A6%E4%B8%B2-string/">字符串-string</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">算法</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E7%AE%97%E6%B3%95/10%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">十大经典排序算法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">英语</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E8%8B%B1%E8%AF%AD/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">语法学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">计算机网络</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">计算机网络学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">设计模式</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">设计模式学习笔记</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">KeepLearning</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Shell &raquo;</li>
+          <li>Shell学习笔记 &raquo;</li><li>变量</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/Shell/shell学习笔记/03.变量.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">变量</h1>
+<h2 id="_2">变量类型</h2>
+<ol>
+<li>局部变量： 局部变量在脚本或命令中定义，仅在当前shell实例中有效，其他shell启动的程序不能访问局部变量。</li>
+<li>环境变量：所有的程序，包括shell启动的程序，都能访问环境变量，有些程序需要环境变量来保证其正常运行。必要的时候shell脚本也可以定义环境变量。</li>
+<li>shell变量：shell变量是由shell程序设置的特殊变量。shell变量中有一部分是环境变量，有一部分是局部变量，这些变量保证了shell的正常运行</li>
+</ol>
+<h2 id="_3">定义变量</h2>
+<pre><code class="language-shell">变量名=变量值
+</code></pre>
+<ul>
+<li>变量名和值之前不能有空格</li>
+<li>不用分号结尾</li>
+<li>命名只能使用英文字母，数字和下划线，首个字符不能以数字开头</li>
+<li>中间不能有空格，可以使用下划线（_）</li>
+<li>不能使用标点符号</li>
+<li>不能使用bash里的关键字（可用help命令查看保留关键字）</li>
+</ul>
+<h2 id="_4">使用变量</h2>
+<p>使用一个定义过的变量，只要在变量名前面加美元符号<code>$</code>即可</p>
+<pre><code class="language-shell">echo $变量名
+echo ${变量名}
+</code></pre>
+<p>变量名外面的花括号是可选的，加不加都行，加花括号是为了帮助解释器识别变量的边界</p>
+<h2 id="_5">只读变量</h2>
+<p>使用 <code>readonly</code> 命令可以将变量定义为只读变量，只读变量的值不能被改变。</p>
+<pre><code class="language-shell">变量名=变量值
+readonly 变量名
+</code></pre>
+<h2 id="_6">删除变量</h2>
+<p>使用 <code>unset</code> 命令可以删除变量。</p>
+<pre><code class="language-shell">unset 变量名
+</code></pre>
+<pre><code class="language-shell">#!/bin/bash
+
+a=1
+b=&quot;b&quot;
+readonly c=3
+
+echo $a
+echo ${b}
+echo $c
+c=4
+</code></pre>
+<blockquote>
+<p>1
+b
+3
+./var.sh: line 10: c: readonly variable</p>
+</blockquote>
+<h2 id="_7">系统变量</h2>
+<h3 id="_8">常用系统变量</h3>
+<p><code>$HOME</code>、<code>$PWD</code>、<code>$SHELL</code>、<code>$USER</code>等</p>
+<pre><code class="language-shell">#!/bin/bash
+
+echo $HOME
+echo $PWD
+echo $SHELL
+echo $USER
+</code></pre>
+<blockquote>
+<p>/Users/simple
+/Users/simple/Desktop/WorkSpace/KeepLearning/Shell/3.变量
+/bin/zsh
+simple</p>
+</blockquote>
+<h3 id="shellset">显示当前Shell中的所有变量：<code>set</code></h3>
+<pre><code class="language-shell">$ set
+'!'=0
+'#'=0
+'$'=1104
+'*'=(  )
+-=569JNRXZghiklms
+0=-zsh
+</code></pre>
+<h2 id="_9">特殊变量</h2>
+<h3 id="n">$n</h3>
+<p>描述：n为数字，<code>$0</code>代表该脚本名称，<code>$1-$9</code>代表第一到第九个参数，十以上的参数需要用大括号包含，<code>${10}</code></p>
+<h3 id="_10">$</h3>
+<p>描述：获取所有输入参数的个数，常用于循环。</p>
+<h3 id="_11"><code>$*</code>,<code>$@</code></h3>
+<p><code>$*</code>：这个变量代表命令行中所有的参数，<code>$*</code>把所有参数看成一个整体。</p>
+<p><code>$@</code>：这个变量也代表命令行中所有的参数，<code>$@</code>把每个参数区分对待。</p>
+<h3 id="_12">$?</h3>
+<p>描述：最后一次执行的命令的返回状态，如果这个变量的值为0，证明上一次命令正确执行。如果这个变量的值为非0（具体是哪个数，由命令自己来决定），则证明上一个命令执行不正确了。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../02.%E6%B3%A8%E9%87%8A/" class="btn btn-neutral float-left" title="注释"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../04.%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="btn btn-neutral float-right" title="字符串">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/simplepeng/KeepLearning/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../02.%E6%B3%A8%E9%87%8A/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../04.%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

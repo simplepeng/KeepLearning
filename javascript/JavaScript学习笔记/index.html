@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>基本语法 - KeepLearning</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u57fa\u672c\u8bed\u6cd5";
+        var mkdocs_page_input_path = "javascript/JavaScript\u5b66\u4e60\u7b14\u8bb0.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> KeepLearning
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">一个大专🐶的学习记录</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C++</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">C++学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HelloWorld/">HelloWorld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Reference/">Reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%87%BD%E6%95%B0/">函数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98/">动态内存</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/">变量和常量</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/">命名空间</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">异常处理</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%BC%95%E7%94%A8/">引用</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8C%87%E9%92%88/">指针</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9E%9A%E4%B8%BE/">枚举</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A8%A1%E6%9D%BF-%E6%B3%9B%E5%9E%8B/">模板 泛型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B3%A8%E9%87%8A/">注释</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%80%E4%BB%8B/">简介</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%92%8C%E9%81%8D%E5%8E%86/">逻辑控制和遍历</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C语言</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../C%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">C语言学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Docker/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Shell学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/01.%E7%AE%80%E4%BB%8B/">简介</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/02.%E6%B3%A8%E9%87%8A/">注释</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/03.%E5%8F%98%E9%87%8F/">变量</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/04.%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/05.%E6%95%B0%E7%BB%84/">数组</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/06.%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/07.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">流程控制</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/08.%E5%87%BD%E6%95%B0/">函数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/09.%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/">输入和输出</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/10.%E5%90%91Shell%E8%84%9A%E6%9C%AC%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/">向Shell脚本传递参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/11.%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/">文件包含</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Shell/shell%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/12.Shell%E5%B7%A5%E5%85%B7/">Shell工具</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Css</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../css/CSS3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS3学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../css/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Git</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../git/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/">Git速查表</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/%5B%E8%AF%91%5DLearning%20Go%20-%20from%20zero%20to%20hero/">[译]Learning Go - from zero to hero</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Groovy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../groovy/Groovy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Groovy学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Html</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../html/HTML5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">HTML5学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../html/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">HTML学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Javascript</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">基本语法</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mysql</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mysql/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">MySQL学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">其他</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E5%85%B6%E4%BB%96/HenCoder-5%E6%9C%9F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">HenCoder-5期-学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E5%85%B6%E4%BB%96/MacOS%2010.10%20%E4%BB%A5%E4%B8%8A%E8%A7%A3%E5%86%B3%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB/">MacOS 10.10 以上解决机械键盘按键无法识别</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E5%85%B6%E4%BB%96/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4%20TensorFlow/">极客时间 TensorFlow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E5%85%B6%E4%BB%96/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A5%E9%97%A8-FFmpeg%28%E5%85%AC%E5%8F%B8%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB%29/">FFmpeg-公司技术分享</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">数据结构</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01.%E7%BA%BF%E6%80%A7%E8%A1%A8-list/">线性表-List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/02.%E6%A0%88-stack/">栈-Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03.%E9%98%9F%E5%88%97-queue/">队列-queue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04.%E5%AD%97%E7%AC%A6%E4%B8%B2-string/">字符串-string</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">算法</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E7%AE%97%E6%B3%95/10%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">十大经典排序算法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">英语</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E8%8B%B1%E8%AF%AD/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">语法学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">计算机网络</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">计算机网络学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">设计模式</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">设计模式学习笔记</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">KeepLearning</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Javascript &raquo;</li><li>基本语法</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/javascript/JavaScript学习笔记.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">基本语法</h1>
+<pre><code class="language-javascript">var a = 2;
+var b = 'hello world';
+</code></pre>
+<p>大致和java差不多，但是可以省略语句结尾的分号（建议不省略）</p>
+<h1 id="_2">注释</h1>
+<ul>
+<li>行注释 //</li>
+<li>块注释 /<em>...</em>/</li>
+</ul>
+<pre><code class="language-javascript">//行注释
+/*
+块注释
+*/
+</code></pre>
+<h1 id="_3">数据类型</h1>
+<h2 id="number">数字类型 Number</h2>
+<p>JavaScript 只有一种数字类型，不区分整数和浮点数，统一用Number表示</p>
+<pre><code class="language-javascript">123; // 整数123
+0.456; // 浮点数0.456
+1.2345e3; // 科学计数法表示1.2345x1000，等同于1234.5
+-99; // 负数
+NaN; // NaN表示Not a Number，当无法计算结果时用NaN表示
+Infinity; // Infinity表示无限大，当数值超过了JavaScript的Number所能表示的最大值时，就表示为Infinity
+</code></pre>
+<p>所有 JavaScript 数字均为 64 位
+JavaScript 不是类型语言。与许多其他编程语言不同，JavaScript 不定义不同类型的数字，比如整数、短、长、浮点等等。</p>
+<p>JavaScript 中的所有数字都存储为根为 10 的 64 位（8 比特），浮点数</p>
+<h2 id="string">字符串 String</h2>
+<p>字符串是以单引号('')或双引号("”)括起来的任意文本</p>
+<pre><code class="language-javascript">var a = 'hello';
+var b = &quot;world&quot;;
+</code></pre>
+<p><em>需要特别注意的是</em>，字符串是不可变的，如果对字符串的某个索引赋值，不会有任何错误，但是，也没有任何效果</p>
+<pre><code class="language-javascript">var a = &quot;hello&quot;;
+a[0] = 'x';
+alert(a);//a 依然等于 hello
+</code></pre>
+<h2 id="boolean">布尔 Boolean</h2>
+<p>布尔（逻辑）只能有两个值：true 或 false</p>
+<pre><code class="language-javascript">var a = true;
+var b = 2 &lt; 1;// b = false
+</code></pre>
+<h2 id="undefined-null">Undefined 和 Null</h2>
+<p><code>null</code>表示一个空的值，而<code>undefined</code>表示值未定义。</p>
+<p>这并没有什么卵用，区分两者的意义不大。大多数情况下，我们都应该用<code>null</code>。<code>undefined</code>仅仅在判断函数参数是否传递的情况下有用（峰哥淘气了。。。。）</p>
+<h2 id="array">数组 Array</h2>
+<p>JavaScript的数组可以包括任意数据类型</p>
+<pre><code class="language-javascript">var a = [1,'hello',null,true,3.3];
+</code></pre>
+<p>也可以用new Array创建数组， 但不是不推荐下面这种写法</p>
+<pre><code class="language-javascript">var arr = new Array(1,2,3);
+</code></pre>
+<p><em>请注意</em>，直接给<code>Array</code>的<code>length</code>赋一个新的值会导致<code>Array</code>大小的变化</p>
+<pre><code class="language-javascript">var arr = [1, 2, 3];
+arr.length; // 3
+arr.length = 6;
+arr; // arr变为[1, 2, 3, undefined, undefined, undefined]
+arr.length = 2;
+arr; // arr变为[1, 2]
+</code></pre>
+<p><em>请注意</em>，如果通过索引赋值时，索引超过了范围，同样会引起<code>Array</code>大小的变化：</p>
+<pre><code class="language-javascript">var arr = [1, 2, 3];
+arr[5] = 'x';
+arr; // arr变为[1, 2, 3, undefined, undefined, 'x']
+</code></pre>
+<p>大多数其他编程语言不允许直接改变数组的大小，越界访问索引会报错。然而，JavaScript的<code>Array</code>却不会有任何错误。在编写代码时，不建议直接修改<code>Array</code>的大小，访问索引时要确保索引不会越界。</p>
+<h2 id="object">对象 Object</h2>
+<p>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义，属性由逗号分隔</p>
+<pre><code class="language-javascript">var person = {
+  name:'simple',
+  age:24,
+  city:'chongqing'
+};
+</code></pre>
+<p>对象的键都是字符串类型，值可以是任意类型</p>
+<p>如果属性名包含特殊字符，就必须用<code>''</code>括起来</p>
+<pre><code class="language-javascript">var person = {
+    name: 'simple',
+    'middle-school': 'No.1 Middle School'
+};
+</code></pre>
+<p>访问这个属性也无法使用<code>.</code>操作符，必须用<code>['xxx']</code>来访问</p>
+<pre><code class="language-javascript">person['middle-school'] //'No.1 Middle School'
+</code></pre>
+<h1 id="_4">函数</h1>
+<h2 id="_5">定义函数</h2>
+<pre><code class="language-javascript">function 函数名(参数){
+  ....
+  return 返回值；//可选
+}
+</code></pre>
+<h2 id="_6">匿名函数</h2>
+<pre><code class="language-javascript">var 函数名 = function（参数）{
+  ...
+  return 返回值；//可选
+}
+</code></pre>
+<h1 id="_7">异常</h1>
+<p>捕获异常</p>
+<pre><code class="language-javascript">try
+  {
+  //在这里运行代码
+  }
+catch(err)
+  {
+  //在这里处理错误
+  }
+</code></pre>
+<p>抛出异常 Throw</p>
+<pre><code class="language-javascript">throw exception
+</code></pre>
+<p>异常可以是 JavaScript 字符串、数字、逻辑值或对象。</p>
+<h1 id="html">操作 HTML 元素</h1>
+<p>如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(<em>id</em>) 方法。</p>
+<p>请使用 "id" 属性来标识 HTML 元素：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;我的第一张网页&lt;/h1&gt;
+&lt;p id=&quot;demo&quot;&gt;我的第一个段落&lt;/p&gt;
+&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML=&quot;我的第一段 JavaScript&quot;;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="js">Js 对象</h1>
+<p>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数...</p>
+<p>此外，JavaScript 允许自定义对象</p>
+<h2 id="date">日期对象 Date</h2>
+<h3 id="_8">定义日期</h3>
+<p>Date 对象用于处理日期和时间，可以通过 new 关键词来定义 Date 对象</p>
+<pre><code class="language-javascript">var myDate=new Date() 
+</code></pre>
+<p>Date 对象自动使用当前的日期和时间作为其初始值</p>
+<h3 id="_9">操作日期</h3>
+<pre><code class="language-javascript">var myDate=new Date()
+myDate.setFullYear(2008,7,9)
+</code></pre>
+<p>注意：表示月份的参数介于 0 到 11 之间。也就是说，如果希望把月设置为 8 月，则参数应该是 7.</p>
+<pre><code class="language-javascript">var myDate=new Date()
+myDate.setDate(myDate.getDate()+5)
+</code></pre>
+<p>注意：如果增加天数会改变月份或者年份，那么日期对象会自动完成这种转换</p>
+<h3 id="_10">比较日期</h3>
+<pre><code class="language-javascript">var myDate=new Date();
+myDate.setFullYear(2008,8,9);
+
+var today = new Date();
+
+if (myDate&gt;today)
+{
+alert(&quot;Today is before 9th August 2008&quot;);
+}
+else
+{
+alert(&quot;Today is after 9th August 2008&quot;);
+}
+</code></pre>
+<h2 id="_11">数组对象</h2>
+<h3 id="_12">定义数组</h3>
+<p>数组对象用来在单独的变量名中存储一系列的值</p>
+<p>我们使用关键词 new 来创建数组对象</p>
+<pre><code class="language-javascript">var myArray=new Array()
+</code></pre>
+<pre><code class="language-javascript">var mycars=new Array()
+mycars[0]=&quot;Saab&quot;
+mycars[1]=&quot;Volvo&quot;
+mycars[2]=&quot;BMW&quot;
+</code></pre>
+<pre><code class="language-javascript">var mycars=new Array(&quot;Saab&quot;,&quot;Volvo&quot;,&quot;BMW&quot;)
+</code></pre>
+<p>还是这样爽一点吧</p>
+<pre><code class="language-javascript">var cars=[&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;];
+</code></pre>
+<h2 id="regexp">正则表达式对象 RegExp</h2>
+<p>RegExp 对象用于规定在文本中检索的内容</p>
+<p>RegExp 是正则表达式的缩写。</p>
+<p>当您检索某个文本时，可以使用一种模式来描述要检索的内容。RegExp 就是这种模式。</p>
+<p>简单的模式可以是一个单独的字符。</p>
+<p>更复杂的模式包括了更多的字符，并可用于解析、格式检查、替换等等。</p>
+<p>您可以规定字符串中的检索位置，以及要检索的字符类型，等等。</p>
+<pre><code class="language-javascript">var patt1=new RegExp(&quot;e&quot;);
+</code></pre>
+<h3 id="regexp_1">RegExp 对象的方法</h3>
+<p>RegExp 对象有 3 个方法：test()、exec() 以及 compile()</p>
+<h4 id="test">test()</h4>
+<p>test() 方法检索字符串中的指定值。返回值是 true 或 false</p>
+<pre><code class="language-javascript">var patt1=new RegExp(&quot;e&quot;);
+document.write(patt1.test(&quot;The best things in life are free&quot;)); 
+//输出 true
+</code></pre>
+<h4 id="exec">exec()</h4>
+<p>exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null</p>
+<pre><code class="language-javascript">var patt1=new RegExp(&quot;e&quot;);
+document.write(patt1.exec(&quot;The best things in life are free&quot;)); 
+//输出 e
+</code></pre>
+<h4 id="compile">compile()</h4>
+<p>compile() 方法用于改变 RegExp</p>
+<p>compile() 既可以改变检索模式，也可以添加或删除第二个参数</p>
+<pre><code class="language-javascript">var patt1=new RegExp(&quot;e&quot;);
+
+document.write(patt1.test(&quot;The best things in life are free&quot;));
+
+patt1.compile(&quot;d&quot;);
+
+document.write(patt1.test(&quot;The best things in life are free&quot;));
+</code></pre>
+<p>由于字符串中存在 "e"，而没有 "d"，以上代码的输出是</p>
+<pre><code class="language-javascript">truefalse
+</code></pre>
+<h1 id="bom">浏览器对象模型 BOM</h1>
+<p>浏览器对象模型 (BOM) 使 JavaScript 有能力与浏览器“对话</p>
+<p>浏览器对象模型（Browser Object Model）尚无正式标准。</p>
+<p>由于现代浏览器已经（几乎）实现了 JavaScript 交互性方面的相同方法和属性，因此常被认为是 BOM 的方法和属性</p>
+<h2 id="window">Window</h2>
+<h3 id="window_1">window 对象</h3>
+<p>所有浏览器都支持 <em>window</em> 对象。它表示浏览器窗口。</p>
+<p>所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。</p>
+<p>全局变量是 window 对象的属性。</p>
+<p>全局函数是 window 对象的方法。</p>
+<p>甚至 HTML DOM 的 document 也是 window 对象的属性之一</p>
+<pre><code class="language-javascript">window.document.getElementById(&quot;header&quot;);
+</code></pre>
+<p>可省略window前缀</p>
+<pre><code class="language-javascript">document.getElementById(&quot;header&quot;);
+</code></pre>
+<h3 id="window_2">window 尺寸</h3>
+<p>有三种方法能够确定浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）</p>
+<p>对于Internet Explorer、Chrome、Firefox、Opera 以及 Safari：</p>
+<ul>
+<li>window.innerHeight - 浏览器窗口的内部高度</li>
+<li>window.innerWidth - 浏览器窗口的内部宽度</li>
+</ul>
+<p>对于 Internet Explorer 8、7、6、5：</p>
+<ul>
+<li>document.documentElement.clientHeight</li>
+<li>document.documentElement.clientWidth</li>
+</ul>
+<p>或者</p>
+<ul>
+<li>document.body.clientHeight</li>
+<li>document.body.clientWidth</li>
+</ul>
+<p>实用的 JavaScript 方案（涵盖所有浏览器）</p>
+<pre><code class="language-javascript">var w=window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h=window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+</code></pre>
+<h3 id="window_3">其他window方法</h3>
+<ul>
+<li>window.open() - 打开新窗口</li>
+<li>window.close() - 关闭当前窗口</li>
+<li>window.moveTo() - 移动当前窗口</li>
+<li>window.resizeTo() - 调整当前窗口的尺寸</li>
+</ul>
+<h2 id="screen">Screen</h2>
+<p>window.screen 对象包含有关用户屏幕的信息</p>
+<p>window.screen 对象在编写时可以不使用 window 这个前缀</p>
+<h3 id="_13">可用宽度</h3>
+<p>screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如窗口任务栏</p>
+<pre><code class="language-javascript">&lt;script&gt;
+document.write(&quot;可用宽度：&quot; + screen.availWidth);
+&lt;/script&gt;
+</code></pre>
+<h3 id="_14">可用高度</h3>
+<p>screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如窗口任务栏</p>
+<pre><code class="language-javascript">&lt;script&gt;
+document.write(&quot;可用高度：&quot; + screen.availHeight);
+&lt;/script&gt;
+</code></pre>
+<h2 id="location">Location</h2>
+<p>window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面</p>
+<p><em>window.location</em> 对象在编写时可不使用 window 这个前缀</p>
+<ul>
+<li>location.hostname 返回 web 主机的域名</li>
+<li>location.pathname 返回当前页面的路径和文件名</li>
+<li>location.port 返回 web 主机的端口 （80 或 443）</li>
+<li>location.protocol 返回所使用的 web 协议（http:// 或 https://）</li>
+<li>location.href 属性返回当前页面的 URL</li>
+</ul>
+<h3 id="assign">Assign</h3>
+<p>location.assign() 方法加载新的文档</p>
+<pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function newDoc()
+  {
+  window.location.assign(&quot;http://www.w3school.com.cn&quot;)
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;加载新文档&quot; onclick=&quot;newDoc()&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="history">History</h2>
+<p>window.history 对象包含浏览器的历史</p>
+<p><em>window.history</em> 对象在编写时可不使用 window 这个前缀</p>
+<ul>
+<li>history.back() - 与在浏览器点击后退按钮相同</li>
+<li>history.forward() - 与在浏览器中点击按钮向前相同</li>
+</ul>
+<h2 id="navigator">Navigator</h2>
+<p>window.navigator 对象包含有关访问者浏览器的信息</p>
+<p>window.navigator 对象在编写时可不使用 window 这个前缀</p>
+<pre><code class="language-html">&lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+txt = &quot;&lt;p&gt;Browser CodeName: &quot; + navigator.appCodeName + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;Browser Name: &quot; + navigator.appName + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;Browser Version: &quot; + navigator.appVersion + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;Cookies Enabled: &quot; + navigator.cookieEnabled + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;Platform: &quot; + navigator.platform + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;User-agent header: &quot; + navigator.userAgent + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;User-agent language: &quot; + navigator.systemLanguage + &quot;&lt;/p&gt;&quot;;
+document.getElementById(&quot;example&quot;).innerHTML=txt;
+&lt;/script&gt;
+</code></pre>
+<p>警告：来自 navigator 对象的信息具有误导性，不应该被用于检测浏览器版本，这是因为：</p>
+<ul>
+<li>navigator 数据可被浏览器使用者更改</li>
+<li>浏览器无法报告晚于浏览器发布的新操作系统</li>
+</ul>
+<h2 id="_15">消息框</h2>
+<h3 id="_16">警告框</h3>
+<p>警告框经常用于确保用户可以得到某些信息</p>
+<p>当警告框出现后，用户需要点击确定按钮才能继续进行操作</p>
+<pre><code class="language-html">alert(&quot;文本&quot;)
+</code></pre>
+<h3 id="_17">确认框</h3>
+<p>确认框用于使用户可以验证或者接受某些信息</p>
+<p>当确认框出现后，用户需要点击确定或者取消按钮才能继续进行操作</p>
+<p>如果用户点击确认，那么返回值为 true。如果用户点击取消，那么返回值为 false</p>
+<pre><code>confirm(&quot;文本&quot;)
+</code></pre>
+<h3 id="_18">提示框</h3>
+<p>提示框经常用于提示用户在进入页面前输入某个值</p>
+<p>当提示框出现后，用户需要输入某个值，然后点击确认或取消按钮才能继续操纵</p>
+<p>如果用户点击确认，那么返回值为输入的值。如果用户点击取消，那么返回值为 null</p>
+<pre><code>prompt(&quot;文本&quot;,&quot;默认值&quot;)
+</code></pre>
+<h2 id="_19">计时</h2>
+<p>通过使用 JavaScript，我们有能力作到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件</p>
+<h3 id="settimeout">setTimeout()</h3>
+<pre><code class="language-javascript">var t=setTimeout(&quot;javascript语句&quot;,毫秒)
+</code></pre>
+<p>setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 t 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它</p>
+<p>setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 "alert('5 seconds!')"，或者对函数的调用，诸如 alertMsg()"</p>
+<p>第二个参数指示从当前起多少毫秒后执行第一个参数</p>
+<h3 id="cleartimeout">clearTimeout()</h3>
+<pre><code class="language-javascript">clearTimeout(setTimeout_variable)
+</code></pre>
+<p>取消setTimeout()</p>
+<h2 id="cookies">Cookies</h2>
+<p>cookie 是存储于访问者的计算机中的变量。每当同一台计算机通过浏览器请求某个页面时，就会发送这个 cookie。你可以使用 JavaScript 来创建和取回 cookie 的值</p>
+<h1 id="html-dom">HTML DOM (文档对象模型)</h1>
+<p>当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）</p>
+<p><img alt="" src="http://www.w3school.com.cn/i/ct_htmltree.gif" /></p>
+<p>通过可编程的对象模型，JavaScript 获得了足够的能力来创建动态的 HTML。</p>
+<ul>
+<li>JavaScript 能够改变页面中的所有 HTML 元素</li>
+<li>JavaScript 能够改变页面中的所有 HTML 属性</li>
+<li>JavaScript 能够改变页面中的所有 CSS 样式</li>
+<li>JavaScript 能够对页面中的所有事件做出反应</li>
+</ul>
+<h2 id="html_1">查找HTML元素</h2>
+<p>通常，通过 JavaScript，您需要操作 HTML 元素</p>
+<p>为了做到这件事情，您必须首先找到该元素。有三种方法来做这件事：</p>
+<ul>
+<li>通过 id 找到 HTML 元素</li>
+<li>通过标签名找到 HTML 元素</li>
+<li>通过类名找到 HTML 元素</li>
+</ul>
+<h3 id="idhtml">通过id查找HTML元素</h3>
+<p>在 DOM 中查找 HTML 元素的最简单的方法，是通过使用元素的 id</p>
+<pre><code class="language-javascript">var x=document.getElementById(&quot;intro&quot;);
+</code></pre>
+<p>如果找到该元素，则该方法将以对象（在 x 中）的形式返回该元素</p>
+<p>如果未找到该元素，则 x 将包含 null</p>
+<h3 id="html_2">通过标签名查找 HTML 元素</h3>
+<p>本例查找 id="main" 的元素，然后查找 "main" 中的所有 <p> 元素：</p>
+<pre><code class="language-javascript">var x=document.getElementById(&quot;main&quot;);
+var y=x.getElementsByTagName(&quot;p&quot;);
+</code></pre>
+<h2 id="html_3">改变HTML</h2>
+<p>HTML DOM 允许 JavaScript 改变 HTML 元素的内容</p>
+<h3 id="html_4">改变HTML输出流</h3>
+<p>JavaScript 能够创建动态的 HTML 内容</p>
+<p>在 JavaScript 中，document.write() 可用于直接向 HTML 输出流写内容</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;script&gt;
+document.write(Date());
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>提示：绝不要使用在文档加载之后使用 document.write(),这会覆盖该文档</p>
+<h3 id="html_5">改变HTML内容</h3>
+<p>修改 HTML 内容的最简单的方法时使用 innerHTML 属性</p>
+<pre><code class="language-javascript">document.getElementById(id).innerHTML=new HTML
+</code></pre>
+<pre><code class="language-html">&lt;html&gt;
+&lt;body&gt;
+&lt;p id=&quot;p1&quot;&gt;Hello World!&lt;/p&gt;
+&lt;script&gt;
+document.getElementById(&quot;p1&quot;).innerHTML=&quot;New text!&quot;;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="html_6">改变HTML属性</h3>
+<pre><code class="language-javascript">document.getElementById(id).attribute=new value
+</code></pre>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;img id=&quot;image&quot; src=&quot;smiley.gif&quot;&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;image&quot;).src=&quot;landscape.jpg&quot;;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="css">改变CSS</h2>
+<p>HTML DOM 允许 JavaScript 改变 HTML 元素的样式</p>
+<h3 id="html_7">改变HTML样式</h3>
+<pre><code class="language-javascript">document.getElementById(id).style.property=new style
+</code></pre>
+<pre><code class="language-html">&lt;p id=&quot;p2&quot;&gt;Hello World!&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;p2&quot;).style.color=&quot;blue&quot;;
+&lt;/script&gt;
+</code></pre>
+<h2 id="_20">事件</h2>
+<p>HTML DOM 使 JavaScript 有能力对 HTML 事件做出反应</p>
+<h2 id="_21">对事件做出反应</h2>
+<p>我们可以在事件发生时执行 JavaScript，比如当用户在 HTML 元素上点击时</p>
+<pre><code>onclick=JavaScript
+</code></pre>
+<p>HTML 事件的例子：</p>
+<ul>
+<li>当用户点击鼠标时</li>
+<li>当网页已加载时</li>
+<li>当图像已加载时</li>
+<li>当鼠标移动到元素上时</li>
+<li>当输入字段被改变时</li>
+<li>当提交 HTML 表单时</li>
+<li>当用户触发按键时</li>
+</ul>
+<pre><code class="language-javascript">&lt;h1 onclick=&quot;this.innerHTML='谢谢!'&quot;&gt;请点击该文本&lt;/h1&gt;
+</code></pre>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function changetext(id)
+{
+id.innerHTML=&quot;谢谢!&quot;;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 onclick=&quot;changetext(this)&quot;&gt;请点击该文本&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="_22">事件属性</h3>
+<p>如需向 HTML 元素分配 事件，您可以使用事件属性</p>
+<pre><code class="language-javascript">&lt;button onclick=&quot;displayDate()&quot;&gt;点击这里&lt;/button&gt;
+</code></pre>
+<h3 id="html-dom_1">使用HTML DOM来分配事件</h3>
+<p>HTML DOM 允许您通过使用 JavaScript 来向 HTML 元素分配事件</p>
+<pre><code class="language-javascript">&lt;script&gt;
+document.getElementById(&quot;myBtn&quot;).onclick=function(){
+    displayDate()
+};
+&lt;/script&gt;
+</code></pre>
+<h3 id="onloadonunload">onload和onunload 事件</h3>
+<p>onload 和 onunload 事件会在用户进入或离开页面时被触发</p>
+<p>onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本</p>
+<p>onload 和 onunload 事件可用于处理 cookie</p>
+<pre><code>&lt;body onload=&quot;checkCookies()&quot;&gt;
+</code></pre>
+<h3 id="onchange">onchange 事件</h3>
+<p>onchange 事件常结合对输入字段的验证来使用</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;fname&quot; onchange=&quot;upperCase()&quot;&gt;
+</code></pre>
+<h3 id="onmouseoveronmouseout">onmouseover和onmouseout 事件</h3>
+<p>onmouseover 和 onmouseout 事件可用于在用户的鼠标移至 HTML 元素上方或移出元素时触发函数</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;div onmouseover=&quot;mOver(this)&quot; onmouseout=&quot;mOut(this)&quot; style=&quot;background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;&quot;&gt;把鼠标移到上面&lt;/div&gt;
+
+&lt;script&gt;
+function mOver(obj)
+{
+obj.innerHTML=&quot;谢谢&quot;
+}
+
+function mOut(obj)
+{
+obj.innerHTML=&quot;把鼠标移到上面&quot;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="onmousedownonmouseup-onclick">onmousedown、onmouseup 以及 onclick 事件</h3>
+<p>onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。首先当点击鼠标按钮时，会触发 onmousedown 事件，当释放鼠标按钮时，会触发 onmouseup 事件，最后，当完成鼠标点击时，会触发 onclick 事件</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;div onmousedown=&quot;mDown(this)&quot; onmouseup=&quot;mUp(this)&quot; style=&quot;background-color:green;color:#ffffff;width:90px;height:20px;padding:40px;font-size:12px;&quot;&gt;请点击这里&lt;/div&gt;
+
+&lt;script&gt;
+function mDown(obj)
+{
+obj.style.backgroundColor=&quot;#1ec5e5&quot;;
+obj.innerHTML=&quot;请释放鼠标按钮&quot;
+}
+
+function mUp(obj)
+{
+obj.style.backgroundColor=&quot;green&quot;;
+obj.innerHTML=&quot;请按下鼠标按钮&quot;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="_23">元素（节点）</h2>
+<h3 id="html_8">创建新的HTML元素</h3>
+<p>如需向 HTML DOM 添加新元素，您必须首先创建该元素（元素节点），然后向一个已存在的元素追加该元素</p>
+<pre><code class="language-html">&lt;div id=&quot;div1&quot;&gt;
+&lt;p id=&quot;p1&quot;&gt;这是一个段落&lt;/p&gt;
+&lt;p id=&quot;p2&quot;&gt;这是另一个段落&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+//创建新的 &lt;p&gt; 元素
+var para=document.createElement(&quot;p&quot;);
+//创建了一个文本节点
+var node=document.createTextNode(&quot;这是新段落。&quot;);
+//向 &lt;p&gt; 元素追加这个文本节点
+para.appendChild(node);
+//向这个已有的元素追加新元素
+var element=document.getElementById(&quot;div1&quot;);
+element.appendChild(para);
+&lt;/script&gt;
+</code></pre>
+<h3 id="html_9">删除已有的HTML元素</h3>
+<p>如需删除 HTML 元素，您必须首先获得该元素的父元素</p>
+<pre><code class="language-html">&lt;div id=&quot;div1&quot;&gt;
+&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;
+&lt;p id=&quot;p2&quot;&gt;这是另一个段落。&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+//找到父元素
+var parent=document.getElementById(&quot;div1&quot;);
+//找到子元素
+var child=document.getElementById(&quot;p1&quot;);
+//删除子元素
+parent.removeChild(child);
+&lt;/script&gt;
+</code></pre>
+<p>通过 parentNode 删除子元素</p>
+<pre><code class="language-javascript">var child=document.getElementById(&quot;p1&quot;);
+child.parentNode.removeChild(child);
+</code></pre>
+<h1 id="cdn">CDN 内容分发网络</h1>
+<p>您总是希望网页可以尽可能地快。您希望页面的容量尽可能地小，同时您希望浏览器尽可能多地进行缓存</p>
+<p>如果许多不同的网站使用相同的 JavaScript 框架，那么把框架库存放在一个通用的位置供每个网页分享就变得很有意义了</p>
+<p>CDN (Content Delivery Network) 解决了这个问题。CDN 是包含可分享代码库的服务器网络</p>
+<h2 id="jquery">引入jQuery</h2>
+<pre><code class="language-javascript">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js&quot;&gt;
+&lt;/script&gt;
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../html/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="btn btn-neutral float-left" title="HTML学习笔记"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../mysql/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="btn btn-neutral float-right" title="MySQL学习笔记">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/simplepeng/KeepLearning/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../html/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../mysql/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
