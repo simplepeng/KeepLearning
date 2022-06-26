@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>队列-queue - KeepLearning</title>
+    <title>简介 - KeepLearning</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "\u961f\u5217-queue";
-        var mkdocs_page_input_path = "\u6570\u636e\u7ed3\u6784/03.\u961f\u5217-queue.md";
+        var mkdocs_page_name = "\u7b80\u4ecb";
+        var mkdocs_page_input_path = "\u6570\u636e\u7ed3\u6784/\u7b80\u4ecb.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -296,23 +296,33 @@
               </ul>
               <p class="caption"><span class="caption-text">数据结构</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../01.%E7%BA%BF%E6%80%A7%E8%A1%A8-list/">线性表-List</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%8F%82%E8%80%83/">参考</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../02.%E6%A0%88-stack/">栈-Stack</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%9B%BE-Graph/">图 Graph</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">队列-queue</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%A0%86-Heap/">堆 Heap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%AD%97%E7%AC%A6%E4%B8%B2-String/">字符串-string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E6%95%A3%E5%88%97%E8%A1%A8-HashTable/">散列表 HashTable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E6%95%B0%E7%BB%84-Array/">数组 Array</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E6%A0%88-Stack/">栈-Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E6%A0%91-Tree/">树 Tree</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">简介</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">顺序队列</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_2">循环队列</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">逻辑结构</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">链队列</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">物理结构</a>
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../04.%E5%AD%97%E7%AC%A6%E4%B8%B2-string/">字符串-string</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E7%BA%BF%E6%80%A7%E8%A1%A8-List/">线性表-List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E9%98%9F%E5%88%97-Queue/">队列-Queue</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">算法</span></p>
@@ -349,9 +359,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>数据结构 &raquo;</li><li>队列-queue</li>
+          <li>数据结构 &raquo;</li><li>简介</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/数据结构/03.队列-queue.md"
+        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/数据结构/简介.md"
           class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
@@ -361,22 +371,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="-queue">队列-queue</h1>
-<p><code>队列（queue）</code>是只允许在一端进行插入操作，而在另一端进行删除操作的线性表。所以队列也有<code>顺序存储</code>和<code>链式存储</code>两种存储方式。</p>
-<p>队列是一种<code>先进先出（First In First Out）</code>的线性表，简称FIFO。</p>
-<p>允许插入的一端称为<code>队尾</code>，允许删除的一端称为<code>队头</code></p>
-<h2 id="_1">顺序队列</h2>
-<h3 id="_2">循环队列</h3>
-<p>为了解决<code>假溢出</code>，当队尾满了就从队头开始，也就是头尾相接的循环。我们把队列的这种头尾相接的顺序存储结构称为<code>循环队列</code>。</p>
-<h2 id="_3">链队列</h2>
-<p>队列的链式存储结构，其实就是线性表的单链表，只不过它只能尾进头出而已，我们把它简称为<code>链队列</code>。</p>
-<p><strong>总结：</strong>在可以确定队列长度最大值的情况下，建议使用顺序队列的循环队列。如果无法确定队列的长度时，则用链队列。</p>
+                <h1 id="_1">简介</h1>
+<p>程序设计=数据结构+算法</p>
+<p>数据结构：是相互之间存在一种或多种特定关系的数据元素的集合。</p>
+<h2 id="_2">逻辑结构</h2>
+<p>逻辑结构：是指数据对象中数据元素之间的相互关系。</p>
+<ul>
+<li>集合结构：集合结构中的数据元素除了同属与一个集合外，它们之间没有其他关系。</li>
+<li>线性结构：线性结构中的数据元素之间是一对一的关系。</li>
+<li>树形结构：树形结构中的数据元素之间存在一对多的层次关系。</li>
+<li>图形结构：图形结构的数据元素使多对多的关系。</li>
+</ul>
+<h2 id="_3">物理结构</h2>
+<p>物理结构：是指数据的逻辑结构在计算机中的存储形式。</p>
+<ul>
+<li>顺序存储结构：是把数据元素存放在地址连续的存储单元里，其数据间的逻辑关系和物理关系是一致的。</li>
+<li>链式存储结构：是把数据元素存放在任意的存储单元里，这组存储单元可以是连续的，也可以是不连续的。</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../02.%E6%A0%88-stack/" class="btn btn-neutral float-left" title="栈-Stack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../04.%E5%AD%97%E7%AC%A6%E4%B8%B2-string/" class="btn btn-neutral float-right" title="字符串-string">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../%E6%A0%91-Tree/" class="btn btn-neutral float-left" title="树 Tree"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../%E7%BA%BF%E6%80%A7%E8%A1%A8-List/" class="btn btn-neutral float-right" title="线性表-List">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -403,10 +420,10 @@
         </span>
     
     
-      <span><a href="../02.%E6%A0%88-stack/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../%E6%A0%91-Tree/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../04.%E5%AD%97%E7%AC%A6%E4%B8%B2-string/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../%E7%BA%BF%E6%80%A7%E8%A1%A8-List/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

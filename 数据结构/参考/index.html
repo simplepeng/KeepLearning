@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>线性表-List - KeepLearning</title>
+    <title>参考 - KeepLearning</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "\u7ebf\u6027\u8868-List";
-        var mkdocs_page_input_path = "\u6570\u636e\u7ed3\u6784/01.\u7ebf\u6027\u8868-list.md";
+        var mkdocs_page_name = "\u53c2\u8003";
+        var mkdocs_page_input_path = "\u6570\u636e\u7ed3\u6784/\u53c2\u8003.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -296,29 +296,29 @@
               </ul>
               <p class="caption"><span class="caption-text">数据结构</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">线性表-List</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">参考</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">顺序存储结构</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">链式存储结构</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">单链表</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_4">静态链表</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_5">循环链表</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_6">双链表</a>
-    </li>
-        </ul>
-    </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../02.%E6%A0%88-stack/">栈-Stack</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%9B%BE-Graph/">图 Graph</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../03.%E9%98%9F%E5%88%97-queue/">队列-queue</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%A0%86-Heap/">堆 Heap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../04.%E5%AD%97%E7%AC%A6%E4%B8%B2-string/">字符串-string</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%AD%97%E7%AC%A6%E4%B8%B2-String/">字符串-string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E6%95%A3%E5%88%97%E8%A1%A8-HashTable/">散列表 HashTable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E6%95%B0%E7%BB%84-Array/">数组 Array</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E6%A0%88-Stack/">栈-Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E6%A0%91-Tree/">树 Tree</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E7%AE%80%E4%BB%8B/">简介</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E7%BA%BF%E6%80%A7%E8%A1%A8-List/">线性表-List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E9%98%9F%E5%88%97-Queue/">队列-Queue</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">算法</span></p>
@@ -355,9 +355,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>数据结构 &raquo;</li><li>线性表-List</li>
+          <li>数据结构 &raquo;</li><li>参考</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/数据结构/01.线性表-list.md"
+        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/数据结构/参考.md"
           class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
@@ -367,54 +367,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="-list">线性表-List</h1>
-<p>零个或多个数据元素的<code>有限</code>序列</p>
-<p>线性表的元素的个数(n&gt;=0)定义为线性表的长度，当<code>n=0</code>时，称为<code>空表</code></p>
-<h2 id="_1">顺序存储结构</h2>
-<p>线性表的顺序存储结构，指的是用一段地址连续的存储单元依次存储线性表的数据元素。</p>
-<p>Java中的<code>ArrayList</code>的底层实现，底层使用<code>数组</code>实现。</p>
-<p>优点：</p>
+                <h1 id="_1">参考</h1>
 <ul>
-<li>无须为表示表中元素之间的逻辑关系而增加额外的存储空间</li>
-<li>查询，添加较快</li>
+<li>&lt;&lt;大话数据结构&gt;&gt;</li>
+<li><a href="https://zhuanlan.zhihu.com/p/93928546">常见的数据结构</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1634155">24张图彻底弄懂九大常见数据结构！</a></li>
 </ul>
-<p>缺点：</p>
-<ul>
-<li>插入和删除需要移动大量的元素</li>
-<li>容器长度需要指定，当元素个数超过指定容量，需要扩容操作</li>
-<li>造成存储空间的碎片(元素个数较少时，造成的空间浪费)</li>
-</ul>
-<h2 id="_2">链式存储结构</h2>
-<p>由结点（Node）组成</p>
-<p>Java中的<code>LinkedList</code>的底层实现</p>
-<h3 id="_3">单链表</h3>
-<p>n个结点（Node）链接成一个链表，即为线性表的链式存储结构，因为此链表的每个结点中只包含一个<code>指针域</code>，所以叫做<code>单链表</code></p>
-<p>链表中第一个结点的存储位置叫做<code>头指针</code></p>
-<p>单链表的最后一个结点的的指针域为“空”（通常用<code>NULL</code>或<code>^</code>表示）</p>
-<p>有时为了更加方便的对链表进行操作，会在<code>单链表</code>的第一个结点前预设一个<code>头结点</code>，但不是必须。</p>
-<p>结点（Node）由存放数据元素的<code>数据域</code>和存放后继结点的<code>指针域</code>组成</p>
-<h3 id="_4">静态链表</h3>
-<p>用数组实现的链表就称之为<code>静态链表</code>（游标实现法）</p>
-<p>优点：</p>
-<ul>
-<li>在插入和删除操作时，只需要修改游标，不需要移动元素，从而改进了在顺序存储结构中的插入和删除操作需要移动大量元素的缺点</li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li>没有解决需要先设定表长度的问题</li>
-<li>失去了顺序存储结构随机存取的特性</li>
-</ul>
-<h3 id="_5">循环链表</h3>
-<p>将单链表中<code>终端结点</code>的指针由<code>空指针</code>指向<code>头结点</code>，就使整个单链表形成一个<code>环</code>，这种头尾相接的单链表称为<code>单循环链表</code>，简称<code>循环链表（circular linked list）</code></p>
-<h3 id="_6">双链表</h3>
-<p><code>双向链表（double linked list）</code>是在单链表的每个结点中，在添加一个<code>指向其前驱结点</code>的指针域。</p>
-<p>使用<code>空间换时间</code>的方法提升了查询效率</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../../python/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="btn btn-neutral float-left" title="Python学习笔记"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../02.%E6%A0%88-stack/" class="btn btn-neutral float-right" title="栈-Stack">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../%E5%9B%BE-Graph/" class="btn btn-neutral float-right" title="图 Graph">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -444,7 +408,7 @@
       <span><a href="../../python/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../02.%E6%A0%88-stack/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../%E5%9B%BE-Graph/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
