@@ -1,5 +1,6 @@
 site_name: KeepLearning
 theme:
   name: readthedocs
+  sticky_navigation: false
 repo_url: https://github.com/simplepeng/KeepLearning/
 
