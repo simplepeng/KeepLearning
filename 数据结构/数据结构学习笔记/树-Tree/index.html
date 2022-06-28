@@ -318,17 +318,21 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_2">二叉树</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">建立二叉树</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">特殊二叉树</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_4">遍历二叉树</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">建立二叉树</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_5">线索二叉树</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">遍历二叉树</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_6">哈夫曼树</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">线索二叉树</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_7">平衡二叉树</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_7">树，森林与二叉树的转换</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_8">红黑树</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_8">哈夫曼树</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_9">平衡二叉树</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_10">红黑树</a>
     </li>
     </ul>
                 </li>
@@ -415,13 +419,43 @@
 <li>左子树和右子树是有顺序的</li>
 <li>即使树中某结点只有一颗子树，也要区分它是左子树还是右子树</li>
 </ul>
-<h2 id="_3">建立二叉树</h2>
-<h2 id="_4">遍历二叉树</h2>
-<h2 id="_5">线索二叉树</h2>
-<h2 id="_6">哈夫曼树</h2>
+<h2 id="_3">特殊二叉树</h2>
+<ul>
+<li>斜树</li>
+<li>满二叉树</li>
+<li>完全二叉树</li>
+</ul>
+<p>所有的结点都只有左子树的二叉树叫<code>左斜树</code>。所有结点都是只有右子树的二叉树叫<code>右斜树</code>。这两者统称为<code>斜树</code>。</p>
+<p>斜树有很明显的特点，就是每一层都只有一个结点，结点的个数与二叉树的深度相同。</p>
+<p>在一个二叉树中，如果所有分支结点都存在左子树和右子树，并且所有叶子都在<strong>同一层上</strong>，这样的二叉树称为<code>满二叉树</code>。</p>
+<p>对一棵具有n个结点的二叉树按层序编号，如果编号为i(1&lt;=i&lt;=n)的结点与同样深度的满二叉树中编号为i的结点在二叉树中位置完全相同，则这棵树称为<code>完全二叉树</code>。</p>
+<h2 id="_4">建立二叉树</h2>
+<h2 id="_5">遍历二叉树</h2>
+<ul>
+<li>前序遍历</li>
+<li>中序遍历</li>
+<li>后序遍历</li>
+<li>层序遍历</li>
+</ul>
+<p>前序遍历：先根后左再右，先访问根结点，然后前序遍历左子树，再前序遍历右子树。若树为空，则空操作返回。</p>
+<p>中序遍历：先左后跟再右，先中序遍历根结点的左子树，然后访问根结点，最后中序遍历右子树。若树为空，则空操作返回。</p>
+<p>后序遍历：先左后右再根，从左到右先叶子后结点的方式遍历访问左右子树，最后访问根结点。若树为空，则空操作返回。</p>
+<p>层序遍历：从树的第一层，也就是根结点开始访问，从上而下逐层遍历，在同一层中，按从左到右的顺序对结点逐个访问。若树为空，则空操作返回。</p>
+<ul>
+<li>已知前序遍历序列和中序遍历序列，可以唯一确定一棵二叉树。</li>
+<li>已知后序遍历序列和中序遍历序列，可以唯一确定一棵二叉树。</li>
+<li>但是已知前序和后序遍历，是不能确定一棵二叉树的。</li>
+</ul>
+<h2 id="_6">线索二叉树</h2>
+<p>在一个结点上有指向前驱和后继的指针，这种指针称为<code>线索</code>，加上线索的二叉链表称为<code>线索链表</code>，相应的二叉树就称为<code>线索二叉树(Thread Binary Tree)</code>。</p>
+<p>线索二叉树等于是把一棵二叉树转变成了双向链表，这样对我们插入删除结点，查找某个结点都带来了方便。所以我们对二叉树以某种次序遍历使其变为线索二叉树的过程称为<code>线索化</code>。</p>
+<p>线索化的过程就是在遍历的过程中修改空指针的过程。</p>
+<p>如果所用的二叉树需经常遍历或查找结点时需要某种遍历序列中的前驱和后继，那么采用线索二叉链表的存储结构就是非常不错的选择。</p>
+<h2 id="_7">树，森林与二叉树的转换</h2>
+<h2 id="_8">哈夫曼树</h2>
 <p><code>哈夫曼树</code>也称之为<code>最优二叉树</code>。与之对应的算法就是<code>哈夫曼编码</code>。</p>
-<h2 id="_7">平衡二叉树</h2>
-<h2 id="_8">红黑树</h2>
+<h2 id="_9">平衡二叉树</h2>
+<h2 id="_10">红黑树</h2>
               
             </div>
           </div><footer>
