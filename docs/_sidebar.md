@@ -58,7 +58,10 @@
 - 算法
   - [排序算法](algorithm/sort.md)
 - 设计模式
-  - [笔记](design_pattern/learn.md)
+  - [简介](design_pattern/intro.md)
+  - [分类](design_pattern/type.md)
+  - [原则](design_pattern/principle.md)
+  - [参考](design_pattern/reference.md)
 - 计算机网络
   - [笔记](network/learn.md)
 - Go
