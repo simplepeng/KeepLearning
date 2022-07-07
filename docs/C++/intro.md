@@ -9,3 +9,22 @@ C++ 是由 Bjarne Stroustrup 于 1979 年在新泽西州美利山贝尔实验室
 C++ 是 C 的一个超集，事实上，任何合法的 C 程序都是合法的 C++ 程序。
 
 注意：使用静态类型的编程语言是在编译时执行类型检查，而不是在运行时执行类型检查。
+
+## HelloWorld
+
+```c++
+//导入库里面头文件
+#include <iostream>
+//使用std的命名空间
+using namespace std;
+
+//main主函数
+int main(int argc, char const *argv[])
+{
+    //在标准输入流输入 字符串, endl标志结尾
+    cout << "hello c++" << endl;
+    return 0;
+}
+```
+
+c++同样要以`;`标志每行语句结束
