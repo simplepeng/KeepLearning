@@ -56,4 +56,8 @@
   - [图](data_structure/graph.md)
   - [参考](data_structure/reference.md)
 - 算法
-    - [排序算法](algorithm/sort.md)    
+  - [排序算法](algorithm/sort.md)
+- Go
+  - [笔记](go/learn_go.md)
+- Git
+    - [速查表](git/query.md)
