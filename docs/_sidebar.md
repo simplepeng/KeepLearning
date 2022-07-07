@@ -60,4 +60,10 @@
 - Go
   - [笔记](go/learn_go.md)
 - Git
-    - [速查表](git/query.md)
+  - [速查表](git/query.md)
+- Docker
+  - [笔记](docker/learn.md)
+- Groovy
+  - [笔记](groovy/learn.md)
+- Python
+  - [笔记](python/learn.md)
