@@ -1,5 +1,4 @@
 - C 语言
-
   - [简介](c/intro.md)
   - [注释](c/comment.md)
   - [变量](c/var.md)
@@ -15,7 +14,6 @@
   - [参考](c/reference.md)
 
 - C++
-
   - [简介](c++/intro.md)
   - [注释](c++/comment.md)
   - [变量和常量](c++/var_const.md)
