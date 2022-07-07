@@ -55,3 +55,5 @@
   - [树](data_structure/tree.md)
   - [图](data_structure/graph.md)
   - [参考](data_structure/reference.md)
+- 算法
+    - [排序算法](algorithm/sort.md)    
