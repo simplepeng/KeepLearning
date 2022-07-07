@@ -12,7 +12,6 @@
   - [字符串](c/string.md)
   - [位运算](c/bit_operation.md)
   - [参考](c/reference.md)
-
 - C++
   - [简介](c++/intro.md)
   - [注释](c++/comment.md)
