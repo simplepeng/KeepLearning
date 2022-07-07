@@ -57,6 +57,10 @@
   - [参考](data_structure/reference.md)
 - 算法
   - [排序算法](algorithm/sort.md)
+- 设计模式
+  - [笔记](design_pattern/learn.md)
+- 计算机网络
+  - [笔记](network/learn.md)
 - Go
   - [笔记](go/learn_go.md)
 - Git
@@ -67,3 +71,13 @@
   - [笔记](groovy/learn.md)
 - Python
   - [笔记](python/learn.md)
+- MySQL
+  - [笔记](mysql/learn.md)
+- HTML
+  - [HTML](html/learn_html.md)
+  - [HTML5](html/learn_html5.md)
+- JavaScript
+  - [笔记](javascript/learn.md)
+- 英语
+  - [语法笔记](english/learn.md)
+  
