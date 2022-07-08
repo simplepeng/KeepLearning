@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>HTML学习笔记 - KeepLearning</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HTML\u5b66\u4e60\u7b14\u8bb0";
+        var mkdocs_page_input_path = "html/learn_html.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> KeepLearning
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../_navbar/"> navbar</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../_sidebar/"> sidebar</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/sort/">十大经典排序算法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/array/">Array</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/bit_operation/">Bit operation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/comment/">Comment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/const/">Const</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/enum/">Enum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/func/">Func</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/pointer/">Pointer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/struct/">Struct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/type/">Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/var/">Var</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C++</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/comment/">Comment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/enum/">Enum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/exception/">Exception</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/expression/">Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/func/">Func</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/namespace/">Namespace</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/new_delete/">New delete</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/pointer/">Pointer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/refers/">Refers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/struct/">Struct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/template/">Template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/types/">Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/var_const/">Var const</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Css</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../css/Reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Css3学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2D%E8%BD%AC%E6%8D%A2/">2D转换</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/3D%E8%BD%AC%E6%8D%A2/">3D转换</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8A%A8%E7%94%BB/">动画</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BE%E7%89%87/">图片</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%88%97/">多列</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%97%E4%BD%93/">字体</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8C%89%E9%92%AE/">按钮</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%9C%AC%E6%95%88%E6%9E%9C/">文本效果</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B8%90%E5%8F%98/">渐变</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/">用户界面</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9B%92%E9%98%B4%E5%BD%B1/">盒阴影</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%83%8C%E6%99%AF/">背景</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86%E5%9B%BE%E7%89%87/">边框图片</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86%E5%9C%86%E8%A7%92/">边框圆角</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BF%87%E6%B8%A1/">过渡</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Css学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BC%AA%E7%B1%BB/">伪类</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%86%85%E8%BE%B9%E8%B7%9D/">内边距</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E7%BB%84%E9%80%89%E6%8B%A9%E5%99%A8/">分组选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%97%E8%A1%A8%E6%A0%B7%E5%BC%8F/">列表样式</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1/">响应式设计</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%96%E8%BE%B9%E8%B7%9D/">外边距</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/">媒体查询</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%97%E4%BD%93/">字体</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AE%9A%E4%BD%8D/">定位</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%BA%E5%AF%B8/">尺寸</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B5%8C%E5%A5%97%E9%80%89%E6%8B%A9%E5%99%A8/">嵌套选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%9C%AC/">文本</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%BE%E7%A4%BA%E5%92%8C%E5%8F%AF%E8%A7%81%E6%80%A7/">显示和可见性</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A0%B7%E5%BC%8F%E8%A1%A8/">样式表</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B3%A8%E9%87%8A/">注释</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B5%AE%E5%8A%A8/">浮动</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">盒子模型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%80%E4%BB%8B/">简介</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/">组合选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BD%91%E6%A0%BC%E8%A7%86%E5%9B%BE/">网格视图</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%83%8C%E6%99%AF/">背景</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%A1%A8%E6%A0%BC/">表格</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AF%AD%E6%B3%95/">语法</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BD%AE%E5%BB%93/">轮廓</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86/">边框</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%80%89%E6%8B%A9%E5%99%A8/">选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%93%BE%E6%8E%A5/">链接</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%A2%9C%E8%89%B2%E7%9A%84%E5%86%99%E6%B3%95/">颜色的写法</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data structure</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/array/">Array</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/graph/">Graph</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/hash_table/">Hash table</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/heap/">堆-Heap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/intro/">简介</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/list/">线性表-List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/queue/">队列-Queue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/reference/">参考</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/stack/">栈-Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/string/">字符串-string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/tree/">树-Tree</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Design pattern</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/abstract_factory/">Abstract factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/adapter/">Adapter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/bridge/">Bridge</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/builder/">Builder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/chain_of_responsibility/">Chain of responsibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/command/">Command</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/composite/">Composite</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/decorator/">Decorator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/facade/">Facade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/factory/">Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/filter/">Filter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/flyweight/">Flyweight</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/interpreter/">Interpreter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/iterator/">Iterator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/mediator/">Mediator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/memento/">Memento</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/null_object/">Null object</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/observer/">Observer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/principle/">Principle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/prototype/">Prototype</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/proxy/">Proxy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/singleton/">Singleton</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/state/">State</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/strategy/">Strategy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/template/">Template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/type/">Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/visitor/">Visitor</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../english/learn/">语法学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Git</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../git/query/">Query</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/learn_go/">[译]Learning Go - from zero to hero</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Groovy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../groovy/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Html</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">HTML学习笔记</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">简介</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">标题</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">段落</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">链接</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#target">target 属性</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#name">name属性</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">图像</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#alt">替换文本属性（Alt）</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">水平线</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">注释</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">换行</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../learn_html5/">HTML5学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Javascript</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../javascript/learn/">基本语法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mysql</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mysql/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Network</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/learn/">计算机网络学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/reference/">Reference</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/learn/">Python学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/reference/">Reference</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/arguments/">传递参数</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/array/">数组</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/comment/">注释</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/expression/">流程控制</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/func/">函数</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/include_file/">文件包含</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/intro/">简介</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/io/">输入和输出</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/operator/">运算符</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/string/">字符串</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/tools/">Shell工具</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/var/">变量</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">KeepLearning</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Html &raquo;</li><li>HTML学习笔记</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/html/learn_html.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="html">HTML学习笔记</h1>
+<h2 id="_1">简介</h2>
+<ul>
+<li>
+<p>HTML 是描述网页的语言</p>
+</li>
+<li>
+<p>HTML 指的是超文本标记语言 (<strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage)</p>
+</li>
+<li>&lt;html&gt; 与 &lt;/html&gt;  之间的文本描述网页</li>
+<li>&lt;body&gt;  与 &lt;/body&gt;  之间的文本是可见的页面内容</li>
+<li>&lt;h1&gt;  与 &lt;/h1&gt;  之间的文本被显示为标题</li>
+<li>&lt;p&gt;  与 &lt;/p&gt;  之间的文本被显示为段落</li>
+</ul>
+<h2 id="_2">标题</h2>
+<p>HTML 标题（Heading）是通过 &lt;h1&gt;  - &lt;h6&gt;  等标签进行定义的</p>
+<pre><code class="language-html">&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;h2&gt;This is a heading&lt;/h2&gt;
+&lt;h3&gt;This is a heading&lt;/h3&gt;
+</code></pre>
+<h2 id="_3">段落</h2>
+<p>HTML 段落（paragraph）是通过 &lt;p&gt; 标签进行定义的</p>
+<pre><code class="language-html">&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+</code></pre>
+<h2 id="_4">链接</h2>
+<p>HTML 链接（hypertext reference）是通过 &lt;a&gt; 标签进行定义的</p>
+<pre><code class="language-html">&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;This is a link&lt;/a&gt;
+</code></pre>
+<p>也可以用图像作为链接</p>
+<pre><code class="language-html">&lt;a href=&quot;/example/html/lastpage.html&quot;&gt;
+&lt;img border=&quot;0&quot; src=&quot;/i/eg_buttonnext.gif&quot; /&gt;
+&lt;/a&gt;
+</code></pre>
+<p>"链接文本" 不必一定是文本。图片或其他 HTML 元素都可以成为链接</p>
+<h3 id="target">target 属性</h3>
+<p>使用 Target 属性，你可以定义被链接的文档在何处显示</p>
+<p>在新窗口打开文档：</p>
+<pre><code class="language-html">&lt;a href=&quot;http://www.w3school.com.cn/&quot; target=&quot;_blank&quot;&gt;Visit W3School!&lt;/a&gt;
+</code></pre>
+<h3 id="name">name属性</h3>
+<p>name 属性规定锚（anchor）的名称,任意名称都可以</p>
+<p>您可以使用 name 属性创建 HTML 页面中的书签，可以使用 id 属性来替代 name 属性，命名锚同样有效</p>
+<p>书签不会以任何特殊方式显示，它对读者是不可见的</p>
+<p>当使用命名锚（named anchors）时，我们可以创建直接跳至该命名锚（比如页面中某个小节）的链接，这样使用者就无需不停地滚动页面来寻找他们需要的信息了</p>
+<pre><code class="language-html">&lt;a name=&quot;label&quot;&gt;锚（显示在页面上的文本）&lt;/a&gt;
+</code></pre>
+<p>首先，我们在 HTML 文档中对锚进行命名（创建一个书签）：</p>
+<pre><code class="language-html">&lt;a name=&quot;tips&quot;&gt;基本的注意事项 - 有用的提示&lt;/a&gt;
+</code></pre>
+<p>然后，我们在同一个文档中创建指向该锚的链接：</p>
+<pre><code class="language-html">&lt;a href=&quot;#tips&quot;&gt;有用的提示&lt;/a&gt;
+</code></pre>
+<p>您也可以在其他页面中创建指向该锚的链接：</p>
+<pre><code class="language-html">&lt;a href=&quot;http://www.w3school.com.cn/html/html_links.asp#tips&quot;&gt;有用的提示&lt;/a&gt;
+</code></pre>
+<h2 id="_5">图像</h2>
+<p>HTML 图像是通过 <img> 标签进行定义的</p>
+<pre><code class="language-html">&lt;img src=&quot;w3school.jpg&quot; width=&quot;104&quot; height=&quot;142&quot; /&gt;
+</code></pre>
+<h3 id="alt">替换文本属性（Alt）</h3>
+<p>alt 属性用来为图像定义一串预备的可替换的文本</p>
+<pre><code class="language-html">&lt;img src=&quot;boat.gif&quot; alt=&quot;Big Boat&quot;&gt;
+</code></pre>
+<p>在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息。此时，浏览器将显示这个替代性的文本而不是图像。为页面上的图像都加上替换文本属性是个好习惯，这样有助于更好的显示信息，并且对于那些使用纯文本浏览器的人来说是非常有用的</p>
+<h2 id="_6">水平线</h2>
+<hr />
+<p>标签在 HTML 页面中创建水平线（horizontal rule），hr 元素可用于分隔内容</p>
+<pre><code class="language-html">&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+</code></pre>
+<h2 id="_7">注释</h2>
+<pre><code class="language-html">&lt;!-- This is a comment --&gt;
+</code></pre>
+<h2 id="_8">换行</h2>
+<p>不产生一个新段落的情况下进行换行（新行），请使用 &lt;br/ 标签</p>
+<pre><code class="language-html">&lt;p&gt;This is&lt;br /&gt;a para&lt;br /&gt;graph with line breaks&lt;/p&gt;
+</code></pre>
+<h1 id="_9">元素</h1>
+<p>HTML 元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码</p>
+<table>
+<thead>
+<tr>
+<th>开始标签</th>
+<th>元素内容</th>
+<th>结束标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p></td>
+<td>This is a paragraph</td>
+<td></p></td>
+</tr>
+<tr>
+<td><a href="default.htm" ></td>
+<td>This is a link</td>
+<td></a></td>
+</tr>
+<tr>
+<td><br /></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="_10">属性</h1>
+<p>HTML 标签可以拥有<em>属性</em>。属性提供了有关 HTML 元素的<em>更多的信息</em>。</p>
+<p>属性总是以名称/值对的形式出现，比如：<em>name="value"</em>。</p>
+<p>属性总是在 HTML 元素的<em>开始标签</em>中规定</p>
+<p>HTML 链接由 <a> 标签定义。链接的地址在 href 属性中指定：</p>
+<pre><code class="language-html">&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;This is a link&lt;/a&gt;
+</code></pre>
+<p>使用小写属性</p>
+<p>始终为属性加引号，如果属性本身带有双引号，就必须加单引号</p>
+<pre><code class="language-html">name='Bill &quot;HelloWorld&quot; Gates'
+</code></pre>
+<h1 id="_11">样式</h1>
+<p>style 属性用于改变 HTML 元素的样式</p>
+<pre><code class="language-html">&lt;html&gt;
+&lt;body style=&quot;background-color:PowderBlue;&quot;&gt;
+
+&lt;h1&gt;Look! Styles and colors&lt;/h1&gt;
+
+&lt;p style=&quot;font-family:verdana;color:red&quot;&gt;
+This text is in Verdana and red&lt;/p&gt;
+
+&lt;p style=&quot;font-family:times;color:green&quot;&gt;
+This text is in Times and green&lt;/p&gt;
+
+&lt;p style=&quot;font-size:30px&quot;&gt;This text is 30 pixels high&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="_12">应该避免使用下面这些标签和属性：</h2>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;center&gt;</td>
+<td>定义居中的内容。</td>
+</tr>
+<tr>
+<td>&lt;font&gt; 和 &lt;basefont&gt;</td>
+<td>定义 HTML 字体。</td>
+</tr>
+<tr>
+<td>&lt;s&gt; 和 &lt;strike&gt;</td>
+<td>定义删除线文本</td>
+</tr>
+<tr>
+<td>&lt;u&gt;</td>
+<td>定义下划线文本</td>
+</tr>
+<tr>
+<td>属性</td>
+<td>描述</td>
+</tr>
+<tr>
+<td>align</td>
+<td>定义文本的对齐方式</td>
+</tr>
+<tr>
+<td>bgcolor</td>
+<td>定义背景颜色</td>
+</tr>
+<tr>
+<td>color</td>
+<td>定义文本颜色</td>
+</tr>
+</tbody>
+</table>
+<p>对于以上这些标签和属性：请使用样式代替！</p>
+<h1 id="_13">表格</h1>
+<p>表格由 &lt;table&gt; 标签来定义。每个表格均有若干行（由  &lt;tr&gt; 标签（table row）定义），每行被分割为若干单元格（由  &lt;td&gt; 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等</p>
+<pre><code class="language-html">&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;row 1, cell 1&lt;/td&gt;
+&lt;td&gt;row 1, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;row 2, cell 1&lt;/td&gt;
+&lt;td&gt;row 2, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<h2 id="_14">边框</h2>
+<p>border 属性定义边框的粗细，不设置就没有边框</p>
+<h2 id="_15">表头</h2>
+<p>表格的表头使用 &lt;th&gt; 标签（table heading）进行定义</p>
+<h1 id="_16">列表</h1>
+<h2 id="_17">无序列表</h2>
+<p>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记</p>
+<p>无序列表始于 &lt;ul&gt; 标签（unordered list）。每个列表项始于 &lt;li&gt; （list）</p>
+<pre><code class="language-html">&lt;ul&gt;
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<ul>
+<li>Coffee</li>
+<li>Milk</li>
+</ul>
+<p>列表项内部可以使用段落、换行符、图片、链接以及其他列表等等</p>
+<h2 id="_18">有序列表</h2>
+<p>同样，有序列表也是一列项目，列表项目使用数字进行标记</p>
+<p>有序列表始于 &lt;ol&gt; 标签（ordered list）。每个列表项始于 <li> 标签</p>
+<pre><code class="language-html">&lt;ol&gt;
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<ol>
+<li>Coffee</li>
+<li>Milk</li>
+</ol>
+<p>列表项内部可以使用段落、换行符、图片、链接以及其他列表等等</p>
+<h2 id="_19">定义列表</h2>
+<p>自定义列表不仅仅是一列项目，而是项目及其注释的组合</p>
+<p>自定义列表以 &lt;dl&gt; 标签（definition list）开始。每个自定义列表项以 <dt> 开始。每个自定义列表项的定义以 &lt;dd&gt; 开始</p>
+<pre><code class="language-html">&lt;dl&gt;
+&lt;dt&gt;Coffee&lt;/dt&gt;
+&lt;dd&gt;Black hot drink&lt;/dd&gt;
+&lt;dt&gt;Milk&lt;/dt&gt;
+&lt;dd&gt;White cold drink&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<p>Coffee</p>
+<p>Black hot drink</p>
+<p>Milk</p>
+<p>White cold drink</p>
+<p>定义列表的列表项内部可以使用段落、换行符、图片、链接以及其他列表等等</p>
+<h1 id="_20">块</h1>
+<p>大多数 HTML 元素被定义为块级元素（block level element）或内联元素（ inline element）</p>
+<h2 id="_21">块元素</h2>
+<p>块级元素在浏览器显示时，通常会以新行来开始（和结束）</p>
+<p>&lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt;</p>
+<h2 id="_22">内联元素</h2>
+<p>内联元素在显示时通常不会以新行开始</p>
+<p>例子：&lt;b&gt;, &lt;td&gt;, &lt;a&gt;, &lt;img&gt;</p>
+<h2 id="div">div元素</h2>
+<p>HTML &lt;div&gt; 元素是块级元素，它是可用于组合其他 HTML 元素的容器</p>
+<p><strong>DIV</strong>是<a href="https://baike.baidu.com/item/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8">层叠样式表</a>中的定位技术，全称DIVision，即为划分。有时可以称其为图层</p>
+<p>&lt;div&gt; 元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。</p>
+<p>如果与 CSS 一同使用，&lt;div&gt; 元素可用于对大的内容块设置样式属性</p>
+<p>&lt;div&gt; 元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。使用 &lt;table&gt; 元素进行文档布局不是表格的正确用法。&lt;table&gt; 元素的作用是显示表格化的数据</p>
+<h2 id="span">span元素</h2>
+<p>HTML &lt;span&gt; 元素是内联元素，可用作文本的容器</p>
+<p>&lt;span&gt; 元素也没有特定的含义</p>
+<p>当与 CSS 一同使用时，&lt;span&gt; 元素可用于为部分文本设置样式属性</p>
+<h1 id="_23">类</h1>
+<p>对 HTML 进行分类（设置类），使我们能够为元素的类定义 CSS 样式</p>
+<p>为相同的类设置相同的样式，或者为不同的类设置不同的样式</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;cities&quot;&gt;
+&lt;h2&gt;London&lt;/h2&gt;
+&lt;p&gt;
+London is the capital city of England. 
+It is the most populous city in the United Kingdom, 
+with a metropolitan area of over 13 million inhabitants.
+&lt;/p&gt;
+&lt;/div&gt; 
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="_24">分类块级元素</h2>
+<p>HTML &lt;div&gt; 元素是<em>块级元素</em>。它能够用作其他 HTML 元素的容器</p>
+<p>设置 &lt;div&gt; 元素的类，使我们能够为相同的 &lt;div&gt; 元素设置相同的类</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;cities&quot;&gt;
+&lt;h2&gt;London&lt;/h2&gt;
+&lt;p&gt;London is the capital city of England. 
+It is the most populous city in the United Kingdom, 
+with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;cities&quot;&gt;
+&lt;h2&gt;Paris&lt;/h2&gt;
+&lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;cities&quot;&gt;
+&lt;h2&gt;Tokyo&lt;/h2&gt;
+&lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="_25">分类行级元素</h2>
+<p>HTML &lt;span&gt; 元素是行内元素，能够用作文本的容器</p>
+<p>设置 &lt;span&gt; 元素的类，能够为相同的 &lt;span&gt; 元素设置相同的样式</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+  span.red {color:red;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My &lt;span class=&quot;red&quot;&gt;Important&lt;/span&gt; Heading&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="_26">布局</h1>
+<h2 id="divhtml">使用&lt;div&gt;元素的HTML布局</h2>
+<p>&lt;div&gt; 元素常用作布局工具，因为能够轻松地通过 CSS 对其进行定位</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;          
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;        
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;      
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id=&quot;header&quot;&gt;
+&lt;h1&gt;City Gallery&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;nav&quot;&gt;
+London&lt;br&gt;
+Paris&lt;br&gt;
+Tokyo&lt;br&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;section&quot;&gt;
+&lt;h2&gt;London&lt;/h2&gt;
+&lt;p&gt;
+London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.
+&lt;/p&gt;
+&lt;p&gt;
+Standing on the River Thames, London has been a major settlement for two millennia,
+its history going back to its founding by the Romans, who named it Londinium.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;footer&quot;&gt;
+Copyright ? W3Schools.com
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="html5">使用HTML5的布局</h2>
+<p>HTML5 提供的新语义元素定义了网页的不同部分</p>
+<p>HTMl5语义元素</p>
+<table>
+<thead>
+<tr>
+<th>header</th>
+<th>定义文档或节的页眉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nav</td>
+<td>定义导航链接的容器</td>
+</tr>
+<tr>
+<td>section</td>
+<td>定义文档中的节</td>
+</tr>
+<tr>
+<td>article</td>
+<td>定义独立的自包含文章</td>
+</tr>
+<tr>
+<td>aside</td>
+<td>定义内容之外的内容（比如侧栏）</td>
+</tr>
+<tr>
+<td>footer</td>
+<td>定义文档或节的页脚</td>
+</tr>
+<tr>
+<td>details</td>
+<td>定义额外的细节</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>定义 details 元素的标题</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;style&gt;
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;     
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;          
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;        
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;         
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;header&gt;
+&lt;h1&gt;City Gallery&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+London&lt;br&gt;
+Paris&lt;br&gt;
+Tokyo&lt;br&gt;
+&lt;/nav&gt;
+
+&lt;section&gt;
+&lt;h1&gt;London&lt;/h1&gt;
+&lt;p&gt;
+London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.
+&lt;/p&gt;
+&lt;p&gt;
+Standing on the River Thames, London has been a major settlement for two millennia,
+its history going back to its founding by the Romans, who named it Londinium.
+&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+Copyright W3Schools.com
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<h2 id="html_1">使用表格的HTML布局</h2>
+<p>注释：&lt;table&gt; 元素不是作为布局工具而设计的</p>
+<p>&lt;table&gt; 元素的作用是显示表格化的数据</p>
+<p>使用 &lt;table&gt; 元素能够取得布局效果，因为能够通过 CSS 设置表格元素的样式：</p>
+<pre><code class="language-html">&lt;body&gt;
+
+&lt;table class=&quot;lamp&quot;&gt;
+&lt;tr&gt;
+  &lt;th&gt;
+    &lt;img src=&quot;/images/lamp.jpg&quot; alt=&quot;Note&quot; style=&quot;height:32px;width:32px&quot;&gt;
+  &lt;/th&gt;
+  &lt;td&gt;
+    The table element was not designed to be a layout tool.
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+</code></pre>
+<pre><code class="language-html">&lt;style&gt;
+table.lamp {
+    width:100%;
+    border:1px solid #d4d4d4;
+}
+table.lamp th, td {
+    padding:10px;
+}
+table.lamp td {
+    width:40px;
+}
+&lt;/style&gt;
+</code></pre>
+<h1 id="_27">框架</h1>
+<p>通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。每份HTML文档称为一个框架，并且每个框架都独立于其他的框架</p>
+<p>使用框架的坏处：</p>
+<ul>
+<li>开发人员必须同时跟踪更多的HTML文档</li>
+<li>很难打印整张页面</li>
+</ul>
+<h2 id="_28">框架结构标签</h2>
+<ul>
+<li>框架结构标签（&lt;frameset&gt;）定义如何将窗口分割为框架</li>
+<li>每个 frameset 定义了一系列行<em>或</em>列</li>
+<li>rows/columns 的值规定了每行或每列占据屏幕的面积</li>
+</ul>
+<p>frameset 标签也被某些文章和书籍译为框架集</p>
+<h2 id="_29">框架标签</h2>
+<p>&lt;Frame&gt; 标签定义了放置在每个框架中的 HTML 文档</p>
+<p>在下面的这个例子中，我们设置了一个两列的框架集。第一列被设置为占据浏览器窗口的 25%。第二列被设置为占据浏览器窗口的 75%</p>
+<pre><code class="language-html">&lt;frameset cols=&quot;25%,75%&quot;&gt;
+   &lt;frame src=&quot;frame_a.htm&quot;&gt;
+   &lt;frame src=&quot;frame_b.htm&quot;&gt;
+&lt;/frameset&gt;
+</code></pre>
+<h1 id="_30">内联框架</h1>
+<p>iframe用于在网页中显示网页</p>
+<pre><code class="language-html">&lt;iframe src=&quot;URL&quot; width=&quot;200&quot; height=&quot;200&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<h2 id="iframe">使用iframe作为链接的目标</h2>
+<p>iframe 可用作链接的目标（target）</p>
+<p>链接的 target 属性必须引用 iframe 的 name 属性</p>
+<pre><code class="language-html">&lt;iframe src=&quot;demo_iframe.htm&quot; name=&quot;iframe_a&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.w3school.com.cn&quot; target=&quot;iframe_a&quot;&gt;W3School.com.cn&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+<h1 id="_31">脚本</h1>
+<h2 id="script">script元素</h2>
+<p>&lt;script&gt; 标签用于定义客户端脚本，比如 JavaScript</p>
+<p>script 元素既可包含脚本语句，也可通过 src 属性指向外部脚本文件</p>
+<p>必需的 type 属性规定脚本的 MIME 类型</p>
+<p>JavaScript 最常用于图片操作、表单验证以及内容动态更新</p>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+document.write(&quot;Hello World!&quot;)
+&lt;/script&gt;
+</code></pre>
+<h2 id="noscript">noscript标签</h2>
+<p>&lt;noscript&gt; 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时</p>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+document.write(&quot;Hello World!&quot;)
+&lt;/script&gt;
+&lt;noscript&gt;Your browser does not support JavaScript!&lt;/noscript&gt;
+</code></pre>
+<h1 id="_32">头部元素</h1>
+<h2 id="head">head元素</h2>
+<p>&lt;head&gt; 元素是所有头部元素的容器。&lt;head&gt; 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等</p>
+<p>以下标签都可以添加到 head 部分：&lt;title&gt;、&lt;base&gt;、&lt;link&gt;、&lt;meta&gt;、&lt;script&gt; 以及 &lt;style&gt;</p>
+<h2 id="title">title元素</h2>
+<p>&lt;title&gt; 标签定义文档的标题。</p>
+<p>title 元素在所有 HTML/XHTML 文档中都是必需的。</p>
+<p>title 元素能够：</p>
+<ul>
+<li>定义浏览器工具栏中的标题</li>
+<li>提供页面被添加到收藏夹时显示的标题</li>
+<li>显示在搜索引擎结果中的页面标题</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Title of the document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+The content of the document......
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="base">base元素</h2>
+<p>&lt;base&gt; 标签为页面上的所有链接规定默认地址或默认目标（target）</p>
+<pre><code class="language-html">&lt;head&gt;
+&lt;base href=&quot;http://www.w3school.com.cn/images/&quot; /&gt;
+&lt;base target=&quot;_blank&quot; /&gt;
+&lt;/head&gt;
+</code></pre>
+<h2 id="link">link元素</h2>
+<p>&lt;link&gt; 标签定义文档与外部资源之间的关系</p>
+<p>&lt;link&gt; 标签最常用于连接样式表</p>
+<pre><code class="language-html">&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot; /&gt;
+&lt;/head&gt;
+</code></pre>
+<h2 id="style">style元素</h2>
+<style> 标签用于为 HTML 文档定义样式信息
+
+您可以在 style 元素内规定 HTML 元素在浏览器中呈现的样式
+
+
+<pre><code class="language-html">&lt;head&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+body {background-color:yellow}
+p {color:blue}
+&lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+
+
+#  表单
+
+## form元素
+
+HTML 表单用于收集用户输入
+
+&lt;form&gt; 元素定义 HTML 表单
+
+
+<pre><code class="language-html">&lt;form&gt;
+ .
+form elements
+ .
+&lt;/form&gt;
+</code></pre>
+
+
+## 表单元素
+
+### input元素
+
+*&lt;input&gt; 元素是最重要的*表单元素*
+
+&lt;input&gt; 元素有很多形态，根据不同的 type 属性
+
+| 类型   | 描述                                 |
+| ------ | ------------------------------------ |
+| text   | 定义常规文本输入。                   |
+| radio  | 定义单选按钮输入（选择多个选择之一） |
+| submit | 定义提交按钮（提交表单）             |
+
+#### 文本输入
+
+*&lt;input type="text"&gt; 定义用于*文本输入*的单行输入字段
+
+
+<pre><code class="language-html">&lt;form&gt;
+ First name:&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;firstname&quot;&gt;
+&lt;br&gt;
+ Last name:&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;lastname&quot;&gt;
+&lt;/form&gt; 
+</code></pre>
+
+
+#### 单选按钮输入
+
+*&lt;input type="radio"&gt; 定义*单选按钮*
+
+单选按钮允许用户在有限数量的选项中选择其中之一
+
+
+<pre><code class="language-html">&lt;form&gt;
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot; checked&gt;Male
+&lt;br&gt;
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot;&gt;Female
+&lt;/form&gt; 
+</code></pre>
+
+
+#### 提交按钮
+
+*&lt;input type="submit"&gt; 定义用于向*表单处理程序*（form-handler）*提交*表单的按钮
+
+表单处理程序通常是包含用来处理输入数据的脚本的服务器页面
+
+表单处理程序在表单的 *action* 属性中指定
+
+
+<pre><code class="language-html">&lt;form action=&quot;action_page.php&quot;&gt;
+First name:&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;Mickey&quot;&gt;
+&lt;br&gt;
+Last name:&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;Mouse&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt; 
+</code></pre>
+
+
+#### password
+
+*&lt;input type="password"&gt; 定义*密码字段*
+
+
+<pre><code class="language-html">&lt;form&gt;
+ User name:&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;
+&lt;br&gt;
+ User password:&lt;br&gt;
+&lt;input type=&quot;password&quot; name=&quot;psw&quot;&gt;
+&lt;/form&gt; 
+</code></pre>
+
+
+####   复选框
+
+&lt;input type="checkbox"&gt; 定义复选框
+
+复选框允许用户在有限数量的选项中选择零个或多个选项
+
+
+<pre><code class="language-html">&lt;form&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot;&gt;I have a bike
+&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot;&gt;I have a car 
+&lt;/form&gt; 
+</code></pre>
+
+
+#### HTMl5 输入类型
+
+HTML5 增加了多个新的输入类型：
+
+- color
+- date
+- datetime
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+注释：老式 web 浏览器不支持的输入类型，会被视为输入类型 text
+
+### Action属性
+
+*action 属性*定义在提交表单时执行的动作
+
+向服务器提交表单的通常做法是使用提交按钮
+
+通常，表单会被提交到 web 服务器上的网页
+
+在上面的例子中，指定了某个服务器脚本来处理被提交表单：
+
+
+<pre><code class="language-html">&lt;form action=&quot;action_page.php&quot;&gt;
+</code></pre>
+
+
+如果省略 action 属性，则 action 会被设置为当前页面
+
+### Method属性
+
+*method 属性*规定在提交表单时所用的 HTTP 方法（*GET* 或 *POST*）
+
+
+<pre><code class="language-html">&lt;form action=&quot;action_page.php&quot; method=&quot;GET&quot;&gt;
+</code></pre>
+
+
+
+<pre><code class="language-html">&lt;form action=&quot;action_page.php&quot; method=&quot;POST&quot;&gt;
+</code></pre>
+
+
+### Name属性
+
+如果要正确地被提交，每个输入字段必须设置一个 name 属性
+
+
+<pre><code class="language-html">&lt;form action=&quot;action_page.php&quot;&gt;
+First name:&lt;br&gt;
+&lt;input type=&quot;text&quot; value=&quot;Mickey&quot;&gt;
+&lt;br&gt;
+Last name:&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;Mouse&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt; 
+</code></pre>
+
+
+### fieldset组合表单数据
+
+&lt;fieldset&gt;* 元素组合表单中的相关数据
+
+*&lt;legend&gt; 元素为 &lt;fieldset&gt; 元素定义标题
+
+
+<pre><code class="language-html">&lt;form action=&quot;action_page.php&quot;&gt;
+&lt;fieldset&gt;
+&lt;legend&gt;Personal information:&lt;/legend&gt;
+First name:&lt;br/&gt;
+&lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;Mickey&quot;&gt;
+&lt;br&gt;
+Last name:&lt;br/&gt;
+&lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;Mouse&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&lt;/fieldset&gt;
+&lt;/form&gt; 
+</code></pre>
+
+
+### form属性列表
+
+| 属性           | 描述                                                       |
+| -------------- | ---------------------------------------------------------- |
+| accept-charset | 规定在被提交表单中使用的字符集（默认：页面字符集）。       |
+| action         | 规定向何处提交表单的地址（URL）（提交页面）。              |
+| autocomplete   | 规定浏览器应该自动完成表单（默认：开启）。                 |
+| enctype        | 规定被提交数据的编码（默认：url-encoded）。                |
+| method         | 规定在提交表单时所用的 HTTP 方法（默认：GET）。            |
+| name           | 规定识别表单的名称（对于 DOM 使用：document.forms.name）。 |
+| novalidate     | 规定浏览器不验证表单。                                     |
+| target         | 规定 action 属性中地址的目标（默认：_self）。              |
+
+### select元素（下拉列表）
+
+*&lt;select&gt; 元素定义*下拉列表*
+
+
+<pre><code class="language-html">&lt;select name=&quot;cars&quot;&gt;
+&lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+&lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+&lt;option value=&quot;fiat&quot;&gt;Fiat&lt;/option&gt;
+&lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+
+*&lt;option*&gt; 元素定义待选择的选项。
+
+列表通常会把首个选项显示为被选选项。
+
+您能够通过添加 selected 属性来定义预定义选项
+
+
+<pre><code class="language-html">&lt;option value=&quot;fiat&quot; selected&gt;Fiat&lt;/option&gt;
+</code></pre>
+
+
+### textarea 元素
+
+*&lt;textarea&gt; 元素定义多行输入字段（*文本域*）
+
+
+<pre><code class="language-html">&lt;textarea name=&quot;message&quot; rows=&quot;10&quot; cols=&quot;30&quot;&gt;
+    The cat was playing in the garden.
+&lt;/textarea&gt;
+</code></pre>
+
+
+### button 元素
+
+*&lt;button&gt;* 元素定义可点击的*按钮*
+
+
+<pre><code class="language-html">&lt;button type=&quot;button&quot; onclick=&quot;alert('Hello World!')&quot;&gt;Click Me!&lt;/button&gt;
+</code></pre>
+
+
+### HTML5 detailst 元素
+
+*&lt;datalist&gt;* 元素为 &lt;input&gt; 元素规定预定义选项列表
+
+用户会在他们输入数据时看到预定义选项的下拉列表
+
+&lt;input&gt; 元素的 *list* 属性必须引用 &lt;datalist&gt; 元素的 *id* 属性
+
+
+<pre><code class="language-html">&lt;form action=&quot;action_page.php&quot;&gt;
+&lt;input list=&quot;browsers&quot;&gt;
+&lt;datalist id=&quot;browsers&quot;&gt;
+   &lt;option value=&quot;Internet Explorer&quot;&gt;
+   &lt;option value=&quot;Firefox&quot;&gt;
+   &lt;option value=&quot;Chrome&quot;&gt;
+   &lt;option value=&quot;Opera&quot;&gt;
+   &lt;option value=&quot;Safari&quot;&gt;
+&lt;/datalist&gt; 
+&lt;/form&gt;
+</code></pre>
+
+
+## 输入(input)属性
+
+### value 属性
+
+*value* 属性规定输入字段的初始值
+
+
+<pre><code class="language-html">&lt;form action=&quot;&quot;&gt;
+ First name:&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;John&quot;&gt;
+&lt;br&gt;
+ Last name:&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;lastname&quot;&gt;
+&lt;/form&gt; 
+</code></pre>
+
+
+### readonly 属性
+
+*readonly* 属性规定输入字段为只读（不能修改）
+
+
+<pre><code class="language-html">&lt;form action=&quot;&quot;&gt;
+ First name:&lt;br/&gt;
+&lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;John&quot; readonly&gt;
+&lt;br&gt;
+ Last name:&lt;br/&gt;
+&lt;input type=&quot;text&quot; name=&quot;lastname&quot;&gt;
+&lt;/form&gt; 
+</code></pre>
+
+
+readonly 属性不需要值。它等同于 readonly="readonly"
+
+### disable 属性
+
+*disabled* 属性规定输入字段是禁用的
+
+被禁用的元素是不可用和不可点击的
+
+被禁用的元素不会被提交
+
+### size 属性
+
+*size* 属性规定输入字段的尺寸（以字符计）
+
+### maxlength 属性
+
+*maxlength* 属性规定输入字段允许的最大长度
+
+如设置 maxlength 属性，则输入控件不会接受超过所允许数的字符
+
+该属性不会提供任何反馈。如果需要提醒用户，则必须编写 JavaScript 代码
+
+注释：输入限制并非万无一失。JavaScript 提供了很多方法来增加非法输入。如需安全地限制输入，则接受者（服务器）必须同时对限制进行检查
+
+### HTML5 属性
+
+HTML5 为 &lt;input&gt; 增加了如下属性：
+
+- autocomplete
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height 和 width
+- list
+- min 和 max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+
+并为 &lt;form&gt; 增加如下属性：
+
+- autocomplete
+- novalidate
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../groovy/learn/" class="btn btn-neutral float-left" title="Learn"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../learn_html5/" class="btn btn-neutral float-right" title="HTML5学习笔记">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/simplepeng/KeepLearning/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../groovy/learn/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../learn_html5/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(false);
+        };
+    </script>
+
+</body>
+</html>

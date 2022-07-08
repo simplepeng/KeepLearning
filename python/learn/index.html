@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Python学习笔记 - KeepLearning</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Python\u5b66\u4e60\u7b14\u8bb0";
+        var mkdocs_page_input_path = "python/learn.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> KeepLearning
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../_navbar/"> navbar</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../_sidebar/"> sidebar</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/sort/">十大经典排序算法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/array/">Array</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/bit_operation/">Bit operation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/comment/">Comment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/const/">Const</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/enum/">Enum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/func/">Func</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/pointer/">Pointer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/struct/">Struct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/type/">Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/var/">Var</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C++</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/comment/">Comment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/enum/">Enum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/exception/">Exception</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/expression/">Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/func/">Func</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/namespace/">Namespace</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/new_delete/">New delete</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/pointer/">Pointer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/refers/">Refers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/struct/">Struct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/template/">Template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/types/">Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/var_const/">Var const</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Css</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../css/Reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Css3学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2D%E8%BD%AC%E6%8D%A2/">2D转换</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/3D%E8%BD%AC%E6%8D%A2/">3D转换</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8A%A8%E7%94%BB/">动画</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BE%E7%89%87/">图片</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%88%97/">多列</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%97%E4%BD%93/">字体</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8C%89%E9%92%AE/">按钮</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%9C%AC%E6%95%88%E6%9E%9C/">文本效果</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B8%90%E5%8F%98/">渐变</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/">用户界面</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9B%92%E9%98%B4%E5%BD%B1/">盒阴影</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%83%8C%E6%99%AF/">背景</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86%E5%9B%BE%E7%89%87/">边框图片</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86%E5%9C%86%E8%A7%92/">边框圆角</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BF%87%E6%B8%A1/">过渡</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Css学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BC%AA%E7%B1%BB/">伪类</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%86%85%E8%BE%B9%E8%B7%9D/">内边距</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E7%BB%84%E9%80%89%E6%8B%A9%E5%99%A8/">分组选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%97%E8%A1%A8%E6%A0%B7%E5%BC%8F/">列表样式</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1/">响应式设计</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%96%E8%BE%B9%E8%B7%9D/">外边距</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/">媒体查询</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%97%E4%BD%93/">字体</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AE%9A%E4%BD%8D/">定位</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%BA%E5%AF%B8/">尺寸</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B5%8C%E5%A5%97%E9%80%89%E6%8B%A9%E5%99%A8/">嵌套选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%9C%AC/">文本</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%BE%E7%A4%BA%E5%92%8C%E5%8F%AF%E8%A7%81%E6%80%A7/">显示和可见性</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A0%B7%E5%BC%8F%E8%A1%A8/">样式表</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B3%A8%E9%87%8A/">注释</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B5%AE%E5%8A%A8/">浮动</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">盒子模型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%80%E4%BB%8B/">简介</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/">组合选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BD%91%E6%A0%BC%E8%A7%86%E5%9B%BE/">网格视图</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%83%8C%E6%99%AF/">背景</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%A1%A8%E6%A0%BC/">表格</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AF%AD%E6%B3%95/">语法</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BD%AE%E5%BB%93/">轮廓</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86/">边框</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%80%89%E6%8B%A9%E5%99%A8/">选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%93%BE%E6%8E%A5/">链接</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%A2%9C%E8%89%B2%E7%9A%84%E5%86%99%E6%B3%95/">颜色的写法</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data structure</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/array/">Array</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/graph/">Graph</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/hash_table/">Hash table</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/heap/">堆-Heap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/intro/">简介</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/list/">线性表-List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/queue/">队列-Queue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/reference/">参考</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/stack/">栈-Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/string/">字符串-string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/tree/">树-Tree</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Design pattern</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/abstract_factory/">Abstract factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/adapter/">Adapter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/bridge/">Bridge</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/builder/">Builder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/chain_of_responsibility/">Chain of responsibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/command/">Command</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/composite/">Composite</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/decorator/">Decorator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/facade/">Facade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/factory/">Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/filter/">Filter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/flyweight/">Flyweight</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/interpreter/">Interpreter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/iterator/">Iterator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/mediator/">Mediator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/memento/">Memento</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/null_object/">Null object</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/observer/">Observer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/principle/">Principle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/prototype/">Prototype</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/proxy/">Proxy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/singleton/">Singleton</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/state/">State</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/strategy/">Strategy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/template/">Template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/type/">Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/visitor/">Visitor</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../english/learn/">语法学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Git</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../git/query/">Query</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/learn_go/">[译]Learning Go - from zero to hero</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Groovy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../groovy/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Html</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../html/learn_html/">HTML学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../html/learn_html5/">HTML5学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Javascript</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../javascript/learn/">基本语法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mysql</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mysql/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Network</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/learn/">计算机网络学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/reference/">Reference</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Python学习笔记</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">简介</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hello-world">Hello World</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">注释</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">缩进</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">数据类型</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">整数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">浮点数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_7">字符串</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_8">布尔值</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_9">空值</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_10">变量</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_11">逻辑控制</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#if">if</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#while">while</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for">for</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#break">break</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#continue">continue</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_12">函数</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_13">定义函数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_14">空函数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_15">检查函数参数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_16">函数参数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_17">默认参数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_18">关键字参数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_19">可变参数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#doc-strings">文档字符串(doc strings)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_20">模块</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fromimport">from...import 语句</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#__name__">模块的__name__</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_21">包</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_22">数据结构</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#-list">列表-List</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-tuple">元祖-Tuple</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-dictionary">字典-Dictionary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-set">集合-Set</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-sequence">序列-Sequence</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_23">面向对象编程</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#self">self</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-class">类-class</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_24">方法</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#__init__">__init__方法</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_25">类变量与对象变量</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_26">继承</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_27">输入与输出</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_28">异常</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_29">捕获异常</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_30">抛出异常</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#finally">finally</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#with">with语句</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/arguments/">传递参数</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/array/">数组</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/comment/">注释</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/expression/">流程控制</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/func/">函数</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/include_file/">文件包含</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/intro/">简介</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/io/">输入和输出</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/operator/">运算符</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/string/">字符串</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/tools/">Shell工具</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/var/">变量</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">KeepLearning</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Python &raquo;</li><li>Python学习笔记</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/python/learn.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="python">Python学习笔记</h1>
+<h2 id="_1">简介</h2>
+<h2 id="hello-world">Hello World</h2>
+<pre><code class="language-python">print(&quot;hello world&quot;)
+</code></pre>
+<h2 id="_2">注释</h2>
+<p>Python注释使用<code>#</code>符号</p>
+<pre><code class="language-python">print('hello world') #注意到 print 是一个函
+# 注意到 print 是一个函数
+print('hello world')
+</code></pre>
+<h2 id="_3">缩进</h2>
+<p>使用四个空格来缩进</p>
+<h2 id="_4">数据类型</h2>
+<h3 id="_5">整数</h3>
+<pre><code class="language-python">a = 1
+</code></pre>
+<h3 id="_6">浮点数</h3>
+<pre><code class="language-python">b = 3.14
+</code></pre>
+<h3 id="_7">字符串</h3>
+<p>用单引号<code>''</code>和双引号<code>""</code>括起来的文本都是字符串，如果字符串中间包含单引号<code>''</code>,请使用双引号括起来，或者只是用转义字符<code>\</code></p>
+<pre><code class="language-python">a = 'hello'
+b = &quot;world&quot;
+
+c = &quot;hello '' world&quot;
+</code></pre>
+<p>Python允许使用<code>'''...'''</code>的格式表示多行内容</p>
+<pre><code class="language-python">f = '''line1
+line2
+line3
+'''
+print(f)
+</code></pre>
+<h3 id="_8">布尔值</h3>
+<p>Python的布尔值用<code>True</code>和<code>False</code>表示。</p>
+<pre><code class="language-python">h = True
+print(h)#True
+print(3&lt;2)#False
+</code></pre>
+<p>布尔值可以用<code>and</code>，<code>or</code>，<code>not</code>运算，也就是<code>与</code>，<code>或</code>，<code>非</code></p>
+<p>相当于其他语言中的<code>&amp;&amp;</code>，<code>||</code>，<code>!</code></p>
+<pre><code class="language-python">True and True
+True or False
+not True
+</code></pre>
+<h3 id="_9">空值</h3>
+<p>空值是Python中一个特别的类型，用<code>None</code>表示。<code>None</code>并不能某些语言那样理解为<code>0</code>，因为Python中的<code>None</code>是有意义的。</p>
+<h3 id="_10">变量</h3>
+<p>变量名必须是大小写英文、数字和<code>_</code>的组合，且不能用数字开头。</p>
+<p>Python中的变量是可以重新赋值的。</p>
+<pre><code class="language-python">a = 1 #a是一个整数
+a = &quot;xxx&quot; #把a变成字符串
+</code></pre>
+<h2 id="_11">逻辑控制</h2>
+<h3 id="if">if</h3>
+<pre><code class="language-python">number = 23
+guess = int(input(&quot;enter an integer :&quot;))
+
+if guess == number:
+    print(&quot;guess == number&quot;)
+elif guess &lt; number:
+    print(&quot;guess &lt; number&quot;)
+else:
+     print(&quot;guess &gt; number&quot;)
+
+print(&quot;Done&quot;)
+</code></pre>
+<p>例子中的<code>else</code>块是可选的，逻辑表达式结尾必须跟上冒号<code>:</code>表示这个表达式为一个代码块。</p>
+<p>Python 中不存在 switch 语句。你可以通过使用 if..elif..else 语句来实现同样的事 情（在某些情况下，使用一部字典能够更快速地完成）。</p>
+<h3 id="while">while</h3>
+<p>while 语句能够让你在条件为<code>True</code>的前提下重复执行某块语句。</p>
+<p>while 语句是 循环 （Looping） 语句的一种。 </p>
+<p>while 语句同样可以拥有 else 子句作为可选选项。</p>
+<p>while 语句后面同样要跟上冒号<code>:</code></p>
+<pre><code class="language-python">number = 23
+running = True
+while running:
+    guess = int(input('Enter an integer : '))
+    if guess == number:
+        print('Congratulations, you guessed it.')
+        # 这将导致 while 循环中止
+        running = False
+    elif guess &lt; number:
+            print('No, it is a little higher than that.')
+    else:
+        print('No, it is a little lower than that.')
+else:
+        print('The while loop is over.')
+# 在这里你可以做你想做的任何事
+print('Done')
+</code></pre>
+<h3 id="for">for</h3>
+<p><code>for...in</code> 语句是另一种循环语句，其特点是会在一系列对象上进行迭代（Iterates），意即 它会遍历序列中的每一个项目。</p>
+<pre><code class="language-python">for i in range(0,5):
+    print(i)
+else:
+    print(&quot;the for loop is over&quot;)
+</code></pre>
+<p>else语句块同样是可选的</p>
+<p>for表达式结尾同样要跟上<code>:</code></p>
+<h3 id="break">break</h3>
+<p><code>break</code>语句用于退出循环，和其他语言差不多。</p>
+<pre><code class="language-python">for i in range(0,10):
+    if i == 5:
+        break
+    else:
+        print(i)
+
+print(&quot;Done&quot;)
+</code></pre>
+<h3 id="continue">continue</h3>
+<p><code>continue</code> 语句用以告诉 Python 跳过当前循环块中的剩余语句，并继续该循环的下一次循环。</p>
+<pre><code class="language-python">for i in range(0,10):
+    if i == 5:
+        continue
+    else:
+        print(i)
+
+print(&quot;Done&quot;)
+</code></pre>
+<h2 id="_12">函数</h2>
+<h3 id="_13">定义函数</h3>
+<p>在Python中定义函数要使用<code>def</code>关键字，并且同样以冒号<code>:</code>结尾。</p>
+<p>返回值使用<code>return</code>关键字，并且Python中的函数是可以返回多个返回值的。</p>
+<pre><code class="language-python">def fun(a):
+    print(a)
+
+fun(1)
+</code></pre>
+<h3 id="_14">空函数</h3>
+<p>如果一个函数暂时没想好内部的实现，可以使用<code>pass</code>关键字先占位。并且<code>pass</code>关键字也可以使用在其他语句块里面。</p>
+<pre><code class="language-python">def nop():
+  pass
+
+if age == 18:
+  pass
+</code></pre>
+<p>缺少了<code>pass</code>的空语句块，代码运行的时候就会报语法错误。</p>
+<h3 id="_15">检查函数参数</h3>
+<p>函数参数的数据类型检查可以使用Python的内置函数<code>isinstance</code>实现</p>
+<pre><code class="language-python">def check_args(a):
+  if not isinstance(x,(int,float)):
+    raise TypeError('bad operand type')
+  else:
+    print(a)
+
+print(&quot;Done&quot;)
+</code></pre>
+<h3 id="_16">函数参数</h3>
+<ul>
+<li>在定义函数 时给定的名称称作“形参”（Parameters）</li>
+<li>在调用函数时你所提供给函数的值称作“实参”（Arguments）</li>
+</ul>
+<h3 id="_17">默认参数</h3>
+<p>设置默认参数可简化函数的调用，但是要注意下面几点</p>
+<ul>
+<li>必选参数在前，默认参数在后</li>
+<li>变化大的参数在前，变化小的参数在后</li>
+</ul>
+<pre><code class="language-python">def fun(a,b=&quot;hello&quot;):
+    print(a)
+    print(b)
+
+fun(1,&quot;world&quot;)
+fun(2)
+</code></pre>
+<h3 id="_18">关键字参数</h3>
+<p>如果你有一些具有许多参数的函数，而你又希望只对其中的一些进行指定，那么你可以通过 命名它们来给这些参数赋值。</p>
+<p>我们使用命 名（关键字）而非位置（一直以来我们所使用的方式）来指定函数中的参数。</p>
+<pre><code class="language-python">def func(a, b=5, c=10):
+    print('a is', a, 'and b is', b, 'and c is', c)
+
+func(3, 7)
+func(25, c=24)
+func(c=50, a=100)
+</code></pre>
+<h3 id="_19">可变参数</h3>
+<p>可变参数就是一个函数所接受的参数是不固定的，可以是0-n个。</p>
+<p>定义可变参数只需要在参数前面加一个<code>*</code>号，可变参数接受的是一个<code>tuple</code>。</p>
+<pre><code class="language-python">def calc(*number):
+  sum = 0
+  for n in number:
+    sum = sum + n * n
+  return sum
+</code></pre>
+<h3 id="doc-strings">文档字符串(doc strings)</h3>
+<p>DocStrings 是一款你应当使用的重要工具，它能够帮 助你更好地记录程序并让其更加易于理解。</p>
+<p>令人惊叹的是，当程序实际运行时，我们甚至可 以通过一个函数来获取文档！</p>
+<pre><code class="language-python">def print_max(x, y):
+    '''Prints the maximum of two numbers.打印两个数值中的最大数。
+    The two values must be integers.这两个数都应该是整数'''
+    # 如果可能，将其转换至整数类型
+    x = int(x)
+    y = int(y)
+    if x &gt; y:
+        print(x, 'is maximum')
+    else:
+        print(y, 'is maximum')
+
+print_max(3, 5)
+# 输出函数的doc
+print(print_max.__doc__)
+</code></pre>
+<h2 id="_20">模块</h2>
+<h3 id="fromimport">from...import 语句</h3>
+<h3 id="__name__">模块的<code>__name__</code></h3>
+<h3 id="_21">包</h3>
+<h2 id="_22">数据结构</h2>
+<h3 id="-list">列表-List</h3>
+<p>列表 是一种用于保存一系列有序项目的集合。</p>
+<p>底层数据结构要么是数组，要么是链表。</p>
+<pre><code class="language-python"># 定义list
+shoplist = ['apple','mango','banana']
+print(&quot;list.len == &quot;,len(shoplist))
+
+print('These items are:', end=' ')
+for item in shoplist:
+    print(item, end=' ')
+# 增加
+shoplist.append(&quot;rice&quot;)
+print(&quot;my shopping list is now&quot;,shoplist)
+# 排序
+shoplist.sort()
+print(&quot;sorted list is&quot;,shoplist)
+# 查找
+print(&quot;the first item is&quot;,shoplist[0])
+shoplist[0] = &quot;orange&quot;
+# 更改
+print(&quot;this item is&quot;,shoplist)
+# 删除
+del shoplist[0]
+print(&quot;deled list is&quot;,shoplist)
+</code></pre>
+<h3 id="-tuple">元祖-Tuple</h3>
+<p>元组（Tuple）用于将多个对象保存到一起，和列表List类似，但是支持的功能没有List多。</p>
+<p>元组是通过特别指定项目来定义的，在指定项目时，你可以给它们加上括号，并在括号内部 用逗号进行分隔。</p>
+<pre><code class="language-python"># 我会推荐你总是使用括号
+# 来指明元组的开始与结束
+# 尽管括号是一个可选选项。
+# 明了胜过晦涩，显式优于隐式。
+zoo = ('python', 'elephant', 'penguin')
+print('Number of animals in the zoo is', len(zoo))
+new_zoo = 'monkey', 'camel', zoo
+print('Number of cages in the new zoo is', len(new_zoo))
+print('All animals in new zoo are', new_zoo)
+print('Animals brought from old zoo are', new_zoo[2])
+print('Last animal brought from old zoo is', new_zoo[2][2])
+print('Number of animals in the new zoo is',
+    len(new_zoo)-1+len(new_zoo[2]))
+</code></pre>
+<h3 id="-dictionary">字典-Dictionary</h3>
+<h3 id="-set">集合-Set</h3>
+<h3 id="-sequence">序列-Sequence</h3>
+<h2 id="_23">面向对象编程</h2>
+<h3 id="self">self</h3>
+<h3 id="-class">类-class</h3>
+<h3 id="_24">方法</h3>
+<h3 id="__init__"><code>__init__</code>方法</h3>
+<h3 id="_25">类变量与对象变量</h3>
+<h3 id="_26">继承</h3>
+<h2 id="_27">输入与输出</h2>
+<h2 id="_28">异常</h2>
+<h3 id="_29">捕获异常</h3>
+<h3 id="_30">抛出异常</h3>
+<h3 id="finally">finally</h3>
+<h3 id="with">with语句</h3>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../network/reference/" class="btn btn-neutral float-left" title="Reference"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../reference/" class="btn btn-neutral float-right" title="Reference">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/simplepeng/KeepLearning/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../network/reference/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../reference/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(false);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>HTML5学习笔记 - KeepLearning</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HTML5\u5b66\u4e60\u7b14\u8bb0";
+        var mkdocs_page_input_path = "html/learn_html5.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> KeepLearning
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../_navbar/"> navbar</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../_sidebar/"> sidebar</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/sort/">十大经典排序算法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/array/">Array</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/bit_operation/">Bit operation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/comment/">Comment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/const/">Const</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/enum/">Enum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/func/">Func</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/pointer/">Pointer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/struct/">Struct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/type/">Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c/var/">Var</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C++</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/comment/">Comment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/enum/">Enum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/exception/">Exception</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/expression/">Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/func/">Func</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/namespace/">Namespace</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/new_delete/">New delete</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/pointer/">Pointer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/refers/">Refers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/struct/">Struct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/template/">Template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/types/">Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/var_const/">Var const</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Css</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../css/Reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Css3学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2D%E8%BD%AC%E6%8D%A2/">2D转换</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/3D%E8%BD%AC%E6%8D%A2/">3D转换</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8A%A8%E7%94%BB/">动画</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BE%E7%89%87/">图片</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%88%97/">多列</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%97%E4%BD%93/">字体</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8C%89%E9%92%AE/">按钮</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%9C%AC%E6%95%88%E6%9E%9C/">文本效果</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B8%90%E5%8F%98/">渐变</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/">用户界面</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9B%92%E9%98%B4%E5%BD%B1/">盒阴影</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%83%8C%E6%99%AF/">背景</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86%E5%9B%BE%E7%89%87/">边框图片</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86%E5%9C%86%E8%A7%92/">边框圆角</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BF%87%E6%B8%A1/">过渡</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Css学习笔记</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BC%AA%E7%B1%BB/">伪类</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%86%85%E8%BE%B9%E8%B7%9D/">内边距</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E7%BB%84%E9%80%89%E6%8B%A9%E5%99%A8/">分组选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%97%E8%A1%A8%E6%A0%B7%E5%BC%8F/">列表样式</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1/">响应式设计</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%96%E8%BE%B9%E8%B7%9D/">外边距</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/">媒体查询</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%97%E4%BD%93/">字体</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AE%9A%E4%BD%8D/">定位</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%BA%E5%AF%B8/">尺寸</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B5%8C%E5%A5%97%E9%80%89%E6%8B%A9%E5%99%A8/">嵌套选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%9C%AC/">文本</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%BE%E7%A4%BA%E5%92%8C%E5%8F%AF%E8%A7%81%E6%80%A7/">显示和可见性</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A0%B7%E5%BC%8F%E8%A1%A8/">样式表</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B3%A8%E9%87%8A/">注释</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%B5%AE%E5%8A%A8/">浮动</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">盒子模型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%80%E4%BB%8B/">简介</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/">组合选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BD%91%E6%A0%BC%E8%A7%86%E5%9B%BE/">网格视图</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%83%8C%E6%99%AF/">背景</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%A1%A8%E6%A0%BC/">表格</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AF%AD%E6%B3%95/">语法</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BD%AE%E5%BB%93/">轮廓</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BE%B9%E6%A1%86/">边框</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%80%89%E6%8B%A9%E5%99%A8/">选择器</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%93%BE%E6%8E%A5/">链接</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%A2%9C%E8%89%B2%E7%9A%84%E5%86%99%E6%B3%95/">颜色的写法</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data structure</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/array/">Array</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/graph/">Graph</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/hash_table/">Hash table</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/heap/">堆-Heap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/intro/">简介</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/list/">线性表-List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/queue/">队列-Queue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/reference/">参考</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/stack/">栈-Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/string/">字符串-string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_structure/tree/">树-Tree</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Design pattern</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/abstract_factory/">Abstract factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/adapter/">Adapter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/bridge/">Bridge</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/builder/">Builder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/chain_of_responsibility/">Chain of responsibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/command/">Command</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/composite/">Composite</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/decorator/">Decorator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/facade/">Facade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/factory/">Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/filter/">Filter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/flyweight/">Flyweight</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/interpreter/">Interpreter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/intro/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/iterator/">Iterator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/mediator/">Mediator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/memento/">Memento</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/null_object/">Null object</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/observer/">Observer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/principle/">Principle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/prototype/">Prototype</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/proxy/">Proxy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/singleton/">Singleton</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/state/">State</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/strategy/">Strategy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/template/">Template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/type/">Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../design_pattern/visitor/">Visitor</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../english/learn/">语法学习笔记</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Git</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../git/query/">Query</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/learn_go/">[译]Learning Go - from zero to hero</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Groovy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../groovy/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Html</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../learn_html/">HTML学习笔记</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">HTML5学习笔记</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">新元素</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#canvas">画布 元素（Canvas）</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Javascript</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../javascript/learn/">基本语法</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mysql</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mysql/learn/">Learn</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Network</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/learn/">计算机网络学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/reference/">Reference</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/learn/">Python学习笔记</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/reference/">Reference</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/arguments/">传递参数</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/array/">数组</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/comment/">注释</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/expression/">流程控制</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/func/">函数</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/include_file/">文件包含</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/intro/">简介</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/io/">输入和输出</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/operator/">运算符</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/string/">字符串</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/tools/">Shell工具</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../shell/var/">变量</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">KeepLearning</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Html &raquo;</li><li>HTML5学习笔记</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/simplepeng/KeepLearning/edit/master/docs/html/learn_html5.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="html5">HTML5学习笔记</h1>
+<h2 id="_1">新元素</h2>
+<h2 id="canvas">画布 元素（Canvas）</h2>
+<canvas> 标签定义图形，比如图表和其他图像。该标签基于 JavaScript 的绘图 API
+
+## 多媒体元素
+
+* <audio> 定义音频内容
+* <video> 定义视频（video 或者 movie）
+* <source>  定义多媒体资源 <video> 和 <audio>
+* <embed> 定义嵌入的内容，比如插件
+* <track> 为诸如 <video> 和 <audio> 元素之类的媒介规定外部文本轨道
+
+## 表单元素
+
+* <datalist>  定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值
+* <keygen> 规定用于表单的密钥对生成器字段
+* <output> 定义不同类型的输出，比如脚本的输出
+
+## 语义和结构元素
+
+* <article> 定义页面独立的内容区域
+
+## 已移除的元素
+
+- &lt;acronym&gt;
+- &lt;applet&gt;
+- &lt;basefont&gt;
+- &lt;big&gt;
+- &lt;center&gt;
+- &lt;dir&gt;
+- &lt;font&gt;
+- &lt;frame&gt;
+- &lt;frameset&gt;
+- &lt;noframes&gt;
+- &lt;strike&gt;
+- &lt;tt&gt;
+
+# Canvas
+
+<canvas>元素是HTML5中的新元素，通过使用该元素，你可以在网页中绘制所需的图形
+
+标签只是图形容器，您必须使用脚本来绘制图形,通常是*JavaScript*
+
+## 创建canvas
+
+一个画布在网页中是一个矩形框，通过 <canvas> 元素来绘制
+
+默认情况下 <canvas> 元素没有边框和内容
+
+
+<pre><code class="language-html">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;
+</code></pre>
+
+
+**使用样式添加边框**
+
+
+<pre><code class="language-html">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot; 
+style=&quot;border:1px solid #000000;&quot;&gt; 
+&lt;/canvas&gt; 
+</code></pre>
+
+
+## 使用JavaScript绘制图像
+
+canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成
+
+
+<pre><code class="language-html">&lt;script&gt; 
+//找到 &lt;canvas&gt; 元素
+var c=document.getElementById(&quot;myCanvas&quot;);
+//创建 context 对象
+var ctx=c.getContext(&quot;2d&quot;);
+//绘制一个红色的矩形
+ctx.fillStyle=&quot;#FF0000&quot;; 
+ctx.fillRect(0,0,150,75); 
+&lt;/script&gt; 
+</code></pre>
+
+
+# 内联 SVG
+
+## 什么是 svg
+
+- SVG 指可伸缩矢量图形 (Scalable Vector Graphics)
+- SVG 用于定义用于网络的基于矢量的图形
+- SVG 使用 XML 格式定义图形
+- SVG 图像在放大或改变尺寸的情况下其图形质量不会有损失
+- SVG 是万维网联盟的标准
+- SVG 与 DOM 和 XSL 之类的 W3C 标准是一个整体
+
+## svg的优势
+
+与其他图像格式相比（比如 JPEG 和 GIF），使用 SVG 的优势在于
+
+- SVG 图像可通过文本编辑器来创建和修改
+- SVG 图像可被搜索、索引、脚本化或压缩
+- SVG 是可伸缩的
+- SVG 图像可在任何的分辨率下被高质量地打印
+- SVG 可在图像质量不下降的情况下被放大
+
+## 把svg嵌入html
+
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; height=&quot;190&quot;&gt;
+  &lt;polygon points=&quot;100,10 40,180 190,60 10,60 160,180&quot;
+  style=&quot;fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;&quot;&gt;
+&lt;/svg&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+# 数学标记语言（MathML）
+
+[MathML](https://baike.baidu.com/item/%E6%95%B0%E5%AD%A6%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80/656305?fr=aladdin&fromid=10813966&fromtitle=MathML) 与 HTML相似度很高，但是比较繁琐。它继承了角括号和双标签（<标签>内容<!--标签-->）的用法
+
+HTML5 可以在文档中使用 MathML 元素，对应的标签是 <math>...</math>
+
+MathML 是数学标记语言，是一种基于XML（标准通用标记语言的子集）的标准，用来在互联网上书写数学符号和公式的置标语言
+
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;&lt;html&gt;
+   &lt;head&gt;
+      &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;title&gt;W3Cschool在线教程(w3cschool.cn)&lt;/title&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+
+      &lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;
+
+         &lt;mrow&gt;
+            &lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+            &lt;mo&gt;+&lt;/mo&gt;
+
+            &lt;msup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+            &lt;mo&gt;=&lt;/mo&gt;
+
+            &lt;msup&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+         &lt;/mrow&gt;
+
+      &lt;/math&gt;
+
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+# 拖放
+
+# 地理定位（Geolocation）
+
+HTML5 Geolocation（地理定位）用于定位用户的位置
+
+Geolocation 通过请求一个位置信息，用户同意后，浏览器会返回一个包含经度和维度的位置信息
+
+## 使用地理定位
+
+请使用 getCurrentPosition() 方法来获得用户的位置
+
+
+<pre><code class="language-javascript">&lt;script&gt;
+var x=document.getElementById(&quot;demo&quot;);
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML=&quot;该浏览器不支持获取地理位置。&quot;;}
+  }
+function showPosition(position)
+  {
+  x.innerHTML=&quot;Latitude: &quot; + position.coords.latitude + 
+  &quot;&lt;br&gt;Longitude: &quot; + position.coords.longitude; 
+  }
+&lt;/script&gt;
+</code></pre>
+
+
+## 处理错误和拒绝
+
+getCurrentPosition() 方法的第二个参数用于处理错误。它规定当获取用户位置失败时运行的函数
+
+
+<pre><code class="language-javascript">function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML=&quot;用户拒绝对获取地理位置的请求。&quot;
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML=&quot;位置信息是不可用的。&quot;
+      break;
+    case error.TIMEOUT:
+      x.innerHTML=&quot;请求用户地理位置超时。&quot;
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML=&quot;未知错误。&quot;
+      break;
+    }
+  }
+</code></pre>
+
+
+## getCurrentPosition 返回数据
+
+| 属性                    | 描述                   |
+| ----------------------- | ---------------------- |
+| coords.latitude         | 十进制数的纬度         |
+| coords.longitude        | 十进制数的经度         |
+| coords.accuracy         | 位置精度               |
+| coords.altitude         | 海拔，海平面以上以米计 |
+| coords.altitudeAccuracy | 位置的海拔精度         |
+| coords.heading          | 方向，从正北开始以度计 |
+| coords.speed            | 速度，以米/每秒计      |
+| timestamp               | 响应的日期/时间        |
+
+# 视频（video)
+
+ ```html
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+您的浏览器不支持Video标签。
+</video>
+ ```
+
+元素支持多个 元素. 元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式
+
+## 使用DOM进行控制 video 标签
+
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt; 
+&lt;html&gt; 
+&lt;body&gt; 
+
+&lt;div style=&quot;text-align:center&quot;&gt; 
+  &lt;button onclick=&quot;playPause()&quot;&gt;播放/暂停&lt;/button&gt; 
+  &lt;button onclick=&quot;makeBig()&quot;&gt;放大&lt;/button&gt;
+  &lt;button onclick=&quot;makeSmall()&quot;&gt;缩小&lt;/button&gt;
+  &lt;button onclick=&quot;makeNormal()&quot;&gt;普通&lt;/button&gt;
+  &lt;br&gt; 
+  &lt;video id=&quot;video1&quot; width=&quot;420&quot;&gt;
+    &lt;source src=&quot;/statics/demosource/mov_bbb.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;source src=&quot;/statics/demosource/mov_bbb.ogg&quot; type=&quot;video/ogg&quot;&gt;
+    您的浏览器不支持 HTML5 video 标签。
+  &lt;/video&gt;
+&lt;/div&gt; 
+
+&lt;script&gt; 
+var myVideo=document.getElementById(&quot;video1&quot;); 
+
+function playPause()
+{ 
+if (myVideo.paused) 
+  myVideo.play(); 
+else 
+  myVideo.pause(); 
+} 
+
+function makeBig()
+{ 
+myVideo.width=560; 
+} 
+
+function makeSmall()
+{ 
+myVideo.width=320; 
+} 
+
+function makeNormal()
+{ 
+myVideo.width=420; 
+} 
+&lt;/script&gt; 
+
+&lt;/body&gt; 
+&lt;/html&gt;
+</code></pre>
+
+
+# 音频（Audio）
+
+
+<pre><code class="language-html">&lt;audio controls&gt; 
+  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt; 
+  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt; 
+您的浏览器不支持 audio 元素。 
+&lt;/audio&gt;
+</code></pre>
+
+
+ [control 属性](https://www.w3cschool.cn/jsref/prop-audio-controls.html)供添加播放、暂停和音量控件
+
+在<audio> 与 </audio> 之间你需要插入浏览器不支持的<audio>元素的提示文本 
+
+<audio> 元素允许使用多个 <source> 元素. <source> 元素可以链接不同的音频文件，浏览器将使用第一个支持的音频文件
+
+# Input 类型
+
+## 新的input类型
+
+- color
+- date
+- datetime
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+## input 类型：color
+
+从拾色器中选择一个颜色
+
+
+<pre><code class="language-html">选择你喜欢的颜色: &lt;input type=&quot;color&quot; name=&quot;favcolor&quot;&gt;
+</code></pre>
+
+
+## input 类型：date
+
+
+<pre><code class="language-html">生日: &lt;input type=&quot;date&quot; name=&quot;bday&quot;&gt;
+</code></pre>
+
+
+## input 类型：datetime
+
+datetime 类型允许你选择一个日期（UTC 时间）
+
+
+<pre><code class="language-html">生日 (日期和时间): &lt;input type=&quot;datetime&quot; name=&quot;bdaytime&quot;&gt;
+</code></pre>
+
+
+## input类型：datetime-local
+
+datetime-local 类型允许你选择一个日期和时间 (无时区)
+
+
+<pre><code class="language-html">生日 (日期和时间): &lt;input type=&quot;datetime-local&quot; name=&quot;bdaytime&quot;&gt;
+</code></pre>
+
+
+## input类型：email
+
+email 类型用于应该包含 e-mail 地址的输入域
+
+在提交表单时，会自动验证 email 域的值是否合法有效
+
+
+<pre><code class="language-html">E-mail: &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
+</code></pre>
+
+
+## input 类型：month
+
+month 类型允许你选择一个月份
+
+
+<pre><code class="language-html">生日 (月和年): &lt;input type=&quot;month&quot; name=&quot;bdaymonth&quot;&gt;
+</code></pre>
+
+
+## input类型：number
+
+number 类型用于应该包含数值的输入域
+
+您还能够设定对所接受的数字的限定
+
+
+<pre><code class="language-html">数量 ( 1 到 5 之间 ): &lt;input type=&quot;number&quot; name=&quot;quantity&quot; min=&quot;1&quot; max=&quot;5&quot;&gt;
+</code></pre>
+
+
+- max- 规定允许的最大值
+- min - 规定允许的最小值
+- step - 规定合法的数字间隔（如果 step="3"，则合法的数是 -3,0,3,6 等）
+- value - 规定默认值
+
+## input类型：range
+
+range 类型用于应该包含一定范围内数字值的输入域
+
+range 类型显示为滑动条
+
+
+<pre><code class="language-html">&lt;input type=&quot;range&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;
+</code></pre>
+
+
+- max - 规定允许的最大值
+- min - 规定允许的最小值
+- step - 规定合法的数字间隔
+- value - 规定默认值
+
+## input 类型：search
+
+search 类型用于搜索域，比如站点搜索或 Google 搜索
+
+
+<pre><code class="language-html">Search Google: &lt;input type=&quot;search&quot; name=&quot;googlesearch&quot;&gt;
+</code></pre>
+
+
+## input 类型：tel
+
+ ```html
+电话号码: <input type="tel" name="usrtel">
+ ```
+
+## input 类型：time
+
+time 类型允许你选择一个时间
+
+
+<pre><code class="language-html">选择时间: &lt;input type=&quot;time&quot; name=&quot;usr_time&quot;&gt;
+</code></pre>
+
+
+## input 类型：url
+
+url 类型用于应该包含 URL 地址的输入域
+
+在提交表单时，会自动验证 url 域的值
+
+
+<pre><code class="language-html">添加您的主页: &lt;input type=&quot;url&quot; name=&quot;homepage&quot;&gt;
+</code></pre>
+
+
+## input 类型：week
+
+week 类型允许你选择周和年
+
+
+<pre><code class="language-html">选择周: &lt;input type=&quot;week&quot; name=&quot;week_year&quot;&gt;
+</code></pre>
+
+
+# 表单元素
+
+HTML5 有以下新的表单元素:
+
+- [datalist](https://www.w3cschool.cn/htmltags/tag-datalist.html)
+- [keygen](https://www.w3cschool.cn/htmltags/tag-keygen.html)
+- [output](https://www.w3cschool.cn/html5/html5-output.html)
+
+## detalist 元素
+
+<datalist> 元素规定输入域的选项列表
+
+<datalist> 属性规定 form 或 input 域应该拥有自动完成功能。当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项
+
+使用 <input> 元素的列表属性与 <datalist> 元素绑定
+
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;W3Cschool(w3cschool.cn)&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;/statics/demosource/demo-form.php&quot; method=&quot;get&quot;&gt;
+&lt;input list=&quot;browsers&quot; name=&quot;browser&quot;&gt;
+&lt;datalist id=&quot;browsers&quot;&gt;
+  &lt;option value=&quot;Internet Explorer&quot;&gt;
+  &lt;option value=&quot;Firefox&quot;&gt;
+  &lt;option value=&quot;Chrome&quot;&gt;
+  &lt;option value=&quot;Opera&quot;&gt;
+  &lt;option value=&quot;Safari&quot;&gt;
+&lt;/datalist&gt;
+&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+
+&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt; Internet Explorer 9（更早IE版本），Safari不支持 datalist 标签。&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+## keygen 元素
+
+<keygen> 元素的作用是提供一种验证用户的可靠方法
+
+<keygen>标签规定用于表单的密钥对生成器字段
+
+当提交表单时，会生成两个键，一个是私钥，一个公钥
+
+私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。公钥可用于之后验证用户的客户端证书（client certificate）
+
+
+<pre><code class="language-html">&lt;form action=&quot;demo_keygen.asp&quot; method=&quot;get&quot;&gt;
+用户名: &lt;input type=&quot;text&quot; name=&quot;usr_name&quot;&gt;
+加密: &lt;keygen name=&quot;security&quot;&gt;
+&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+
+## output 元素
+
+<output> 元素用于不同类型的输出，比如计算或脚本输出
+
+
+<pre><code class="language-html">&lt;form oninput=&quot;x.value=parseInt(a.value)+parseInt(b.value)&quot;&gt;0
+&lt;input type=&quot;range&quot; id=&quot;a&quot; value=&quot;50&quot;&gt;100 +
+&lt;input type=&quot;number&quot; id=&quot;b&quot; value=&quot;50&quot;&gt;=
+&lt;output name=&quot;x&quot; for=&quot;a b&quot;&gt;&lt;/output&gt;
+&lt;/form&gt;
+</code></pre>
+
+
+# Web 存储
+
+在HTML5之前，主要是使用cookies存储，cookies的缺点有：需要在请求头上带着数据，存储大小不过，在4k之内
+
+HTML5 web 存储，一个比cookie更好的本地存储方式
+
+## localStorage 和 sessionStorage
+
+客户端存储数据的两个对象为:
+
+- localStorage - 没有时间限制的数据存储
+- sessionStorage - 针对一个 session 的数据存储
+
+在使用 web 存储前,应检查浏览器是否支持 localStorage 和sessionStorage:  
+
+
+<pre><code class="language-html">if(typeof(Storage)!==&quot;undefined&quot;){        
+  // 是的! 支持 localStorage  sessionStorage 对象!         
+  // 一些代码.....         
+ }        
+else{        
+  // 抱歉! 不支持 web 存储。         
+}
+</code></pre>
+
+
+## localStorage 对象
+
+localStorage 对象存储的数据没有时间限制。第二天、第二周或下一年之后，数据依然可用
+
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;W3Cschool在线教程(w3cschool.cn)&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+if(typeof(Storage)!==&quot;undefined&quot;)
+{
+  localStorage.sitename=&quot;W3Cschool在线教程&quot;;
+  document.getElementById(&quot;result&quot;).innerHTML=&quot;网站名：&quot; + localStorage.sitename;
+}
+else
+{
+  document.getElementById(&quot;result&quot;).innerHTML=&quot;对不起，您的浏览器不支持 web 存储。&quot;;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+移除 localStorage 中的 "lastname" :
+
+
+<pre><code class="language-html">localStorage.removeItem(&quot;lastname&quot;);
+</code></pre>
+
+
+不管是 localStorage，还是 sessionStorage，可使用的API都相同，常用的有如下几个（以localStorage为例）：
+
+- 保存数据：localStorage.setItem(key,value);
+- 读取数据：localStorage.getItem(key);
+- 删除单个数据：localStorage.removeItem(key);
+- 删除所有数据：localStorage.clear();
+- 得到某个索引的key：localStorage.key(index);
+
+## sessionStorage  对象
+
+sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。
+
+
+<pre><code class="language-html">if (sessionStorage.clickcount) 
+  { 
+  sessionStorage.clickcount=Number(sessionStorage.clickcount)+1; 
+  } 
+else 
+  { 
+  sessionStorage.clickcount=1; 
+  } 
+document.getElementById(&quot;result&quot;).innerHTML=&quot;在这个会话中你已经点击了该按钮 &quot; + sessionStorage.clickcount + &quot; 次 &quot;;
+</code></pre>
+
+
+ # Web SQL
+
+Web SQL 是在浏览器上模拟数据库，可以使用JS来操作SQL完成对数据的读写
+
+Web SQL 数据库 API 并不是 HTML5 规范的一部分，但是它是一个独立的规范，引入了一组使用 SQL 操作客户端数据库的 APIs
+
+## 核心方法
+
+1. **openDatabase**：这个方法使用现有的数据库或者新建的数据库创建一个数据库对象
+2. **transaction**：这个方法让我们能够控制一个事务，以及基于这种情况执行提交或者回滚。
+3. **executeSql**：这个方法用于执行实际的 SQL 查询
+
+## 打开数据库
+
+使用 openDatabase() 方法来打开已存在的数据库，如果数据库不存在，则会创建一个新的数据库，使用代码如下
+
+
+<pre><code class="language-ht">var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+</code></pre>
+
+
+openDatabase() 方法对应的五个参数说明：
+
+1. 数据库名称
+2. 版本号
+3. 描述文本
+4. 数据库大小
+5. 创建回调
+
+第五个参数，创建回调会在创建数据库后被调用
+
+## 执行查询操作
+
+
+<pre><code class="language-html">var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+db.transaction(function (tx) {  
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+});
+</code></pre>
+
+
+## 插入数据
+
+
+<pre><code class="language-javascript">var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+db.transaction(function (tx) {  
+  tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+  tx.executeSql('INSERT INTO LOGS 
+                        (id,log) VALUES (?, ?'), [e_id, e_log];
+});
+</code></pre>
+
+
+## 读取数据
+
+
+<pre><code class="language-javascript">db.transaction(function (tx) {
+   tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+      var len = results.rows.length, i;
+      msg = &quot;查询记录条数: &quot; + len + &quot;&quot;;
+      document.querySelector('#status').innerHTML +=  msg;
+      for (i = 0; i &lt; len; i++){
+         alert(results.rows.item(i).log );
+      }
+
+   }, null);
+});
+</code></pre>
+
+
+## 删除记录
+
+
+<pre><code class="language-javascript">db.transaction(function(tx) {
+    tx.executeSql('DELETE FROM LOGS WHERE id=?', [id]);
+});
+</code></pre>
+
+
+## 更新记录
+
+
+<pre><code class="language-javascript">db.transaction(function(tx) {
+    tx.executeSql('UPDATE LOGS SET log=\'www.w3cschool.cn\' WHERE id=?', [id]);
+});
+</code></pre>
+
+
+# 应用程序缓存
+
+使用 HTML5，通过创建 cache manifest 文件，可以轻松地创建 web 应用的离线版本。这意味着，你可以在没有网络连接的情况下进行访问
+
+## 什么是应用程序缓存
+
+HTML5 引入了应用程序缓存，这意味着 web 应用可进行缓存，并可在没有因特网连接时进行访问
+
+应用程序缓存为应用带来三个优势：
+
+1. 离线浏览 - 用户可在应用离线时使用它们
+2. 速度 - 已缓存资源加载得更快
+3. 减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源
+
+## Cache Manifest 基础
+
+如需启用应用程序缓存，请在文档的<html> 标签中包含 [manifest 属性](https://www.w3cschool.cn/htmltags/att-html-manifest.html)
+
+
+<pre><code class="language-html">&lt;!DOCTYPE HTML&gt;        
+&lt;html manifest=&quot;demo.appcache&quot;&gt;        
+...        
+&lt;/html&gt;
+</code></pre>
+
+
+每个指定了 manifest 的页面在用户对其访问时都会被缓存。如果未指定 manifest 属性，则页面不会被缓存（除非在 manifest 文件中直接指定了该页面）
+
+manifest 文件的建议的文件扩展名是：".appcache"
+
+manifest 文件需要配置正确的 MIME-type，即 "text/cache-manifest"。必须在 web 服务器上进行配置
+
+## Manifest 文件
+
+manifest 文件是简单的文本文件，它告知浏览器被缓存的内容（以及不缓存的内容）
+
+manifest 文件可分为三个部分：
+
+- *CACHE MANIFEST* - 在此标题下列出的文件将在首次下载后进行缓存
+- *NETWORK* - 在此标题下列出的文件需要与服务器的连接，且不会被缓存
+- *FALLBACK* - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）
+
+### CACHE MAIFEST
+
+第一行，CACHE MANIFEST，是必需的：
+
+
+<pre><code>CACHE MANIFEST        
+/theme.css        
+/logo.gif        
+/main.js
+</code></pre>
+
+
+### NETWORK
+
+下面的 NETWORK 小节规定文件 "login.php" 永远不会被缓存，且离线时是不可用的：
+
+
+<pre><code>NETWORK:        
+login.php
+</code></pre>
+
+
+可以使用星号来指示所有其他其他资源/文件都需要因特网连接：
+
+
+<pre><code>NETWORK:        
+*
+</code></pre>
+
+
+### FALLBACK
+
+下面的 FALLBACK 小节规定如果无法建立因特网连接，则用 "offline.html" 替代 /html5/ 目录中的所有文件：
+
+
+<pre><code>FALLBACK:       
+/html/ /offline.html
+</code></pre>
+
+
+**注意:** 第一个 URI 是资源，第二个是替补。
+
+## 更新缓存
+
+一旦应用被缓存，它就会保持缓存直到发生下列情况：
+
+- 用户清空浏览器缓存
+- manifest 文件被修改（参阅下面的提示）
+- 由程序来更新应用缓存
+
+# Web Workers
+
+## 什么是 Web Workers
+
+当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成
+
+web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行
+
+## 检查浏览器是否支持Web Workers
+
+在创建 web worker 之前，请检测用户的浏览器是否支持它
+
+
+<pre><code class="language-javascript">if(typeof(Worker)!==&quot;undefined&quot;)
+   {
+   // 是的! Web worker 支持!
+   // 一些代码.....
+   }
+ else
+   {
+   // //抱歉! Web Worker 不支持
+   } 
+</code></pre>
+
+
+## 创建Web Worker 文件
+
+必须为外部 JavaScript 文件
+
+
+<pre><code class="language-javascript">var i=0;
+
+ function timedCount()
+ {
+ i=i+1;
+ postMessage(i);
+ setTimeout(&quot;timedCount()&quot;,500);
+ }
+
+ timedCount();
+</code></pre>
+
+
+## 创建 Web Worker 对象
+
+下面的代码检测是否存在 worker，如果不存在，- 它会创建一个新的 web worker 对象，然后运行 "demo_workers.js" 中的代码
+
+
+<pre><code class="language-javascript"> if(typeof(w)==&quot;undefined&quot;)
+   {
+   w=new Worker(&quot;demo_workers.js&quot;);
+   }
+</code></pre>
+
+
+向 web worker 添加一个 "onmessage" 事件监听器
+
+
+<pre><code class="language-javascript"> w.onmessage=function(event){
+ document.getElementById(&quot;result&quot;).innerHTML=event.data;
+ };
+</code></pre>
+
+
+## 终止 Web Worker
+
+当我们创建 web worker 对象后，它会继续监听消息（即使在外部脚本完成之后）直到其被终止为止
+
+
+<pre><code class="language-javascript"> w.terminate(); 
+</code></pre>
+
+
+## Web Worker 和 DOM
+
+由于 web worker 位于外部文件中，它们无法访问下例 JavaScript 对象：
+
+- [window 对象](https://www.w3cschool.cn/javascript_guide/javascript_guide-9f8e269x.html)
+- [document 对象](https://www.w3cschool.cn/jsref/dom-obj-document.html)
+- parent 对象
+
+
+# WebSocket
+
+WebSocket是HTML5开始提供的一种在单个 TCP 连接上进行全双工通讯的协议
+
+在WebSocket API中，浏览器和服务器只需要做一个握手的动作，然后，浏览器和服务器之间就形成了一条快速通道。两者之间就直接可以数据互相传送
+
+浏览器通过 JavaScript 向服务器发出建立 WebSocket 连接的请求，连接建立以后，客户端和服务器端就可以通过 TCP 连接直接交换数据
+
+当你获取 Web Socket 连接后，你可以通过 **send()** 方法来向服务器发送数据，并通过 **onmessage** 事件来接收服务器返回的数据
+
+
+<pre><code class="language-javascript">var Socket = new WebSocket(url, [protocal] );
+</code></pre>
+
+
+第一个参数 url, 指定连接的 URL。第二个参数 protocol 是可选的，指定了可接受的子协议
+
+## 属性
+
+| Socket.readyState     | **readyState** 表示连接状态，可以是以下值：0 - 表示连接尚未建立。1 - 表示连接已建立，可以进行通信。2 - 表示连接正在进行关闭。3 - 表示连接已经关闭或者连接不能打开。 |
+| --------------------- | ------------------------------------------------------------ |
+| Socket.bufferedAmount | 只读属性 **bufferedAmount** 已被 send() 放入正在队列中等待传输，但是还没有发出的 UTF-8 文本字节数。 |
+
+## 事件
+
+| 事件    | 事件处理程序     | 描述                       |
+| ------- | ---------------- | -------------------------- |
+| open    | Socket.onopen    | 连接建立时触发             |
+| message | Socket.onmessage | 客户端接收服务端数据时触发 |
+| error   | Socket.onerror   | 通信发生错误时触发         |
+| close   | Socket.onclose   | 连接关闭时触发             |
+
+## 方法
+
+| 方法           | 描述             |
+| -------------- | ---------------- |
+| Socket.send()  | 使用连接发送数据 |
+| Socket.close() | 关闭连接         |
+
+## 实例
+
+
+<pre><code class="language-html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+   &lt;title&gt;W3Cschool教程(w3cschool.cn)&lt;/title&gt;
+
+      &lt;script type=&quot;text/javascript&quot;&gt;
+         function WebSocketTest()
+         {
+            if (&quot;WebSocket&quot; in window)
+            {
+               alert(&quot;您的浏览器支持 WebSocket!&quot;);
+
+               // 打开一个 web socket
+               var ws = new WebSocket(&quot;ws://localhost:9998/echo&quot;);
+
+               ws.onopen = function()
+               {
+                  // Web Socket 已连接上，使用 send() 方法发送数据
+                  ws.send(&quot;发送数据&quot;);
+                  alert(&quot;数据发送中...&quot;);
+               };
+
+               ws.onmessage = function (evt) 
+               { 
+                  var received_msg = evt.data;
+                  alert(&quot;数据已接收...&quot;);
+               };
+
+               ws.onclose = function()
+               { 
+                  // 关闭 websocket
+                  alert(&quot;连接已关闭...&quot;); 
+               };
+            }
+
+            else
+            {
+               // 浏览器不支持 WebSocket
+               alert(&quot;您的浏览器不支持 WebSocket!&quot;);
+            }
+         }
+      &lt;/script&gt;
+
+   &lt;/head&gt;
+   &lt;body&gt;
+
+      &lt;div id=&quot;sse&quot;&gt;
+         &lt;a href=&quot;javascript:WebSocketTest()&quot;&gt;运行 WebSocket&lt;/a&gt;
+      &lt;/div&gt;
+
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../learn_html/" class="btn btn-neutral float-left" title="HTML学习笔记"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../javascript/learn/" class="btn btn-neutral float-right" title="基本语法">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/simplepeng/KeepLearning/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../learn_html/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../javascript/learn/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(false);
+        };
+    </script>
+
+</body>
+</html>
