@@ -89,6 +89,7 @@
   - [参考](design_pattern/reference.md)
 - 计算机网络
   - [笔记](network/learn.md)
+  - [参考](network/reference.md)
 - Go
   - [笔记](go/learn_go.md)
 - Git
@@ -99,6 +100,7 @@
   - [笔记](groovy/learn.md)
 - Python
   - [笔记](python/learn.md)
+  - [参考](python/reference.md)
 - MySQL
   - [笔记](mysql/learn.md)
 - HTML

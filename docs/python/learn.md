@@ -398,8 +398,4 @@ print('Number of animals in the new zoo is',
 
 ### with语句
 
-## 参考书籍或文献
-
-* 廖雪峰的Python博客
-* 简明Python教程
 
