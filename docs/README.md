@@ -5,7 +5,7 @@
 - [Shell](shell/intro.md)
 - [数据结构](data_structure/intro.md)
 - [算法](algorithm/sort.md)
-- [设计模式](design_pattern/learn.md)
+- [设计模式](design_pattern/intro.md)
 - [计算机网络](network/learn.md)
 - [Go](go/learn_go.md)
 - [Git](git/query.md)
