@@ -55,8 +55,11 @@
   - [树](data_structure/tree.md)
   - [图](data_structure/graph.md)
   - [参考](data_structure/reference.md)
-- 算法
-  - [排序算法](algorithm/sort.md)
+- 排序算法
+  - [简介](algorithm/sort/intro.md)
+  - [冒泡排序](algorithm/sort/bubble_sort.md)
+  - [快速排序](algorithm/sort/quick_sort.md)
+  - [参考](algorithm/sort/reference.md)
 - 设计模式
   - [简介](design_pattern/intro.md)
   - [模式类型](design_pattern/type.md)
