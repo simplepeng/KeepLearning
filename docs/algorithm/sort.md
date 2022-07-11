@@ -81,7 +81,7 @@ public static void bubbleSort(int[] arr) {
 ## 3.插入排序
 
 1. 将未排序数列的第一个元素看做一个有序序列，从第二个元素到最后一个元素看成未排序序列。
-2. 从头至尾遍历未排序序列，将扫描到的每个元素插入**有序序列**适当的位置。
+2. 从头至尾遍历未排序序列，将扫描到的每个元素插入`有序序列`适当的位置。
 
 ![](imgs/insertion_sort.gif)
 
@@ -120,20 +120,20 @@ private static void insertionSort(int[] arr) {
 ![](imgs/selection_sort.gif)
 
 ```java
-    private static void selectionSort(int[] arr) {
-        int length = arr.length;
-        int minIndex = 0;
+private static void selectionSort(int[] arr) {
+    int length = arr.length;
+    int minIndex = 0;
 
-        for (int i = 0; i < length; i++) {
-            minIndex = i;
-            for (int j = i + 1; j < length; j++) {
-                if (arr[minIndex] > arr[j]) {
-                    minIndex = j;
-                }
+    for (int i = 0; i < length; i++) {
+        minIndex = i;
+        for (int j = i + 1; j < length; j++) {
+            if (arr[minIndex] > arr[j]) {
+                minIndex = j;
             }
-            swap(arr, i, minIndex);
         }
+        swap(arr, i, minIndex);
     }
+}
 ```
 
 内层for循环遍历一次数列找出最小或最大的那个元素，外层for控制循环次数，保证每个元素都被比较到。
