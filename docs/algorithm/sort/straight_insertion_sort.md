@@ -1,4 +1,4 @@
-## 直接插入排序
+## 插入排序
 
 [维基百科](https://zh.wikipedia.org/wiki/插入排序)
 

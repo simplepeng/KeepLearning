@@ -1,6 +1,6 @@
-## 简单选择排序
+## 选择排序
 
-[百度百科](https://baike.baidu.com/item/%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/9796478)
+[维基百科](https://zh.wikipedia.org/wiki/选择排序)
 
 1. 从数列中选择最大或最小的那个元素，放到首位或末尾。
 
