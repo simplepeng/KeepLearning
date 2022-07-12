@@ -1,5 +1,7 @@
 # 栈-Stack
 
+[维基百科](https://zh.wikipedia.org/wiki/堆栈)
+
 `栈（stack）`是限定仅在表尾进行插入和删除操作的线性表
 
 栈又称为`后进先出（Last In First Out）`的线性表，简称`LIFO`结构

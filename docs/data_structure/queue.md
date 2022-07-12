@@ -1,5 +1,7 @@
 # 队列-Queue
 
+[维基百科](https://zh.wikipedia.org/wiki/队列)
+
 `队列（queue）`是只允许在一端进行插入操作，而在另一端进行删除操作的线性表。所以队列也有`顺序存储`和`链式存储`两种存储方式。
 
 队列是一种`先进先出（First In First Out）`的线性表，简称FIFO。
