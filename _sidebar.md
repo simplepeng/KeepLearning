@@ -130,7 +130,6 @@
   - [并发](rust/concurrency.md)
   - [宏](rust/macros.md)
   - [异步](rust)
-  - [](rust)
   - [参考](rust/refers.md)
 - Git
   - [速查表](git/query.md)
