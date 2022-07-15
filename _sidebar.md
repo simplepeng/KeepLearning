@@ -138,6 +138,7 @@
 - Groovy
   - [笔记](groovy/learn.md)
 - Python
+  - [简介](python/intro.md)
   - [笔记](python/learn.md)
   - [参考](python/reference.md)
 - MySQL
