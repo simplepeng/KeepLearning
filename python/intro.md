@@ -9,3 +9,9 @@ Python 优雅的语法和动态类型以及解释型语言的本质，使它成�
 [官方网站](https://www.python.org/)
 
 [官方教程](https://docs.python.org/zh-cn/3/tutorial/index.html)
+
+## Hello World
+
+```python
+print("hello world")
+```
