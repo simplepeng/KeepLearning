@@ -49,5 +49,29 @@ else:
     print("age > 10")
 ```
 
+## range函数
+
+`range()`函数生成数字序列，可以直接用来遍历
+
+```python
+for i in range(5):
+    print(i)
+```
+
+## pass语句
+
+pass是空语句，一般用来占位。
+
+```python
+while True:
+     pass
+
+class EmptyClass:
+    pass
+
+def fun():
+    pass
+```
+
 
 
