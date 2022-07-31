@@ -59,3 +59,33 @@ hello5(a = 1, b = 2)
 sum = lambda a, b: a + b
 print("sum = ",sum(1, 2))
 ```
+
+## 函数作为参数
+
+```python
+def fun1():
+    print("fun1 call")
+
+def fun2(func):
+    func()
+    print("fun2 call")
+fun2(fun1)
+```
+
+## 装饰器
+
+* python这个函数装饰器有点类似于Java中的注解
+
+```python
+def decor_fun(func):
+    def wrapper(*args, **kw):
+        print("装饰器函数 -- start")
+        func()
+        print("装饰器函数 -- end")
+    return wrapper
+
+@decor_fun
+def fun():
+    print("本体方法调用")
+fun()
+```
