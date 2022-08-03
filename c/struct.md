@@ -1,4 +1,4 @@
-## 结构体
+# 结构体
 
 ```c
 struct Preson{
@@ -16,7 +16,7 @@ int main()
 
 * 结构体括号结尾要带上分号`;`
 
-### typedef简写结构体
+## typedef简写结构体
 
 ```c
 typedef struct
@@ -40,7 +40,7 @@ int main()
 }
 ```
 
-### 结构体指针
+## 结构体指针
 
 ```c
 #include <stdio.h>
@@ -126,7 +126,7 @@ void fun2(Person *p)
 > start -- zhang san
 > end --li si
 
-### 结构体长度
+## 结构体长度
 
 结构体的长度一般为结构中字段长度的总和。
 
@@ -147,7 +147,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-### const的结构指针
+## const的结构指针
 
 const后的指针不能修改所指向地址的值，结构指针也是一样。但是可以重新指向其他的地址。
 
@@ -171,7 +171,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-### 结构体增加函数
+## 结构体增加函数
 
 ```c
 #include <stdio.h>
