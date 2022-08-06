@@ -23,3 +23,26 @@ int max(int num1,int num2)
   return result;
 }
 ```
+
+* `形式参数(形参)`是函数中存储值得变量，`实际参数(实参)`是传递给函数的特定值。
+
+## 函数声明
+
+```c
+//sum.h
+int sum(int a, int b);
+```
+
+* 函数声明(function declaration)也叫函数原型，函数原型指明了函数的属性。
+* 函数声明一般定义在头文件中
+
+## 函数实现
+
+```c
+//sum.c
+#include "sum.h" //导入函数原型的头文件
+
+int sum(int a, int b){
+  return a + b;
+}
+```
