@@ -1,6 +1,7 @@
 # 函数
 
-函数是一组一起执行一个任务的语句。每个 C 程序都至少有一个函数，即主函数 `main()`。
+* 函数是一组一起执行一个任务的语句。每个 C 程序都至少有一个函数，即主函数 `main()`。
+* 没有返回值的函数，函数返回值类型用关键字`void`标明。
 
 ```c
 返回类型 函数名(参数列表)
@@ -10,7 +11,7 @@
 ```
 
 ```c
-int max(int num1,int num2)
+int max(int num1, int num2)
 {
   int result;
   if(num1 > num2)
@@ -25,6 +26,7 @@ int max(int num1,int num2)
 ```
 
 * `形式参数(形参)`是函数中存储值得变量，`实际参数(实参)`是传递给函数的特定值。
+* 形参(formal argument或formal parameter)，实参(actual argument或actual parameter)
 
 ## 函数声明
 

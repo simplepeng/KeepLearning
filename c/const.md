@@ -5,7 +5,10 @@
 在C中有两种方式定义常量
 
 1. 使用 `#define` 预处理器
-2. 使用 `const` 关键字
+2. 使用 `const` 关键字，C90新增的，用于限定一个变量为只读。
+
+* 使用`#defind`定义的常量会在编译时全部替换成实际值，这个过程被称为`编译时替换(compile-time substitution)`。
+* 这样定义的常量也被称为`明示常量(manifest constant)`
 
 ```c
 #include <stdio.h>

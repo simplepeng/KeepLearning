@@ -5,6 +5,8 @@
   - [常量](c/const.md)
   - [函数](c/func.md)
   - [类型](c/type.md)
+  - [运算符](c/operator.md)
+  - [流程控制](c/flow_control.md)
   - [数组](c/array.md)
   - [指针](c/pointer.md)
   - [结构体](c/struct.md)
