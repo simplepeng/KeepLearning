@@ -2,20 +2,40 @@
 
 * 花括号`{}`以及被花括号括起来的部分被称为`快(block)`
 
-## if判断
+## if语句
+
+* if语句被称为`分支语句(branching statement)`或`选择语句(selection statement)`
 
 ```c
 int main()
 {
     int a = 5;
-    if(a < 4)
+    if(a < 3)
     {
         //...
-    }
-    else
+    }else if(a < 4)
     {
         //...
+    }else
+    {
+
     }
+}
+```
+
+## switch-case多重选择
+
+```c
+int age = 20;
+switch(age)
+{
+    case 1:
+        break;
+    case 10:
+    case 11://多重标签写法
+        break;
+    default:
+
 }
 ```
 
@@ -66,3 +86,7 @@ for(count = 1; count <= 22; count++)
 
 * `嵌套循环(nested loop)`指在一个循环内包含另一个循环。
 * 算法里经常用到嵌套循环
+
+## goto语句
+
+* `K&R`建议`谨慎使用，或者根本不用`goto语句，因为不使用goto语句也能实现同样的代码逻辑。
