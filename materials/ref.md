@@ -6,13 +6,14 @@
 以下大多数视频都是B站链接，我的推荐是先看书，再看视频，书可以先找PDF快速过一遍，觉得有收获就买本实体书支持一下，
 书只看一遍是没啥用的，多看多想多总结。
 视频可以倍速观看，没懂的可以暂停回放，再听一遍想一遍，这就是视频教程相对于上课听讲的优势。
-下面的视频链接我大多数都是看完了的，有的看得快也忘得快，所以记笔记真的很重要，温故而知新。
+下面的视频链接我大多数都是看完了的，都讲得不错，但是有的看得快也忘得快，所以记笔记真的很重要，温故而知新。
 
-`收藏不等于学习`，斜眼笑.jpg
+可以star收藏一下，不定期更新。`收藏不等于学习`，斜眼笑.jpg
 
 ## 计算机基础
 
 * [计算机速成课-Crash Course](https://www.bilibili.com/video/BV1EW411u7th) - 强推，无意中在B站刷到的
+* [自学计算机科学](https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md)
 
 ## 计算机网络
 
@@ -32,7 +33,7 @@
 
 ## 操作系统
 
-* 
+* [操作系统 - 北京大学](https://www.bilibili.com/video/BV1Gx411Q7ro)
 
 ## 数据结构和算法
 
@@ -56,7 +57,22 @@
 
 ## Java
 
-## 
+
+
+## Python
+
+* [Python官方教程](https://docs.python.org/zh-cn/3.12/tutorial/index.html)
+
+## Rust
+
+* [Rust语言圣经](https://course.rs/about-book.html)
+* [Rust程序设计语言](https://kaisery.github.io/trpl-zh-cn/)
+
+## 人工智能
+
+* [深度学习与计算机视觉 - 斯坦福]() - 李飞飞教授的课
+* [机器学习 - 台大](https://www.bilibili.com/video/BV1Ht411g7Ef) - 李宏毅
+* [深度学习 - 台大](https://www.bilibili.com/video/BV1JA411c7VT) - 李宏毅
 
 ## 推荐的up主
 
