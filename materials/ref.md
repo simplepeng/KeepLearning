@@ -6,7 +6,7 @@
 以下大多数视频都是B站链接，我的推荐是先看书，再看视频，书可以先找PDF快速过一遍，觉得有收获就买本实体书支持一下，
 书只看一遍是没啥用的，多看多想多总结。
 视频可以倍速观看，没懂的可以暂停回放，再听一遍想一遍，这就是视频教程相对于上课听讲的优势。
-下面的视频链接我大多数都是看完了的，都讲得不错，但是有的看得快也忘得快，所以记笔记真的很重要，温故而知新。
+下面的视频链接我大多数是看完了的，都讲得不错，但是有的看得快也忘得快，所以记笔记真的很重要，温故而知新。
 
 可以star收藏一下，不定期更新。`收藏不等于学习`，斜眼笑.jpg
 
@@ -28,12 +28,13 @@
 
 ## 编译原理
 
-* 《编译原理》 - 俗称`龙书`，我还没看过，还没到那个境界，视频倒是看过一些
+* 《编译原理》 - 俗称`龙书`，我没看过，还没到那个境界，视频倒是看过一些
 * [编译原理 - 哈工大](https://www.bilibili.com/video/BV1zW411t7YE)
 
 ## 操作系统
 
 * [操作系统 - 北京大学](https://www.bilibili.com/video/BV1Gx411Q7ro)
+* [操作系统 - 清华大学](https://www.bilibili.com/video/BV1wq4y1M7qf)
 
 ## 数据结构和算法
 
@@ -57,11 +58,15 @@
 
 ## Java
 
-
+*《Head First Java》
+*《Effective java》
+*《Java编程思想》
+* [Java入门视频教程](https://www.bilibili.com/video/av48144058) - 尚硅谷
 
 ## Python
 
 * [Python官方教程](https://docs.python.org/zh-cn/3.12/tutorial/index.html)
+* [8天python从入门到精通](https://www.bilibili.com/video/BV1qW4y1a7fU) - 黑马程序员
 
 ## Rust
 
@@ -73,14 +78,29 @@
 * [深度学习与计算机视觉 - 斯坦福]() - 李飞飞教授的课
 * [机器学习 - 台大](https://www.bilibili.com/video/BV1Ht411g7Ef) - 李宏毅
 * [深度学习 - 台大](https://www.bilibili.com/video/BV1JA411c7VT) - 李宏毅
+* [深度学习](https://www.bilibili.com/video/BV16r4y1Y7jv) - 吴恩达
+
+## 其他
+
+* [软件工程](https://www.bilibili.com/video/BV1F34y1j7Sn) - Udemy
+* [汇编语言 - 第3版](https://www.bilibili.com/video/BV1Wu411B72F) - 王爽
+* [Git应用详解](https://www.bilibili.com/video/BV1Bt411b7sk)
+* 《代码整洁之道 - Clean Code》
+* 《架构整洁之道 - Clean Architecture》
+* 《人月神话》
 
 ## 推荐的up主
 
-* []
-* [中国大学MOOC](https://space.bilibili.com/243619979) - 官方网站也有
+* [bennyhuo不是算命的](https://space.bilibili.com/28615855) - Kotlin GDE，Android大佬(利益相关在大佬群里，放在首位，括号内删掉)
+* [扔物线](https://space.bilibili.com/27559447) - Kotlin&Android GDE，Android大佬
+* [稚晖君](https://space.bilibili.com/20259914) - 华为天才少年
+* [跟李沐学AI](https://space.bilibili.com/1567748478) - 亚马逊资深首席科学家，AI大佬
+* [中国大学MOOC](https://space.bilibili.com/243619979) - 也有官网
 
 
 ## 一些学习网站
 
 * [LeetCode](https://leetcode.cn) - 用来刷题，现在很多公司都喜欢出算法面试题了
+
+
 
