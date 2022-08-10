@@ -6,7 +6,7 @@
 以下大多数视频都是B站链接，我的推荐是先看书，再看视频，书可以先找PDF快速过一遍，觉得有收获就买本实体书支持一下，
 书只看一遍是没啥用的，多看多想多总结。
 视频可以倍速观看，没懂的可以暂停回放，再听一遍想一遍，这就是视频教程相对于上课听讲的优势。
-下面的视频链接我大多数是看完了的，都讲得不错，但是有的看得快也忘得快，所以记笔记真的很重要，温故而知新。
+下面的链接我大多数是看完了的，都讲得不错，但是有的看得快也忘得快，所以记笔记真的很重要，温故而知新。
 
 可以star收藏一下，不定期更新。`收藏不等于学习`，斜眼笑.jpg
 
@@ -14,17 +14,21 @@
 
 * [计算机速成课-Crash Course](https://www.bilibili.com/video/BV1EW411u7th) - 强推，无意中在B站刷到的
 * [自学计算机科学](https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md)
+* 《计算机是怎么跑起来的 - How Computers Work》
+* 《程序是怎么跑起来的 - How Program Works》
 
 ## 计算机网络
 
 * 《计算机网络-自顶向下》- 第六版
 * [计算机网络-自顶向下-第7版](https://www.bilibili.com/video/BV1JV411t7ow) - 中科大-郑烇老师讲的
+* 《计算机网络》 - 谢希仁
 
 ## 计算机组成原理
 
 * 《计算机组成原理》
 * [计算机组成 - 北京大学](https://www.bilibili.com/video/BV1Xx411Q7Nz)
 * [计算机原理 - 国防科技大学](https://www.bilibili.com/video/BV1Jt411G7v9)
+* 《计算机组成与设计：硬件/软件接口》 - 第5版
 
 ## 编译原理
 
@@ -35,6 +39,7 @@
 
 * [操作系统 - 北京大学](https://www.bilibili.com/video/BV1Gx411Q7ro)
 * [操作系统 - 清华大学](https://www.bilibili.com/video/BV1wq4y1M7qf)
+* 《计算机操作系统教程》 - 张尧学
 
 ## 数据结构和算法
 
@@ -44,6 +49,7 @@
 * [数据结构基础 - 北京大学](https://www.bilibili.com/video/BV1Hx411U7Km)
 * [数据结构和算法 - 尚学堂](https://www.bilibili.com/video/BV1bW411o7xJ)
 * [算法导论 - MIT](https://www.bilibili.com/video/BV1ex411k7gk)
+* 《数据结构C语言版》 - 严蔚敏
 
 ## C/C++
 
@@ -73,6 +79,10 @@
 * [Rust语言圣经](https://course.rs/about-book.html)
 * [Rust程序设计语言](https://kaisery.github.io/trpl-zh-cn/)
 
+## Go
+
+* 《Go程序设计语言》
+
 ## 人工智能
 
 * [深度学习与计算机视觉 - 斯坦福]() - 李飞飞教授的课
@@ -94,13 +104,19 @@
 * [bennyhuo不是算命的](https://space.bilibili.com/28615855) - Kotlin GDE，Android大佬(利益相关在大佬群里，放在首位，括号内删掉)
 * [扔物线](https://space.bilibili.com/27559447) - Kotlin&Android GDE，Android大佬
 * [稚晖君](https://space.bilibili.com/20259914) - 华为天才少年
+* [YJango](https://space.bilibili.com/344849038) - 余博士，学习观那些视频讲得真好
 * [跟李沐学AI](https://space.bilibili.com/1567748478) - 亚马逊资深首席科学家，AI大佬
+* [AliveGameStudio](https://space.bilibili.com/580207) - 独立游戏开发大佬
 * [中国大学MOOC](https://space.bilibili.com/243619979) - 也有官网
-
 
 ## 一些学习网站
 
+* [稀土掘金](https://juejin.cn/)
 * [LeetCode](https://leetcode.cn) - 用来刷题，现在很多公司都喜欢出算法面试题了
+* [菜鸟教程](https://www.runoob.com/)
+* [w3school](https://www.w3school.com.cn/)
+* [慕课网](https://www.imooc.com/)
+* [牛客网](https://www.nowcoder.com/)
 
 
 
