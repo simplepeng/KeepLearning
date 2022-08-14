@@ -20,5 +20,7 @@
 
 ### KMP模式匹配算法
 
+[最浅显易懂的 KMP 算法讲解](https://www.bilibili.com/video/BV1AY4y157yL)
+
 （Knuth和Pratt共同研究，Morris独立研究）发表一个模式匹配算法，可以大大避免重复遍历的情况，我们把它称之为克努特-莫里斯-普拉特算法，简称`KMP`算法。
 
