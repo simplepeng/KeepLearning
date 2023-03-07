@@ -16,3 +16,4 @@
 - [JavaScript](javascript/learn.md)
 - [英语](english/learn.md)
 - [学习资料汇总](materials/ref.md)
+- [学习记录](learn_list.md)
